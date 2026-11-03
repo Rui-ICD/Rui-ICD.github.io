@@ -15,7 +15,7 @@ hugoblox:
     # Site name - shown in navbar, footer, copyright, and browser title by default
     name: "Jiao Rui"
     # Legal entity for copyright notices (defaults to name if not set)
-    organization: "Nanyang Technological University"
+    organization: ""
     # Schema.org type for structured data
     type: person # person | organization | local_business
     # Short tagline displayed on your site
