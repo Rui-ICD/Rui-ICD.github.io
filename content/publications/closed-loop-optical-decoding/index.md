@@ -29,6 +29,7 @@ visual:
   alt: Closed-loop PPM decoding with threshold estimation, feedback, and reference calibration
 layout: research-paper
 figures: []
+short_title: Closed-loop optical PPM decoding
 ---
 
 Weak optical uplinks make pulse detection sensitive to missed events and false alarms. This decoder uses pulse timing, proportional-integral feedback, and reference-clock calibration to recover the encoded neural waveform.

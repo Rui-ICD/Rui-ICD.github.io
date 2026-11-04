@@ -61,6 +61,7 @@ figures:
   alt: Implant imaging and neural recording traces from awake mice
   caption: In vivo recording setup and representative chronic neural recordings.
   doi: 10.1038/s41928-025-01484-1
+short_title: Subnanolitre neural implants
 ---
 
 A single AlGaAs diode provides photovoltaic power and optical data transmission. CMOS circuits amplify and encode the neural signals, eliminating external wires and tethers.

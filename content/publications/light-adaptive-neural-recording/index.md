@@ -47,6 +47,7 @@ figures:
   alt: FB-MOTE signal chain and optical power domains
   caption: Circuit architecture and power domains, Fig. 3 of the TBioCAS article.
   doi: 10.1109/TBCAS.2026.3652195
+short_title: Light-adaptive neural recording IC
 ---
 
 FB-MOTE uses forward-biased silicon junctions to harvest optical energy directly in the CMOS bulk. Its amplifier adapts to the available power, while neural signals are encoded as optical pulse pairs.

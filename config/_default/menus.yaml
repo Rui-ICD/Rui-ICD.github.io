@@ -1,13 +1,10 @@
 main:
-  - name: About
-    url: /#about
-    weight: 10
   - name: Research
     url: /#research
-    weight: 20
+    weight: 10
   - name: Publications
     url: /publications/
+    weight: 20
+  - name: About
+    url: /#about
     weight: 30
-  - name: Education
-    url: /#education
-    weight: 40

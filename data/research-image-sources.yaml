@@ -22,3 +22,7 @@
   source_url: https://hanson-zheng.github.io/project/microdevice-injection/images/fig-01-automated-workflow.png
   doi: 10.1109/ICRA57385.2026.11697121
   source: Public research materials shared by co-author Yumin Zheng. Original figures retained.
+- file: assets/media/research/optical-readout.png
+  source_url: https://hanson-zheng.github.io/project/optical-ppm-decoding/images/poster-measurement-setup.png
+  doi: 10.1109/ICASSP55912.2026.11462355
+  source: Author poster measurement photograph. Representative image for the optical readout research area.

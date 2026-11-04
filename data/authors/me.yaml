@@ -5,8 +5,8 @@ name:
   display: Rui Jiao
   given: Rui
   family: Jiao
-role: PhD Student · NTU Singapore
-bio: Analog circuit design, optical energy harvesting, and signal recovery for miniature neural implants.
+role: PhD student, NTU Singapore
+bio: Neural recording ICs and optical readout.
 affiliations:
 - name: Nanyang Technological University
   url: https://www.ntu.edu.sg/
@@ -29,27 +29,28 @@ links:
   url: https://orcid.org/0009-0000-6434-9672
   label: ORCID
 interests:
-- Optically Powered Neural ICs
-- Light-Aware Analog Circuit Design
-- Optical Telemetry & Signal Recovery
+- Neural Microsystems
+- Optical Readout
 education:
 - degree: PhD in Electrical and Electronic Engineering
   institution: Nanyang Technological University
   year: 2023–present
   start: '2023'
-  summary: 'Research in microelectronics with Prof. Sunwoo Lee in the Lee Group.
-
-    '
+  summary: Research in microelectronics with Prof. Sunwoo Lee in the Lee Group.
+  short_degree: PhD · Electrical & Electronic Engineering
+  short_institution: Nanyang Technological University
 - degree: Joint MS in Integrated Circuit Design
   institution: Technical University of Munich & Nanyang Technological University
   year: '2023'
   end: '2023'
-  summary: 'Joint master''s degree awarded by TUM and NTU.
-
-    '
+  summary: Joint master's degree awarded by TUM and NTU.
+  short_degree: Joint MS · Integrated Circuit Design
+  short_institution: TUM & NTU
 - degree: BS in Electronic Information Science and Technology
   institution: University of Electronic Science and Technology of China
   year: '2021'
   end: '2021'
-headline: Neural recording circuits that harvest light and communicate optically.
+  short_degree: BS · Electronic Information Science & Technology
+  short_institution: UESTC
+headline: Neural interfaces, powered by light.
 email: jiao0038@e.ntu.edu.sg

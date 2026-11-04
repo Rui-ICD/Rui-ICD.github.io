@@ -1,0 +1,33 @@
+hugoblox:
+  meta:
+    format: hugoblox-font@1
+    name: Studio
+    vendor: custom
+    version: 1.0.0
+    description: Manrope headings with Inter body text
+  families:
+    heading: Manrope
+    body: Inter
+    code: JetBrains Mono
+  weights:
+    heading:
+    - 500
+    - 600
+    - 700
+    body:
+    - 400
+    - 500
+    - 600
+    code:
+    - 400
+  leading:
+    heading: 1.2
+    body: 1.65
+    code: 1.5
+  tracking:
+    heading: -0.035em
+    body: '0'
+  variable:
+    heading: true
+    body: true
+    code: true

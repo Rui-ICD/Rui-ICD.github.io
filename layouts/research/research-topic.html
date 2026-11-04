@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ $area := index (where hugo.Data.research "slug" .Params.track) 0 }}
+<main id="main-content" class="rj-shell rj-topic-page" data-pagefind-body>
+  <a class="rj-back" href="{{ "/#research" | relURL }}">&larr; Research</a>
+  <h1>{{ $area.title }}</h1>
+  <p class="rj-topic-description">{{ $area.description }}</p>
+  <figure class="rj-topic-figure">
+    {{ with resources.Get $area.image }}{{ $image := .Fit "1500x1100 webp q92" }}<a href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}"></a>{{ end }}
+    <figcaption>{{ $area.credit }} <a href="https://doi.org/{{ $area.source_doi }}">Source &nearr;</a></figcaption>
+  </figure>
+  <ul class="rj-focus-list">{{ range $area.focus }}<li>{{ . }}</li>{{ end }}</ul>
+  <h2>Related publications</h2>
+  {{ $papers := slice }}{{ range $area.papers }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $papers = $papers | append . }}{{ end }}{{ end }}
+  {{ partial "research/publications.html" (dict "pages" $papers "compact" true) }}
+</main>
+{{ end }}

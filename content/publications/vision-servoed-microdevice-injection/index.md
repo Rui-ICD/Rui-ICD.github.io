@@ -29,6 +29,7 @@ visual:
   alt: Vision-guided workflow for positioning and injecting an implantable microdevice
 layout: research-paper
 figures: []
+short_title: Vision-guided microdevice injection
 ---
 
 The platform combines commercial micromanipulators and visual feedback for microdevice delivery. Coarse positioning, autofocus, marker-based centering, and pipette alignment form an automated workflow with minimal manual calibration.

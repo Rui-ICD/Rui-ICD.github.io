@@ -40,6 +40,7 @@ visual:
   source_doi: 10.1109/TBCAS.2026.3652195
 layout: research-paper
 figures: []
+short_title: Forward-bulk optoelectronic neural recording
 ---
 
 A forward-bulk CMOS architecture uses photogenerated carriers for power harvesting and light-tolerant neural recording. Circuit bandwidth and sampling frequency increase with available optical power while integrated input-referred noise remains stable.
