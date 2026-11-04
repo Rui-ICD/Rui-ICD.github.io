@@ -2,112 +2,61 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Dr. Jiao Rui
+  display: Rui Jiao
   given: Rui
   family: Jiao
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
-postnominals:
-  - PhD
-  - MIEEE
-status:
-  icon: "☕️"
-role: Ph.D.
+role: PhD Student
 bio: |
-  My research focuses on low-power integrated circuits (ICs),
-  optoelectronic microsystems, and bioelectronic sensing.
+  I am a PhD student in Electrical and Electronic Engineering at Nanyang
+  Technological University (NTU), working with Prof. Sunwoo Lee in the Lee Group.
+  My research focuses on microelectronics, low-power integrated circuits, and
+  optoelectronic microsystems for neural recording.
+
+  I received my B.S. in Electronic Information Science and Technology from the
+  University of Electronic Science and Technology of China (UESTC) in 2021, and
+  a joint M.S. in Integrated Circuit Design from the Technical University of
+  Munich (TUM) and NTU in 2023.
 
 affiliations:
-  - name: Nanyang Technological University, Lee Group
+  - name: Nanyang Technological University
+    url: https://www.ntu.edu.sg/
+  - name: Lee Group
     url: https://blogs.ntu.edu.sg/sunwoo/
 
 links:
-  - icon: academicons/google-scholar
-    url: https://ieeexplore.ieee.org/author/657536981182338
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
+  - icon: hero/globe-alt
+    url: https://blogs.ntu.edu.sg/sunwoo/people/
+    label: Lee Group Profile
   - icon: brands/github
-    url: https://github.com/example
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
+    url: https://github.com/Rui-ICD
+    label: GitHub
+  - icon: academicons/ieee
+    url: https://ieeexplore.ieee.org/author/657536981182338
+    label: IEEE Xplore
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://orcid.org/0009-0000-6434-9672
+    label: ORCID
 
 interests:
-  - Integrated Circuits
+  - Low-Power Integrated Circuits
   - Optoelectronic Microsystems
   - Bioelectronic Sensing
+  - Tetherless Neural Recording
 
 education:
-  - degree: PhD
+  - degree: PhD in Electrical and Electronic Engineering
     institution: Nanyang Technological University
-    start: 2023-08-01
-    end: 2027-08-01
+    year: '2023–present'
+    start: '2023'
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
-
-experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+      Research in microelectronics with Prof. Sunwoo Lee in the Lee Group.
+  - degree: Joint MS in Integrated Circuit Design
+    institution: Technical University of Munich & Nanyang Technological University
+    year: '2023'
+    end: '2023'
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
-    summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
-
-skills:
-  - name: Technical Skills
-    items:
-      - label: Python
-        level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
-    items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
-
-languages:
-  - name: English
-    level: 5
-    label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
-
-awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+      Joint master's degree awarded by TUM and NTU.
+  - degree: BS in Electronic Information Science and Technology
+    institution: University of Electronic Science and Technology of China
+    year: '2021'
+    end: '2021'

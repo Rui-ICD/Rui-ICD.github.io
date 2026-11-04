@@ -13,18 +13,18 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   identity:
     # Site name - shown in navbar, footer, copyright, and browser title by default
-    name: "Jiao Rui"
+    name: "Rui Jiao"
     # Legal entity for copyright notices (defaults to name if not set)
     organization: ""
     # Schema.org type for structured data
     type: person # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: ""
+    tagline: "PhD Student | Microelectronics & Neural Interfaces"
     # Site meta description for search engines and social sharing
-    description: "Research on integrated circuits, optoelectronic microsystems, and bioelectronic sensing."
+    description: "Rui Jiao is a PhD student in the Lee Group at NTU, researching low-power integrated circuits and optoelectronic microsystems for neural recording."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
-      twitter: "GoOwnable" # Twitter/X handle for Twitter Cards (without @)
+      twitter: "" # Twitter/X handle for Twitter Cards (without @)
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
@@ -239,7 +239,7 @@ hugoblox:
   # Regional formatting preferences
   # ────────────────────────────────────────────────────────────────────────────
   locale:
-    date_format: "Jan 2, 2006" # Go time format
+    date_format: "Jan 2006" # Month-level precision for publication dates
     time_format: "3:04 PM"
     address_format: en-us
 
