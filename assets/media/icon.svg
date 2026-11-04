@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 64 64">
+  <title>Rui Jiao</title>
+  <rect width="64" height="64" rx="14" fill="#263d72"/>
+  <g fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 45V19h9c6 0 9 3 9 8s-3 8-9 8h-9m9 0 11 10"/>
+    <path d="M38 19h12m-4 0v18c0 6-3 9-8 9"/>
+  </g>
+</svg>

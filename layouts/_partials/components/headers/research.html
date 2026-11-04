@@ -1,4 +1,4 @@
-{{ if or .IsHome (in (slice "publications" "research") .Section) }}<a class="rj-skip" href="#main-content">Skip to content</a>{{ end }}
+{{ if or .IsHome (in (slice "publications" "research" "activities") .Section) }}<a class="rj-skip" href="#main-content">Skip to content</a>{{ end }}
 <header class="rj-header">
   <nav class="rj-shell rj-nav" aria-label="Main navigation">
     <a class="rj-wordmark" href="{{ "/" | relURL }}">Rui Jiao<span aria-hidden="true">.</span></a>

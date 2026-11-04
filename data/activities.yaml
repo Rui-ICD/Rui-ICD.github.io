@@ -1,0 +1,37 @@
+- date: '2026-06-02'
+  title: Microdevice injection work presented at ICRA 2026
+  text: The collaborative vision-servoed injection work was presented at IEEE ICRA, connecting automated
+    positioning with the delivery of implantable microdevices.
+  paper: /publications/vision-servoed-microdevice-injection/
+  source: https://blogs.ntu.edu.sg/sunwoo/
+- date: '2026-05-07'
+  title: Optical PPM decoding work presented at ICASSP 2026
+  text: The closed-loop decoding paper was presented at IEEE ICASSP. It studies reliable detection and
+    recovery of optical uplinks from neural implants.
+  paper: /publications/closed-loop-optical-decoding/
+  source: https://blogs.ntu.edu.sg/sunwoo/
+- date: '2026-04-01'
+  date_precision: month
+  title: FB-MOTE published in IEEE TBioCAS
+  text: The light-adaptive neural recording IC article appears in volume 20, issue 2, pages 180–193. Rui
+    Jiao and Yumin Zheng contributed equally.
+  paper: /publications/light-adaptive-neural-recording/
+  source: https://doi.org/10.1109/TBCAS.2026.3652195
+- date: '2025-12-24'
+  title: Neural implant work featured on the Nature Electronics cover
+  text: The collaborative MOTE study was featured on the cover of Nature Electronics, volume 8, issue
+    12. The cover highlights the subnanolitre implant developed for chronic neural recording.
+  paper: /publications/subnanolitre-neural-recording/
+  source: https://blogs.ntu.edu.sg/sunwoo/
+- date: '2025-11-03'
+  title: Chronic neural recording study published in Nature Electronics
+  text: The paper reports a subnanolitre optoelectronic microsystem capable of chronic neural recording
+    in awake mice.
+  paper: /publications/subnanolitre-neural-recording/
+  source: https://doi.org/10.1038/s41928-025-01484-1
+- date: '2025-05-26'
+  title: Forward-bulk neural recording work presented at ISCAS 2025
+  text: Rui and Yumin’s work on light-tolerant, power-adaptive neural recording was presented at IEEE
+    ISCAS.
+  paper: /publications/forward-bulk-neural-recording/
+  source: https://blogs.ntu.edu.sg/sunwoo/

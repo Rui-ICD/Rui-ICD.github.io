@@ -8,7 +8,11 @@
     {{ with resources.Get $area.image }}{{ $image := .Fit "1500x1100 webp q92" }}<a href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}"></a>{{ end }}
     <figcaption>{{ $area.credit }} <a href="https://doi.org/{{ $area.source_doi }}">Source &nearr;</a></figcaption>
   </figure>
-  <ul class="rj-focus-list">{{ range $area.focus }}<li>{{ . }}</li>{{ end }}</ul>
+  <div class="rj-topic-sections">
+  {{ range $area.sections }}
+    <section><h2>{{ .heading }}</h2>{{ with .text }}<p>{{ . }}</p>{{ end }}{{ with .bullets }}<ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}</section>
+  {{ end }}
+  </div>
   <h2>Related publications</h2>
   {{ $papers := slice }}{{ range $area.papers }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $papers = $papers | append . }}{{ end }}{{ end }}
   {{ partial "research/publications.html" (dict "pages" $papers "compact" true) }}

@@ -1,31 +1,67 @@
 - slug: neural-microsystems
-  title: Neural microsystems
-  description: Light-powered ICs for recording neural activity.
-  image: media/research/neural-implant.jpg
-  alt: A microscale neural implant inside a glass pipette, with grains of salt for scale
-  source_doi: 10.1038/s41928-025-01484-1
-  credit: MOTE implant and salt grains, Lee et al., Nature Electronics (2025).
-  fit: photo
+  title: Analog & mixed-signal IC design
+  description: Analog front ends, bias circuits, and optical encoders for neural recording.
+  image: media/research/fb-mote-die.jpg
+  alt: FB-MOTE CMOS die, recording-unit pad map, and annotated circuit layout
+  source_doi: 10.1109/TBCAS.2026.3652195
+  credit: FB-MOTE die micrograph and layout, Jiao et al., IEEE TBioCAS 20(2), Fig. 19.
   papers:
   - light-adaptive-neural-recording
-  - subnanolitre-neural-recording
   - forward-bulk-neural-recording
   focus:
-  - Photovoltaic power harvesting
-  - Analog neural recording circuits
-  - Microscale integration
+  - Low-noise neural amplification and analog encoding.
+  - Photovoltaic harvesting through forward-biased CMOS junctions.
+  - Circuit characterization and modeling under illumination.
+  result: A 43 × 269 μm recording unit fabricated in 180 nm CMOS.
+  sections:
+  - heading: Circuit architecture
+    text: The FB-MOTE architecture combines a neural amplifier, a pulse encoder, bias generation, and
+      an optical transmitter. Forward bias allows the intrinsic silicon junctions to harvest incident
+      light while reducing transistor threshold voltages.
+  - heading: Adapting to available power
+    text: Additional photocurrent is directed mainly to the amplifier. Recording bandwidth therefore increases
+      with illumination, while proportional-to-absolute-temperature biasing stabilizes other blocks. Switched-capacitor
+      feedback limits sensitivity to light-induced leakage.
+  - heading: Measurement and modeling
+    text: The published work compares electrically powered and optically powered operation, examines leakage
+      and photocurrent effects, and validates recovered neural waveforms in saline and acute nerve experiments.
+  - heading: Reported results
+    bullets:
+    - 'CMOS process: 180 nm; recording-unit dimensions: 43 × 269 μm.'
+    - Operation down to 0.2 μA at 0.317 V.
+    - Probe-based operation demonstrated under illumination up to 1200 μW/mm². Wire-bonded biological
+      tests used a different integration configuration.
 - slug: optical-readout
-  title: Optical readout
-  description: Recovering neural signals from faint optical pulses.
-  image: media/research/optical-readout.png
-  alt: Optical neural readout bench with a microscope, photodetector, and oscilloscope
-  source_doi: 10.1109/ICASSP55912.2026.11462355
-  credit: Optical readout setup from the author poster for ICASSP 2026.
-  fit: contain
+  title: Optoelectronic neural microsystems
+  description: Autonomous neural implants combining CMOS circuitry and optoelectronic devices.
+  image: media/research/neural-implant.jpg
+  alt: A MOTE neural implant inside a glass pipette beside grains of salt
+  source_doi: 10.1038/s41928-025-01484-1
+  credit: MOTE implant and salt grains, Lee et al., Nature Electronics (2025).
   papers:
-  - closed-loop-optical-decoding
+  - subnanolitre-neural-recording
   - light-adaptive-neural-recording
+  - closed-loop-optical-decoding
+  - vision-servoed-microdevice-injection
   focus:
-  - Optical pulse detection
-  - Clock-reference recovery
-  - Closed-loop decoding
+  - AlGaAs devices for photovoltaic power and optical transmission.
+  - CMOS integration, light shielding, and protective encapsulation.
+  - Chronic neural recording and implant-delivery workflows.
+  result: Subnanolitre implants demonstrated neural recording in awake mice over 365 days.
+  sections:
+  - heading: An integrated neural interface
+    text: A single AlGaAs diode provides photovoltaic power and optical transmission. CMOS circuitry supplies
+      neural amplification, pulse-position-modulated encoding, and the LED drive, bringing sensing and
+      communication into a subnanolitre implant.
+  - heading: Fabrication and biological operation
+    text: Heterogeneous integration connects the CMOS circuitry and optoelectronic device. Patterning,
+      annealing, light shielding, and atomic-layer-deposited encapsulation support operation in biological
+      media. The Nature Electronics work reports chronic recordings in awake mice over a 365-day period.
+  - heading: Optical telemetry as a system method
+    text: Optical readout is part of the implant communication chain. Related work studies adaptive pulse
+      detection, feedback-based threshold control, and clock-reference calibration to recover neural signals
+      when optical pulses are weak or fluctuating.
+  - heading: Delivery and experimental validation
+    text: Collaborative work on vision-servoed microdevice injection combines coarse positioning, autofocus,
+      marker-assisted centering, and pipette alignment. In agarose experiments, the automated workflow
+      reduced delivery time by 47.2% relative to experienced manual injection.

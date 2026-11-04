@@ -1,0 +1,7 @@
+{{ define "main" }}
+<main id="main-content" class="rj-shell rj-activities-page" data-pagefind-body>
+  <div class="rj-page-heading"><h1>Recent activity</h1></div>
+  <p class="rj-activities-intro">Publication milestones and conference updates.</p>
+  {{ partial "research/activities.html" (dict "compact" false) }}
+</main>
+{{ end }}

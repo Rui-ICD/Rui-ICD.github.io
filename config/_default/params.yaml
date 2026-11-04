@@ -19,7 +19,7 @@ hugoblox:
     # Schema.org type for structured data
     type: person # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: "Neural ICs | Optical Power & Telemetry"
+    tagline: "Analog IC Design | Optoelectronic Microsystems"
     # Site meta description for search engines and social sharing
     description: "Rui Jiao is a PhD student in the Lee Group at NTU, researching low-power integrated circuits and optoelectronic microsystems for neural recording."
     # Social accounts (used for meta tags like Twitter Cards)

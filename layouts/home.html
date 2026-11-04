@@ -17,9 +17,16 @@
     </div>
   </section>
 
+  <section class="rj-shell rj-section" id="updates" aria-labelledby="updates-heading">
+    <div class="rj-section-heading"><h2 id="updates-heading">Recent activity</h2><a class="rj-text-link" href="{{ "/activities/" | relURL }}">All updates <span aria-hidden="true">&rarr;</span></a></div>
+    {{ partial "research/activities.html" (dict "compact" true "limit" 4) }}
+  </section>
+
   <section class="rj-shell rj-section" id="research" aria-labelledby="research-heading">
     <div class="rj-section-heading"><h2 id="research-heading">Research</h2></div>
+    <p class="rj-research-overview">{{ index hugo.Data "research-context" "overview" }}</p>
     {{ partial "research/areas.html" . }}
+    {{ partial "research/system-work.html" . }}
   </section>
 
   <section class="rj-shell rj-section" id="papers" aria-labelledby="papers-heading">

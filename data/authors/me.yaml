@@ -6,7 +6,7 @@ name:
   given: Rui
   family: Jiao
 role: PhD student, NTU Singapore
-bio: Neural recording ICs and optical readout.
+bio: Analog and mixed-signal integrated circuits, optoelectronic integration, and autonomous neural interfaces.
 affiliations:
 - name: Nanyang Technological University
   url: https://www.ntu.edu.sg/
@@ -29,8 +29,8 @@ links:
   url: https://orcid.org/0009-0000-6434-9672
   label: ORCID
 interests:
-- Neural Microsystems
-- Optical Readout
+- Analog & Mixed-Signal IC Design
+- Optoelectronic Neural Microsystems
 education:
 - degree: PhD in Electrical and Electronic Engineering
   institution: Nanyang Technological University
@@ -52,5 +52,5 @@ education:
   end: '2021'
   short_degree: BS · Electronic Information Science & Technology
   short_institution: UESTC
-headline: Neural interfaces, powered by light.
+headline: Integrated circuits for bioelectronic systems.
 email: jiao0038@e.ntu.edu.sg
