@@ -5,58 +5,51 @@ name:
   display: Rui Jiao
   given: Rui
   family: Jiao
-role: PhD Student
-bio: |
-  I am a PhD student in Electrical and Electronic Engineering at Nanyang
-  Technological University (NTU), working with Prof. Sunwoo Lee in the Lee Group.
-  My research focuses on microelectronics, low-power integrated circuits, and
-  optoelectronic microsystems for neural recording.
-
-  I received my B.S. in Electronic Information Science and Technology from the
-  University of Electronic Science and Technology of China (UESTC) in 2021, and
-  a joint M.S. in Integrated Circuit Design from the Technical University of
-  Munich (TUM) and NTU in 2023.
-
+role: PhD Student · NTU Singapore
+bio: Analog circuit design, optical energy harvesting, and signal recovery for miniature neural implants.
 affiliations:
-  - name: Nanyang Technological University
-    url: https://www.ntu.edu.sg/
-  - name: Lee Group
-    url: https://blogs.ntu.edu.sg/sunwoo/
-
+- name: Nanyang Technological University
+  url: https://www.ntu.edu.sg/
+- name: Lee Group
+  url: https://blogs.ntu.edu.sg/sunwoo/
 links:
-  - icon: hero/globe-alt
-    url: https://blogs.ntu.edu.sg/sunwoo/people/
-    label: Lee Group Profile
-  - icon: brands/github
-    url: https://github.com/Rui-ICD
-    label: GitHub
-  - icon: academicons/ieee
-    url: https://ieeexplore.ieee.org/author/657536981182338
-    label: IEEE Xplore
-  - icon: academicons/orcid
-    url: https://orcid.org/0009-0000-6434-9672
-    label: ORCID
-
+- icon: hero/envelope
+  url: mailto:jiao0038@e.ntu.edu.sg
+  label: Email
+- icon: hero/globe-alt
+  url: https://blogs.ntu.edu.sg/sunwoo/people/
+  label: Lee Group Profile
+- icon: brands/github
+  url: https://github.com/Rui-ICD
+  label: GitHub
+- icon: academicons/ieee
+  url: https://ieeexplore.ieee.org/author/657536981182338
+  label: IEEE Xplore
+- icon: academicons/orcid
+  url: https://orcid.org/0009-0000-6434-9672
+  label: ORCID
 interests:
-  - Low-Power Integrated Circuits
-  - Optoelectronic Microsystems
-  - Bioelectronic Sensing
-  - Tetherless Neural Recording
-
+- Optically Powered Neural ICs
+- Light-Aware Analog Circuit Design
+- Optical Telemetry & Signal Recovery
 education:
-  - degree: PhD in Electrical and Electronic Engineering
-    institution: Nanyang Technological University
-    year: '2023–present'
-    start: '2023'
-    summary: |
-      Research in microelectronics with Prof. Sunwoo Lee in the Lee Group.
-  - degree: Joint MS in Integrated Circuit Design
-    institution: Technical University of Munich & Nanyang Technological University
-    year: '2023'
-    end: '2023'
-    summary: |
-      Joint master's degree awarded by TUM and NTU.
-  - degree: BS in Electronic Information Science and Technology
-    institution: University of Electronic Science and Technology of China
-    year: '2021'
-    end: '2021'
+- degree: PhD in Electrical and Electronic Engineering
+  institution: Nanyang Technological University
+  year: 2023–present
+  start: '2023'
+  summary: 'Research in microelectronics with Prof. Sunwoo Lee in the Lee Group.
+
+    '
+- degree: Joint MS in Integrated Circuit Design
+  institution: Technical University of Munich & Nanyang Technological University
+  year: '2023'
+  end: '2023'
+  summary: 'Joint master''s degree awarded by TUM and NTU.
+
+    '
+- degree: BS in Electronic Information Science and Technology
+  institution: University of Electronic Science and Technology of China
+  year: '2021'
+  end: '2021'
+headline: Neural recording circuits that harvest light and communicate optically.
+email: jiao0038@e.ntu.edu.sg

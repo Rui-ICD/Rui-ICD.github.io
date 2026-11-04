@@ -1,0 +1,71 @@
+{{ define "main" }}
+{{ $profile := hugo.Data.authors.me }}
+<main id="main-content" class="rj-home" data-pagefind-body>
+  <section class="rj-shell rj-hero" id="about" aria-labelledby="profile-name">
+    <div class="rj-hero-copy">
+      <p class="rj-eyebrow">{{ $profile.role }}</p>
+      <h1 id="profile-name">{{ $profile.name.display }}</h1>
+      <p class="rj-headline">{{ $profile.headline }}</p>
+      <p class="rj-affiliation"><a href="https://blogs.ntu.edu.sg/sunwoo/">Lee Group</a><span> / </span>Electrical &amp; Electronic Engineering</p>
+      <div class="rj-profile-links" aria-label="Academic profiles">
+        {{ range $profile.links }}<a href="{{ .url | safeURL }}">{{ .label }} <span aria-hidden="true">↗</span></a>{{ end }}
+      </div>
+    </div>
+    {{ with resources.Get "media/authors/me.png" }}
+    {{ $avatar := .Resize "360x webp q90" }}
+    <img class="rj-avatar" src="{{ $avatar.RelPermalink }}" width="180" height="180" alt="Profile portrait" fetchpriority="high">
+    {{ end }}
+  </section>
+
+  <section class="rj-shell rj-section" id="research" aria-labelledby="research-heading">
+    <div class="rj-section-heading">
+      <div><p class="rj-eyebrow">Research</p><h2 id="research-heading">Circuits. Light. Neural signals.</h2></div>
+      <p class="rj-section-note">Device physics, circuit design, and the signals between them.</p>
+    </div>
+    <div class="rj-research-grid">
+      {{ range hugo.Data.research }}
+      {{ $track := . }}
+      <article class="rj-research-card">
+        <a class="rj-research-visual{{ if .photo }} rj-research-photo{{ end }}" href="{{ .paper | relURL }}" aria-label="Read about {{ .title }}">
+          {{ with resources.Get .image }}
+          {{ $image := .Fit "1100x700 webp q86" }}
+          <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $track.alt }}" loading="lazy" decoding="async">
+          {{ end }}
+          <span class="rj-image-label">{{ .metric }}</span>
+        </a>
+        <div class="rj-research-copy">
+          <p class="rj-card-label">{{ .label }}</p>
+          <h3><a href="{{ .paper | relURL }}">{{ .title }}</a></h3>
+          <p>{{ .description }}</p>
+          <a class="rj-paper-link" href="{{ .paper | relURL }}">{{ .venue }} <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="rj-shell rj-section" id="papers" aria-labelledby="papers-heading">
+    <div class="rj-section-heading">
+      <div><p class="rj-eyebrow">Publications</p><h2 id="papers-heading">Papers &amp; proceedings</h2></div>
+      <a class="rj-text-link" href="{{ "/publications/" | relURL }}">Browse all publications <span aria-hidden="true">↗</span></a>
+    </div>
+    {{ partial "research/publications.html" (dict "pages" (where site.RegularPages "Section" "publications") "compact" true) }}
+  </section>
+
+  <section class="rj-shell rj-section rj-education-section" id="education" aria-labelledby="education-heading">
+    <div><p class="rj-eyebrow">Background</p><h2 id="education-heading">Education</h2></div>
+    <ol class="rj-education-list">
+      {{ range $profile.education }}
+      <li><span class="rj-education-year">{{ .year }}</span><div><h3>{{ .degree }}</h3><p>{{ .institution }}</p></div></li>
+      {{ end }}
+    </ol>
+  </section>
+
+  <section class="rj-contact" id="contact" aria-labelledby="contact-heading">
+    <div class="rj-shell rj-contact-inner">
+      <div><p class="rj-eyebrow">Contact</p><h2 id="contact-heading">Get in touch.</h2></div>
+      <a class="rj-email" href="mailto:{{ $profile.email }}">{{ $profile.email }} <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>
+{{ end }}

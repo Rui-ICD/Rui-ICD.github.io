@@ -19,7 +19,7 @@ hugoblox:
     # Schema.org type for structured data
     type: person # person | organization | local_business
     # Short tagline displayed on your site
-    tagline: "PhD Student | Microelectronics & Neural Interfaces"
+    tagline: "Neural ICs | Optical Power & Telemetry"
     # Site meta description for search engines and social sharing
     description: "Rui Jiao is a PhD student in the Lee Group at NTU, researching low-power integrated circuits and optoelectronic microsystems for neural recording."
     # Social accounts (used for meta tags like Twitter Cards)
@@ -32,7 +32,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   theme:
     # Mode: 'light', 'dark', or 'system' (follows OS preference)
-    mode: system
+    mode: light
     # Theme pack: name from data/themes/ or { light: "x", dark: "y" } for mix-and-match
     pack: "default"
     # Optional: Override theme pack colors
@@ -60,7 +60,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   typography:
     # Theme pack: name from data/fonts/
-    pack: "academic"
+    pack: "modern"
 
   # ────────────────────────────────────────────────────────────────────────────
   # LAYOUT
@@ -81,16 +81,16 @@ hugoblox:
   header:
     enable: true
     # Header style variant
-    style: navbar # navbar | navbar-simple | minimal
+    style: research # Custom academic navigation
     # Stick to top on scroll
     sticky: true
     # Menu alignment
     align: center # left | center | right
     # Feature toggles
     search: true
-    theme_toggle: true
-    theme_picker: true
-    language_switcher: true
+    theme_toggle: false
+    theme_picker: false
+    language_switcher: false
     # Call-to-action button
     cta:
       enable: false
@@ -103,8 +103,8 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   footer:
     # Footer style variant
-    style: minimal # minimal | columns | centered
-    language_switcher: true
+    style: research # Custom academic footer
+    language_switcher: false
     # Custom footer text (HTML supported)
     text: ""
 

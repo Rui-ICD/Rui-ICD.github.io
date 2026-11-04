@@ -1,0 +1,24 @@
+- file: assets/media/research/neural-implant.jpg
+  source_url: https://hanson-zheng.github.io/project/tetherless-neural-recording/MOTE_in_Pipette.jpg
+  doi: 10.1038/s41928-025-01484-1
+  source: Public research materials shared by co-author Yumin Zheng. Original figures retained.
+- file: assets/media/research/neural-recordings.png
+  source_url: https://hanson-zheng.github.io/project/tetherless-neural-recording/Result_MOTE_AP.png
+  doi: 10.1038/s41928-025-01484-1
+  source: Public research materials shared by co-author Yumin Zheng. Original figures retained.
+- file: assets/media/research/fb-mote-die.jpg
+  source_url: https://hanson-zheng.github.io/project/fb-mote/images/fig-19-cmos-die.jpg
+  doi: 10.1109/TBCAS.2026.3652195
+  source: Public research materials shared by co-author Yumin Zheng. Original figures retained.
+- file: assets/media/research/fb-mote-signal-chain.jpg
+  source_url: https://hanson-zheng.github.io/project/fb-mote/images/fig-03-signal-chain.jpg
+  doi: 10.1109/TBCAS.2026.3652195
+  source: Public research materials shared by co-author Yumin Zheng. Original figures retained.
+- file: assets/media/research/optical-decoding.png
+  source_url: https://hanson-zheng.github.io/project/optical-ppm-decoding/images/poster-decoding-workflow.png
+  doi: 10.1109/ICASSP55912.2026.11462355
+  source: Public research materials shared by co-author Yumin Zheng. Original figures retained.
+- file: assets/media/research/microdevice-workflow.png
+  source_url: https://hanson-zheng.github.io/project/microdevice-injection/images/fig-01-automated-workflow.png
+  doi: 10.1109/ICRA57385.2026.11697121
+  source: Public research materials shared by co-author Yumin Zheng. Original figures retained.

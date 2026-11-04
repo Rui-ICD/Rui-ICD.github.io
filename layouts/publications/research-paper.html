@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ $paper := . }}
+{{ $doi := .Params.hugoblox.ids.doi }}
+<main id="main-content" class="rj-shell rj-paper-page" data-pagefind-body>
+  <a class="rj-back" href="{{ "/publications/" | relURL }}">← All publications</a>
+  <div class="rj-publication-meta"><span class="rj-venue">{{ .Params.publication.short_name }}</span><span>{{ .Date.Format "2006" }}</span><span class="rj-published">Published</span></div>
+  <h1>{{ .Title }}</h1>
+  {{ partial "research/authors.html" .Params.authors }}
+  <p class="rj-publication-citation">{{ .Params.publication.name }}{{ with .Params.publication.volume }}, {{ . }}{{ end }}{{ with .Params.publication.issue }}({{ . }}){{ end }}{{ with .Params.publication.pages }}, pp. {{ . }}{{ end }}.</p>
+  <div class="rj-paper-actions"><a class="rj-button" href="https://doi.org/{{ $doi }}">Read the paper ↗</a>{{ with .Resources.GetMatch "cite.bib" }}<a class="rj-button rj-button-secondary" href="{{ .RelPermalink }}" download>Download BibTeX ↓</a>{{ end }}</div>
+  {{ with .Params.author_notes }}<p class="rj-paper-contribution">Rui Jiao and Yumin Zheng contributed equally to this work.</p>{{ end }}
+  <figure class="rj-paper-figure">
+    {{ with resources.Get .Params.visual.image }}
+    {{ $image := .Fit "1500x1000 webp q90" }}
+    <a href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $paper.Params.visual.alt }}"></a>
+    {{ end }}
+    <figcaption>{{ .Params.visual.credit | default .Params.visual.alt }}. <a href="https://doi.org/{{ .Params.visual.source_doi | default $doi }}">Image source ↗</a></figcaption>
+  </figure>
+  <div class="rj-paper-body">{{ .Content }}</div>
+  {{ range .Params.figures }}
+  {{ $figure := . }}
+  <figure class="rj-paper-figure">
+    {{ with resources.Get .image }}
+    {{ $image := .Fit "1500x1000 webp q90" }}
+    <a href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $figure.alt }}" loading="lazy" decoding="async"></a>
+    {{ end }}
+    <figcaption>{{ .caption }} <a href="https://doi.org/{{ .doi }}">Image source ↗</a></figcaption>
+  </figure>
+  {{ end }}
+  <p class="rj-paper-doi">DOI: <a href="https://doi.org/{{ $doi }}">{{ $doi }}</a></p>
+</main>
+{{ end }}

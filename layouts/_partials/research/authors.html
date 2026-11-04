@@ -1,0 +1,15 @@
+{{ $authors := . }}
+{{ $long := gt (len $authors) 12 }}
+{{ if $long }}<details class="rj-author-details"><summary>{{ end }}
+<span class="rj-authors">
+  {{- range $i, $name := $authors -}}
+    {{- if or (not $long) (lt $i 3) (eq $name "me") (eq $i (sub (len $authors) 1)) -}}
+      {{- if gt $i 0 }}<span class="rj-author-separator">, </span>{{ end -}}
+      {{- if and $long (or (eq $name "me") (eq $i (sub (len $authors) 1))) }}<span>… </span>{{ end -}}
+      {{- if eq $name "me" }}<strong>{{ hugo.Data.authors.me.name.display }}</strong>{{ else }}<span>{{ $name }}</span>{{ end -}}
+    {{- end -}}
+  {{- end -}}
+</span>
+{{ if $long }}<span class="rj-author-count">All {{ len $authors }} authors</span></summary>
+<p class="rj-authors rj-authors-full">{{ range $i, $name := $authors }}{{ if gt $i 0 }}, {{ end }}{{ if eq $name "me" }}<strong>{{ hugo.Data.authors.me.name.display }}</strong>{{ else }}{{ $name }}{{ end }}{{ end }}</p>
+</details>{{ end }}

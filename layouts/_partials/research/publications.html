@@ -1,0 +1,40 @@
+{{ $papers := .pages.ByDate.Reverse }}
+<div class="rj-publications{{ if .compact }} rj-publications-compact{{ end }}" data-publications>
+  {{ if not .compact }}
+  <div class="rj-publication-toolbar">
+    <div class="rj-filters" role="group" aria-label="Filter publication type">
+      <button type="button" class="is-active" data-filter="all" aria-pressed="true">All <span>{{ len $papers }}</span></button>
+      <button type="button" data-filter="article-journal" aria-pressed="false">Journals</button>
+      <button type="button" data-filter="paper-conference" aria-pressed="false">Conferences</button>
+    </div>
+    <label class="rj-publication-search"><span class="rj-visually-hidden">Search publications</span><input type="search" placeholder="Search publications…" data-paper-search autocomplete="off"></label>
+  </div>
+  <p class="rj-search-status rj-visually-hidden" role="status" aria-live="polite" data-paper-status></p>
+  {{ end }}
+  <div class="rj-publication-list">
+    {{ range $papers }}
+    {{ $paper := . }}
+    {{ $doi := .Params.hugoblox.ids.doi }}
+    <article class="rj-publication" data-paper data-kind="{{ index .Params.publication_types 0 }}" data-search="{{ printf "%s %s %s %s" .Title (delimit .Params.authors " ") .Params.publication.name "Rui Jiao" | lower }}">
+      <a class="rj-publication-visual" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+        {{ with resources.Get .Params.visual.image }}
+        {{ $image := .Fit "500x360 webp q82" }}
+        <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="" loading="lazy" decoding="async">
+        {{ end }}
+      </a>
+      <div class="rj-publication-copy">
+        <div class="rj-publication-meta"><span class="rj-venue">{{ .Params.publication.short_name }}</span><span>{{ .Date.Format "2006" }}</span><span class="rj-published">Published</span></div>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ partial "research/authors.html" .Params.authors }}
+        <p class="rj-publication-citation">{{ .Params.publication.name }}{{ with .Params.publication.volume }}, {{ . }}{{ end }}{{ with .Params.publication.issue }}({{ . }}){{ end }}{{ with .Params.publication.pages }}, pp. {{ . }}{{ end }}.</p>
+        <div class="rj-publication-actions">
+          <a href="https://doi.org/{{ $doi }}">Paper <span aria-hidden="true">↗</span></a>
+          {{ with .Resources.GetMatch "cite.bib" }}<a href="{{ .RelPermalink }}" download>BibTeX <span aria-hidden="true">↓</span></a>{{ end }}
+          {{ with .Params.author_notes }}<span class="rj-contribution">Rui Jiao &amp; Yumin Zheng contributed equally.</span>{{ end }}
+        </div>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  <p class="rj-empty" data-paper-empty hidden>No publications match your search.</p>
+</div>

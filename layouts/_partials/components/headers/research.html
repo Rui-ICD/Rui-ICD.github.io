@@ -1,0 +1,12 @@
+{{ if or .IsHome (eq .Section "publications") }}<a class="rj-skip" href="#main-content">Skip to content</a>{{ end }}
+<header class="rj-header">
+  <nav class="rj-shell rj-nav" aria-label="Main navigation">
+    <a class="rj-wordmark" href="{{ "/" | relURL }}">Rui Jiao<span>NTU Singapore</span></a>
+    <div class="rj-nav-links">
+      {{ range site.Menus.main }}
+      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+      <a class="rj-nav-contact" href="{{ "/#contact" | relURL }}">Contact <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+</header>

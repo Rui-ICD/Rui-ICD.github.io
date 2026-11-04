@@ -1,0 +1,34 @@
+- title: Circuits that run on light
+  label: 01 / CIRCUITS
+  description: Forward-bulk CMOS, photovoltaic power harvesting, and amplifiers that adapt to available
+    illumination.
+  image: media/research/fb-mote-die.jpg
+  alt: A 43 by 269 micrometre FB-MOTE unit and its CMOS circuit layout
+  paper: /publications/light-adaptive-neural-recording/
+  venue: IEEE TBioCAS, 2026
+  metric: 43 × 269 μm
+  credit: Jiao et al., IEEE TBioCAS 20(2), Fig. 19.
+  doi: 10.1109/TBCAS.2026.3652195
+- title: Neural interfaces without tethers
+  label: 02 / MICROSYSTEMS
+  description: Photovoltaic power and optical data transmission in subnanolitre implants for chronic neural
+    recording.
+  image: media/research/neural-implant.jpg
+  alt: A microscopic MOTE implant inside a glass pipette with grains of salt for scale
+  paper: /publications/subnanolitre-neural-recording/
+  venue: Nature Electronics, 2025
+  metric: Subnanolitre implants
+  credit: Lee et al., Nature Electronics 8, 2025.
+  doi: 10.1038/s41928-025-01484-1
+  photo: true
+- title: From optical pulses to neural signals
+  label: 03 / TELEMETRY
+  description: Closed-loop pulse detection and clock-reference recovery for optical uplinks with weak,
+    varying signals.
+  image: media/research/optical-decoding.png
+  alt: PPM decoding workflow with threshold initialization, feedback control, and reference calibration
+  paper: /publications/closed-loop-optical-decoding/
+  venue: IEEE ICASSP, 2026
+  metric: Timing-guided decoding
+  credit: Zheng, Jiao & Lee, ICASSP 2026; author poster.
+  doi: 10.1109/ICASSP55912.2026.11462355
