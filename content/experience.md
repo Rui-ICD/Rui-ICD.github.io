@@ -1,5 +1,5 @@
 ---
-title: 'Education'
+title: 'Experience & Education'
 type: landing
 
 design:

@@ -31,6 +31,15 @@ links:
 interests:
 - Analog & Mixed-Signal IC Design
 - Optoelectronic Neural Microsystems
+experience:
+- role: RF / Analog Intern
+  org: MediaTek
+  start: '2022-07'
+  end: '2023-04'
+  period: Jul 2022 – Apr 2023
+  # 加入这张照片后，首页会自动显示。PNG 照片请修改后缀。
+  image: media/experience/mediatek-2022-2023.jpg
+  image_alt: Photo from the MediaTek internship
 education:
 - degree: PhD in Electrical and Electronic Engineering
   institution: Nanyang Technological University

@@ -34,6 +34,13 @@
     {{ partial "research/publications.html" (dict "pages" (where site.RegularPages "Section" "publications") "compact" true) }}
   </section>
 
+  {{ with $profile.experience }}
+  <section class="rj-shell rj-section rj-industry-section" id="industry" aria-labelledby="industry-heading">
+    <div class="rj-section-heading"><h2 id="industry-heading">Industry experience</h2></div>
+    {{ partial "research/industry.html" . }}
+  </section>
+  {{ end }}
+
   <section class="rj-shell rj-section rj-education-section" id="education" aria-labelledby="education-heading">
     <h2 id="education-heading">Education</h2>
     <ol class="rj-education-list">
