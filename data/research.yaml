@@ -1,6 +1,8 @@
 - slug: neural-microsystems
   url: /projects/analog-mixed-signal-ics/
   title: Analog & mixed-signal IC design
+  home_title: Analog & mixed-signal ICs
+  home_summary: Neural amplification, optical powering, and pulse encoding.
   description: Analog front ends, bias circuits, and optical encoders for neural recording.
   image: media/research/fb-mote-die.jpg
   alt: FB-MOTE CMOS die, recording-unit pad map, and annotated circuit layout
@@ -35,6 +37,8 @@
 - slug: optical-readout
   url: /projects/optoelectronic-neural-microsystems/
   title: Optoelectronic neural microsystems
+  home_title: Optoelectronic microsystems
+  home_summary: CMOS–optoelectronic integration for chronic neural recording.
   description: Autonomous neural implants combining CMOS circuitry and optoelectronic devices.
   image: media/research/neural-implant-ant.png
   alt: A tiny MOTE microsystem inside a glass micropipette, shown beside an ant head for scale

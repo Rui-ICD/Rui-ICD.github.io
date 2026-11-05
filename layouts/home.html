@@ -11,11 +11,27 @@
       <p class="rj-role">{{ $profile.role }}</p>
       <p class="rj-focus">{{ $profile.headline }}</p>
       <p class="rj-group"><a href="https://blogs.ntu.edu.sg/sunwoo/">Lee Group</a> &middot; Electrical &amp; Electronic Engineering</p>
+      <p class="rj-home-bio">{{ hugo.Data.home.bio }}</p>
       <div class="rj-profile-links" aria-label="Academic profiles">
-        {{ range $profile.links }}{{ if ne .label "Lee Group Profile" }}<a href="{{ .url | safeURL }}">{{ if eq .label "IEEE Xplore" }}IEEE{{ else }}{{ .label }}{{ end }}</a>{{ end }}{{ end }}
+        {{ range $profile.links }}{{ if not (in (slice "Lee Group Profile" "GitHub" "IEEE Xplore") .label) }}<a href="{{ .url | safeURL }}">{{ .label }}</a>{{ end }}{{ end }}
       </div>
     </div>
   </section>
-
+  <div class="rj-shell rj-home-overview">
+    <section aria-labelledby="home-focus-heading">
+      <div class="rj-home-section-heading"><h2 id="home-focus-heading">Research focus</h2></div>
+      <div class="rj-home-projects">
+        {{ range hugo.Data.research }}<article><h3><a href="{{ .url | relURL }}">{{ .home_title }}</a></h3><p>{{ .home_summary }}</p></article>{{ end }}
+      </div>
+      <a class="rj-text-link" href="{{ "/projects/" | relURL }}">Explore projects &rarr;</a>
+    </section>
+    <section aria-labelledby="home-recent-heading">
+      <div class="rj-home-section-heading"><h2 id="home-recent-heading">Recent</h2></div>
+      <ol class="rj-home-news">
+        {{ range hugo.Data.home.news }}<li><time datetime="{{ .month }}">{{ time.Format "Jan 2006" (printf "%s-01" .month) }}</time><a href="{{ .url | relURL }}">{{ .text }}</a></li>{{ end }}
+      </ol>
+      <a class="rj-text-link" href="{{ "/highlights/" | relURL }}">More highlights &rarr;</a>
+    </section>
+  </div>
 </main>
 {{ end }}

@@ -9,10 +9,10 @@
       <div><h3>{{ .title }}</h3><p>{{ .institution }}</p></div>
     </div>
     {{ with $photo }}
-    {{ $display := .Fit "1200x900 webp q90" }}
+    {{ $display := .Fit "640x420 webp q90" }}
     <figure class="rj-award-figure">
-      <a class="rj-award-photo" href="{{ .RelPermalink }}" aria-label="View the {{ $award.title }} award photo"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $award.image_alt }}" loading="lazy" decoding="async"></a>
-      <figcaption>{{ $award.caption }}</figcaption>
+      <a class="rj-award-photo" href="{{ .RelPermalink }}" aria-label="View full photo: {{ $award.title }}, {{ $award.year }}" title="{{ $award.caption }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $award.image_alt }}" loading="lazy" decoding="async"></a>
+      <figcaption class="rj-visually-hidden">{{ $award.caption }}</figcaption>
     </figure>
     {{ end }}
   </article>

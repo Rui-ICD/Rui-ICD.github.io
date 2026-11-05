@@ -1,6 +1,6 @@
 ---
 title: Highlights
-summary: Awards, scholarships, conference moments, and research presentations.
+summary: Awards, conference moments, and research presentations.
 aliases:
   - /activities/
 ---

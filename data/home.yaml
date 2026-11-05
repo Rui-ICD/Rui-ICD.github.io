@@ -1,0 +1,13 @@
+bio: Working with Prof. Sunwoo Lee on microelectronics for neural interfaces. Previously an RF / Analog Intern at MediaTek.
+
+# 首页只显示简短近况，详细内容链接到各分页。
+news:
+- month: '2026-06'
+  text: ICRA 2026 in Vienna.
+  url: /highlights/#icra-2026
+- month: '2026-05'
+  text: Poster presentation at ICASSP 2026 in Barcelona.
+  url: /highlights/#icassp-2026
+- month: '2026-04'
+  text: Light-adaptive neural recording IC published in IEEE TBioCAS.
+  url: /publications/light-adaptive-neural-recording/
