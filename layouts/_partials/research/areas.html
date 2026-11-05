@@ -2,17 +2,17 @@
   {{ range hugo.Data.research }}
   {{ $area := . }}
   <article class="rj-area">
-    <a class="rj-area-image" href="{{ printf "/research/%s/" .slug | relURL }}" aria-label="Read about {{ .title }}">
+    <a class="rj-area-image" href="{{ .url | relURL }}" aria-label="Read about {{ .title }}">
       {{ with resources.Get .image }}{{ $image := .Fit "1100x850 webp q90" }}
       <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}" loading="lazy" decoding="async">
       {{ end }}
     </a>
     <div class="rj-area-copy">
-      <h3><a href="{{ printf "/research/%s/" .slug | relURL }}">{{ .title }}</a></h3>
+      <h3><a href="{{ .url | relURL }}">{{ .title }}</a></h3>
       <p>{{ .description }}</p>
       <ul class="rj-area-work">{{ range .focus }}<li>{{ . }}</li>{{ end }}</ul>
       <p class="rj-area-result">{{ .result }}</p>
-      <a class="rj-text-link" href="{{ printf "/research/%s/" .slug | relURL }}">Research details <span aria-hidden="true">&rarr;</span></a>
+      <a class="rj-text-link" href="{{ .url | relURL }}">Project details <span aria-hidden="true">&rarr;</span></a>
     </div>
   </article>
   {{ end }}

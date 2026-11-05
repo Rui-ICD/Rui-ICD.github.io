@@ -21,11 +21,13 @@ a:hover { color: var(--rj-accent); }
 .rj-header { background: var(--rj-paper); }
 .rj-nav { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-bottom: 1px solid var(--rj-line); }
 .rj-wordmark { color: var(--rj-ink); font: 600 21px/1.2 var(--rj-heading); letter-spacing: -.025em; }
-.rj-nav-links { display: flex; align-items: center; gap: 34px; font-size: 16px; }
+.rj-nav-links { display: flex; align-items: center; gap: 28px; font-size: 16px; }
 .rj-nav-links a { color: var(--rj-text); }
 .rj-nav-links a:hover { color: var(--rj-accent); }
+.rj-nav-links a[aria-current="page"] { color: var(--rj-accent); font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
 .rj-skip { position: fixed; z-index: 100; left: 16px; top: -65px; padding: 10px 16px; background: white; border: 1px solid var(--rj-accent); }
 .rj-skip:focus { top: 12px; }
+.rj-home { min-height: calc(100svh - 220px); display: grid; align-items: center; }
 .rj-hero { display: grid; grid-template-columns: 280px minmax(0,1fr); align-items: center; gap: 56px; padding-block: 56px 64px; }
 .rj-portrait { width: 280px; border-radius: 6px; overflow: hidden; }
 .rj-portrait img { display: block; width: 100%; height: auto; }
@@ -39,7 +41,7 @@ a:hover { color: var(--rj-accent); }
 .rj-profile-links a:hover { text-decoration: underline; }
 .rj-section { padding-block: 38px 46px; border-top: 1px solid var(--rj-line); }
 .rj-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
-.rj-section h2, .rj-topic-page h2 { font: 600 30px/1.3 var(--rj-heading); letter-spacing: -.025em; margin: 0; }
+.rj-section h2, .rj-topic-page h2, .rj-content-section h2 { font: 600 30px/1.3 var(--rj-heading); letter-spacing: -.025em; margin: 0; }
 .rj-text-link { display: inline-flex; align-items: baseline; gap: 10px; color: var(--rj-accent); font-size: 16px; }
 .rj-text-link:hover { text-decoration: underline; }
 .rj-areas { display: grid; gap: 42px; }
@@ -190,11 +192,6 @@ a:hover { color: var(--rj-accent); }
 .rj-area-work li + li { margin-top: 6px; }
 .rj-area-copy > .rj-area-result { color: var(--rj-ink); font-size: 17px; font-weight: 500; line-height: 1.7; max-width: none; margin-bottom: 20px; }
 .rj-area-image { background: #fff; }
-.rj-system-work { margin-top: 34px; padding: 30px 0 0; }
-.rj-system-work > h3 { color: var(--rj-ink); font: 600 25px/1.4 var(--rj-heading); letter-spacing: -.03em; margin: 0 0 21px; }
-.rj-system-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
-.rj-system-work h4 { color: var(--rj-ink); font-size: 19px; font-weight: 600; margin: 0 0 9px; }
-.rj-system-work p { color: var(--rj-text); font-size: 17px; line-height: 1.8; margin: 0 0 14px; }
 .rj-topic-sections { color: var(--rj-text); font-size: 18px; line-height: 1.85; margin: 34px 0 46px; }
 .rj-topic-sections section + section { margin-top: 30px; }
 .rj-topic-sections h2 { color: var(--rj-ink); font-size: 25px; margin-bottom: 12px; }
@@ -236,17 +233,39 @@ a:hover { color: var(--rj-accent); }
 .rj-industry-photo { display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; background: #fcf8f2; border: 1px solid var(--rj-line); border-radius: 6px; overflow: hidden; }
 .rj-industry-photo img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .rj-industry-figure figcaption { color: var(--rj-muted); font-size: 15px; line-height: 1.6; margin-top: 9px; }
-@media (max-width: 380px) {
-  .rj-nav { flex-wrap: wrap; padding-block: 15px; row-gap: 12px; }
-  .rj-nav-links { width: 100%; justify-content: space-between; }
+.rj-background-page, .rj-highlights-page { padding-block: 55px 65px; }
+.rj-page-intro { color: var(--rj-text); font-size: 19px; line-height: 1.7; margin: -14px 0 30px; }
+.rj-content-section { border-top: 1px solid var(--rj-line); padding-block: 34px 44px; }
+.rj-content-section:last-child { padding-bottom: 0; }
+.rj-section-nav { display: flex; flex-wrap: wrap; gap: 12px 28px; color: var(--rj-accent); font-size: 17px; margin: -5px 0 30px; }
+.rj-section-nav a:hover { text-decoration: underline; }
+.rj-awards { display: grid; }
+.rj-award { display: grid; align-items: center; gap: 36px; min-width: 0; }
+.rj-award + .rj-award { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rj-line); }
+.rj-award-with-photo { grid-template-columns: 1fr 1fr; }
+.rj-award-copy { display: grid; grid-template-columns: 80px minmax(0,1fr); gap: 24px; }
+.rj-award-year { color: var(--rj-accent); font-size: 17px; padding-top: 4px; }
+.rj-award-copy h3 { color: var(--rj-ink); font: 600 23px/1.45 var(--rj-heading); letter-spacing: -.02em; margin: 0 0 7px; }
+.rj-award-copy p { color: var(--rj-text); font-size: 17px; line-height: 1.7; margin: 0; }
+.rj-award-figure { min-width: 0; margin: 0; }
+.rj-award-photo { display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; background: #fcf8f2; border: 1px solid var(--rj-line); border-radius: 6px; overflow: hidden; }
+.rj-award-photo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.rj-award-figure figcaption { color: var(--rj-muted); font-size: 15px; line-height: 1.6; margin-top: 9px; }
+@media (max-width: 760px) {
+  .rj-nav { flex-wrap: wrap; padding-block: 18px; gap: 18px; }
+  .rj-nav-links { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 12px 24px; }
 }
 @media (max-width: 640px) {
+  .rj-background-page, .rj-highlights-page { padding-block: 30px 45px; }
+  .rj-content-section { padding-block: 28px 34px; }
+  .rj-award-with-photo { grid-template-columns: 1fr; gap: 22px; }
+  .rj-award-copy { grid-template-columns: 52px minmax(0,1fr); gap: 18px; }
+  .rj-award-copy h3 { font-size: 21px; }
   .rj-industry-with-photo { grid-template-columns: 1fr; gap: 24px; }
   .rj-event-grid { grid-template-columns: 1fr; gap: 38px; }
   .rj-event-meta { font-size: 15px; column-gap: 14px; }
   .rj-activity-list > li { grid-template-columns: 1fr; gap: 7px; padding-block: 23px; }
   .rj-activity-compact > li { gap: 5px; padding-block: 12px; }
-  .rj-system-work-grid { grid-template-columns: 1fr; gap: 26px; }
   .rj-research-overview { font-size: 18px; }
   .rj-activities-page { padding-block: 30px 50px; }
 }

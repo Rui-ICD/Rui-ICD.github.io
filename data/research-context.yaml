@@ -1,13 +1,2 @@
 overview: Integrated circuits and microsystems for neural interfaces, connecting transistor-level design,
   optoelectronic integration, and experimental validation.
-methods:
-- title: Neural signal recovery
-  text: Feedback-based pulse detection and reference-clock calibration support optical telemetry. The
-    ICASSP evaluation reports a 24% reduction in total system power requirement.
-  paper: /publications/closed-loop-optical-decoding/
-  link_label: ICASSP 2026
-- title: Implant-delivery workflows
-  text: Vision-guided positioning, autofocus, and pipette alignment support microdevice delivery. The
-    ICRA agarose experiments report 47.2% shorter delivery time.
-  paper: /publications/vision-servoed-microdevice-injection/
-  link_label: ICRA 2026

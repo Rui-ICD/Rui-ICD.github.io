@@ -41,7 +41,8 @@ enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-disableAliases: true
+# Generate HTML redirects for old URLs on GitHub Pages.
+disableAliases: false
 outputs:
   home: [HTML, RSS, headers, redirects, backlinks]
   section: [HTML, RSS]

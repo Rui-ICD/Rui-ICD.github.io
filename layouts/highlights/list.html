@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main id="main-content" class="rj-shell rj-highlights-page" data-pagefind-body>
+  <div class="rj-page-heading"><h1>Highlights</h1></div>
+  <p class="rj-page-intro">Awards, scholarships, and conference moments.</p>
+  <nav class="rj-section-nav" aria-label="Highlights sections"><a href="#awards">Awards &amp; scholarships</a><a href="#conferences">Conferences &amp; talks</a></nav>
+  <section class="rj-content-section" id="awards" aria-labelledby="awards-heading">
+    <div class="rj-section-heading"><h2 id="awards-heading">Awards &amp; scholarships</h2></div>
+    {{ partial "research/awards.html" . }}
+  </section>
+  <section class="rj-content-section" id="conferences" aria-labelledby="conferences-heading">
+    <div class="rj-section-heading"><h2 id="conferences-heading">Conferences &amp; talks</h2></div>
+    {{ partial "research/activities.html" (dict "compact" false) }}
+  </section>
+</main>
+{{ end }}

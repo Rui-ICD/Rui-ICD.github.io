@@ -1,8 +1,0 @@
-<section class="rj-system-work" aria-labelledby="system-work-heading">
-  <h3 id="system-work-heading">System methods &amp; validation</h3>
-  <div class="rj-system-work-grid">
-    {{ range index hugo.Data "research-context" "methods" }}
-    <article><h4>{{ .title }}</h4><p>{{ .text }}</p><a class="rj-text-link" href="{{ .paper | relURL }}">{{ .link_label }} &rarr;</a></article>
-    {{ end }}
-  </div>
-</section>

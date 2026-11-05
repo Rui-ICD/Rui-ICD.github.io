@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ $profile := hugo.Data.authors.me }}
+<main id="main-content" class="rj-shell rj-background-page" data-pagefind-body>
+  <div class="rj-page-heading"><h1>Background</h1></div>
+  <p class="rj-page-intro">Education and industry experience.</p>
+  <section class="rj-content-section" id="education" aria-labelledby="education-heading">
+    <div class="rj-section-heading"><h2 id="education-heading">Education</h2></div>
+    <ol class="rj-education-list">
+      {{ range $profile.education }}
+      <li><span class="rj-education-year">{{ .year }}</span><div><h3>{{ .short_degree | default .degree }}</h3><p>{{ .short_institution | default .institution }}</p></div></li>
+      {{ end }}
+    </ol>
+  </section>
+  {{ with $profile.experience }}
+  <section class="rj-content-section" id="industry" aria-labelledby="industry-heading">
+    <div class="rj-section-heading"><h2 id="industry-heading">Industry experience</h2></div>
+    {{ partial "research/industry.html" . }}
+  </section>
+  {{ end }}
+</main>
+{{ end }}

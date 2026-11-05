@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $area := index (where hugo.Data.research "slug" .Params.track) 0 }}
 <main id="main-content" class="rj-shell rj-topic-page" data-pagefind-body>
-  <a class="rj-back" href="{{ "/#research" | relURL }}">&larr; Research</a>
+  <a class="rj-back" href="{{ "/projects/" | relURL }}">&larr; Projects</a>
   <h1>{{ $area.title }}</h1>
   <p class="rj-topic-description">{{ $area.description }}</p>
   <figure class="rj-topic-figure">

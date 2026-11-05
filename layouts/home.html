@@ -17,37 +17,5 @@
     </div>
   </section>
 
-  <section class="rj-shell rj-section" id="updates" aria-labelledby="updates-heading">
-    <div class="rj-section-heading"><h2 id="updates-heading">Recent activity</h2><a class="rj-text-link" href="{{ "/activities/" | relURL }}">All activities <span aria-hidden="true">&rarr;</span></a></div>
-    {{ partial "research/activities.html" (dict "compact" true "limit" 4) }}
-  </section>
-
-  <section class="rj-shell rj-section" id="research" aria-labelledby="research-heading">
-    <div class="rj-section-heading"><h2 id="research-heading">Research</h2></div>
-    <p class="rj-research-overview">{{ index hugo.Data "research-context" "overview" }}</p>
-    {{ partial "research/areas.html" . }}
-    {{ partial "research/system-work.html" . }}
-  </section>
-
-  <section class="rj-shell rj-section" id="papers" aria-labelledby="papers-heading">
-    <div class="rj-section-heading"><h2 id="papers-heading">Publications</h2><a class="rj-text-link" href="{{ "/publications/" | relURL }}">Full bibliography <span aria-hidden="true">&rarr;</span></a></div>
-    {{ partial "research/publications.html" (dict "pages" (where site.RegularPages "Section" "publications") "compact" true) }}
-  </section>
-
-  {{ with $profile.experience }}
-  <section class="rj-shell rj-section rj-industry-section" id="industry" aria-labelledby="industry-heading">
-    <div class="rj-section-heading"><h2 id="industry-heading">Industry experience</h2></div>
-    {{ partial "research/industry.html" . }}
-  </section>
-  {{ end }}
-
-  <section class="rj-shell rj-section rj-education-section" id="education" aria-labelledby="education-heading">
-    <h2 id="education-heading">Education</h2>
-    <ol class="rj-education-list">
-      {{ range $profile.education }}
-      <li><span class="rj-education-year">{{ .year }}</span><div><h3>{{ .short_degree | default .degree }}</h3><p>{{ .short_institution | default .institution }}</p></div></li>
-      {{ end }}
-    </ol>
-  </section>
 </main>
 {{ end }}

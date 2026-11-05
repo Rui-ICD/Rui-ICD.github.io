@@ -1,10 +1,16 @@
 main:
-  - name: Research
-    url: /#research
+  - name: Home
+    url: /
+    weight: 1
+  - name: Projects
+    url: /projects/
     weight: 10
   - name: Publications
     url: /publications/
     weight: 20
-  - name: Activities
-    url: /activities/
+  - name: Background
+    url: /background/
     weight: 30
+  - name: Highlights
+    url: /highlights/
+    weight: 40

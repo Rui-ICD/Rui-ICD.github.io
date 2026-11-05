@@ -1,0 +1,17 @@
+# 获奖名称与年份来自 Rui Jiao 提供的信息。
+# DAAD 照片加入指定路径后自动显示；另外两项只用文字，不需要图片。
+- id: daad-2022
+  title: DAAD Scholarship
+  year: '2022'
+  institution: Technical University of Munich (TUM)
+  image: media/highlights/daad-2022.jpg
+  image_alt: Rui Jiao receiving the DAAD scholarship on stage in 2022
+  caption: DAAD scholarship award ceremony, 2022.
+- id: academic-distinction-2021
+  title: Academic Distinction Scholarship
+  year: '2021'
+  institution: Technical University of Munich (TUM)
+- id: women-in-stem-2021
+  title: Women in STEM Scholarship
+  year: '2021'
+  institution: Technical University of Munich (TUM)

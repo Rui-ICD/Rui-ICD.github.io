@@ -1,7 +1,7 @@
-{{ if or .IsHome (in (slice "publications" "research" "activities") .Section) }}<a class="rj-skip" href="#main-content">Skip to content</a>{{ end }}
+{{ if or .IsHome (in (slice "projects" "publications" "background" "highlights") .Section) }}<a class="rj-skip" href="#main-content">Skip to content</a>{{ end }}
 <header class="rj-header">
   <nav class="rj-shell rj-nav" aria-label="Main navigation">
     <a class="rj-wordmark" href="{{ "/" | relURL }}">Rui Jiao</a>
-    <div class="rj-nav-links">{{ range site.Menus.main }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}</div>
+    <div class="rj-nav-links">{{ range site.Menus.main }}{{ $active := false }}{{ if eq .URL "/" }}{{ $active = $.IsHome }}{{ else }}{{ $active = hasPrefix $.RelPermalink .URL }}{{ end }}<a href="{{ .URL | relURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</div>
   </nav>
 </header>

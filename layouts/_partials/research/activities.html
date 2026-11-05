@@ -6,7 +6,7 @@
   <li>
     <time datetime="{{ time.Format "2006-01" .date }}">{{ time.Format "Jan 2006" .date }}</time>
     <div class="rj-activity-content">
-      <h3><a href="{{ printf "/activities/#%s" .id | relURL }}">{{ .title }} <span class="rj-activity-location">&middot; {{ .location }}</span></a></h3>
+      <h3><a href="{{ printf "/highlights/#%s" .id | relURL }}">{{ .title }} <span class="rj-activity-location">&middot; {{ .location }}</span></a></h3>
     </div>
   </li>
   {{ end }}

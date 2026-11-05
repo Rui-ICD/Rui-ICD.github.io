@@ -1,4 +1,5 @@
 - slug: neural-microsystems
+  url: /projects/analog-mixed-signal-ics/
   title: Analog & mixed-signal IC design
   description: Analog front ends, bias circuits, and optical encoders for neural recording.
   image: media/research/fb-mote-die.jpg
@@ -32,6 +33,7 @@
     - Probe-based operation demonstrated under illumination up to 1200 μW/mm². Wire-bonded biological
       tests used a different integration configuration.
 - slug: optical-readout
+  url: /projects/optoelectronic-neural-microsystems/
   title: Optoelectronic neural microsystems
   description: Autonomous neural implants combining CMOS circuitry and optoelectronic devices.
   image: media/research/neural-implant-ant.png

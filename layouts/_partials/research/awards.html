@@ -1,0 +1,20 @@
+<div class="rj-awards">
+  {{ range hugo.Data.awards }}
+  {{ $award := . }}
+  {{ $photo := false }}
+  {{ with .image }}{{ $photo = resources.Get . }}{{ end }}
+  <article class="rj-award{{ if $photo }} rj-award-with-photo{{ end }}" id="{{ .id }}">
+    <div class="rj-award-copy">
+      <span class="rj-award-year">{{ .year }}</span>
+      <div><h3>{{ .title }}</h3><p>{{ .institution }}</p></div>
+    </div>
+    {{ with $photo }}
+    {{ $display := .Fit "1200x900 webp q90" }}
+    <figure class="rj-award-figure">
+      <a class="rj-award-photo" href="{{ .RelPermalink }}" aria-label="View the {{ $award.title }} award photo"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $award.image_alt }}" loading="lazy" decoding="async"></a>
+      <figcaption>{{ $award.caption }}</figcaption>
+    </figure>
+    {{ end }}
+  </article>
+  {{ end }}
+</div>
