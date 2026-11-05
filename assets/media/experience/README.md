@@ -12,7 +12,7 @@ mediatek-2022-2023.jpg
 E:\GithubPage\Rui-ICD.github.io\assets\media\experience\mediatek-2022-2023.jpg
 ```
 
-加入照片后，会自动显示在 **Background → Industry experience** 的实习卡片中，照片与公司、岗位和日期放在一起。没有照片时只显示文字。照片保留原始比例，不裁剪；点击可以打开大图。
+加入照片后，**Background → Industry experience** 条目内会出现 **Photo**。照片默认收起，点击 Photo 展开；再点击图片可打开原图。照片保留原始比例，不裁剪。
 
 如果照片是 PNG 或 WebP，把原格式的文件放进来，然后在 `data/authors/me.yaml` 的 `experience` 条目中修改对应的路径后缀。例如：
 

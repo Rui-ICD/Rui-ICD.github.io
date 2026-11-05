@@ -1,27 +1,23 @@
-{{ $photos := slice }}
-{{ range hugo.Data.awards }}{{ $award := . }}{{ with .image }}{{ with resources.Get . }}{{ $photos = $photos | append (dict "award" $award "photo" .) }}{{ end }}{{ end }}{{ end }}
-{{ $institution := (index hugo.Data.awards 0).institution }}
-<div class="rj-awards{{ if $photos }} rj-awards-with-photos{{ end }}">
-  {{ with $photos }}
-  <div class="rj-award-gallery">
-    {{ range . }}
-    {{ $display := .photo.Fit "720x480 webp q90" }}
-    <figure class="rj-award-figure"><a class="rj-award-photo" href="{{ .photo.RelPermalink }}" aria-label="View full photo: {{ .award.title }}, {{ .award.year }}" title="{{ .award.caption }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ .award.image_alt }}" loading="lazy" decoding="async"></a><figcaption>{{ .award.title }} &middot; {{ .award.year }} <span aria-hidden="true">&nearr;</span></figcaption></figure>
-    {{ end }}
-  </div>
-  {{ end }}
-  <div class="rj-award-details">
-    <p class="rj-award-institution">{{ $institution }}</p>
-    <ol class="rj-award-list">
-    {{ range hugo.Data.awards }}
+<div class="rj-awards">
+  {{ range hugo.Data.awards }}
   {{ $award := . }}
-  <li class="rj-award" id="{{ .id }}">
+  {{ $photo := false }}
+  {{ with .image }}{{ $photo = resources.Get . }}{{ end }}
+  <article class="rj-award" id="{{ .id }}">
     <div class="rj-award-copy">
       <span class="rj-award-year">{{ .year }}</span>
-      <div><h3>{{ .title }}</h3>{{ if ne .institution $institution }}<p>{{ .institution }}</p>{{ end }}</div>
+      <div><h3>{{ .title }}</h3><p>{{ .institution }}</p>
+    {{ with $photo }}
+    {{ $display := .Fit "1000x750 webp q90" }}
+    <details class="rj-photo-details"><summary>Photo</summary>
+    <figure class="rj-award-figure">
+      <a class="rj-award-photo" href="{{ .RelPermalink }}" aria-label="View full photo: {{ $award.title }}, {{ $award.year }}" title="{{ $award.caption }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $award.image_alt }}" loading="lazy" decoding="async"></a>
+      <figcaption>{{ $award.caption }}</figcaption>
+    </figure>
+    </details>
+    {{ end }}
+      </div>
     </div>
-  </li>
+  </article>
   {{ end }}
-    </ol>
-  </div>
 </div>

@@ -3,8 +3,7 @@
 <main id="main-content" class="rj-shell rj-background-page" data-pagefind-body>
   <div class="rj-page-heading"><h1>Background</h1></div>
   <p class="rj-page-intro">Education and industry experience.</p>
-  <div class="rj-background-grid">
-  <section class="rj-background-education" id="education" aria-labelledby="education-heading">
+  <section class="rj-content-section" id="education" aria-labelledby="education-heading">
     <div class="rj-section-heading"><h2 id="education-heading">Education</h2></div>
     <ol class="rj-education-list">
       {{ range $profile.education }}
@@ -13,11 +12,10 @@
     </ol>
   </section>
   {{ with $profile.experience }}
-  <section class="rj-background-industry" id="industry" aria-labelledby="industry-heading">
+  <section class="rj-content-section" id="industry" aria-labelledby="industry-heading">
     <div class="rj-section-heading"><h2 id="industry-heading">Industry experience</h2></div>
     {{ partial "research/industry.html" . }}
   </section>
   {{ end }}
-  </div>
 </main>
 {{ end }}

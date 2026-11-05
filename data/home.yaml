@@ -1,6 +1,8 @@
-headline: Circuits for neural interfaces.
-bio: I work with Prof. Sunwoo Lee at NTU, designing light-powered circuits and optoelectronic neural microsystems.
-moment: icassp-2026
+bio: I work with Prof. Sunwoo Lee on analog and mixed-signal circuits and optoelectronic neural microsystems.
+
+selected_work:
+- light-adaptive-neural-recording
+- subnanolitre-neural-recording
 
 # 首页只显示简短近况，详细内容链接到各分页。
 news:
