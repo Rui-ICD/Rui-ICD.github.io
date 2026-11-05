@@ -1,7 +1,8 @@
 - file: assets/media/research/neural-implant-ant.png
   source: Macro photograph supplied by Rui Jiao in the conversation on 2026-11-05.
+  original_file: assets/media/research/neural-implant-ant-original.jpg
   edit_tool: Built-in imagegen, edit mode.
-  edit_intent: Lift midtones and shadows, slightly neutralize the warm cast; retain the full composition and relative scale of the ant, pipette, and microsystem.
+  edit_intent: Gently brighten exposure and dark midtones from the original photograph while retaining its warm pale-yellow background, white balance, composition, and relative scale. Do not neutralize the warm colour.
   note: Website presentation image; not a replacement for original scientific figures or measurement data.
 - file: assets/media/research/neural-implant.jpg
   source_url: https://hanson-zheng.github.io/project/tetherless-neural-recording/MOTE_in_Pipette.jpg
