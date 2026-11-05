@@ -1,13 +1,41 @@
 {{ $events := sort hugo.Data.activities "date" "desc" }}
 {{ with .limit }}{{ $events = first . $events }}{{ end }}
-<ol class="rj-activity-list{{ if .compact }} rj-activity-compact{{ end }}">
+{{ if .compact }}
+<ol class="rj-activity-list rj-activity-compact">
   {{ range $events }}
   <li>
-    <time datetime="{{ if eq .date_precision "month" }}{{ time.Format "2006-01" .date }}{{ else }}{{ .date }}{{ end }}">{{ if $.compact }}{{ time.Format "Jan 2006" .date }}{{ else if eq .date_precision "month" }}{{ time.Format "Jan 2006" .date }}{{ else }}{{ time.Format "02 Jan 2006" .date }}{{ end }}</time>
+    <time datetime="{{ time.Format "2006-01" .date }}">{{ time.Format "Jan 2006" .date }}</time>
     <div class="rj-activity-content">
-      <h3><a href="{{ .paper | relURL }}">{{ .title }}</a></h3>
-      {{ if not $.compact }}<p>{{ .text }}</p><div class="rj-activity-links"><a href="{{ .paper | relURL }}">Related paper &rarr;</a><a href="{{ .source }}">Source &nearr;</a></div>{{ end }}
+      <h3><a href="{{ printf "/activities/#%s" .id | relURL }}">{{ .title }} <span class="rj-activity-location">&middot; {{ .location }}</span></a></h3>
     </div>
   </li>
   {{ end }}
 </ol>
+{{ else }}
+<div class="rj-event-grid">
+  {{ range $events }}
+  {{ $event := . }}
+  {{ $photo := resources.Get .image }}
+  {{ $placeholder := not $photo }}
+  {{ if $placeholder }}{{ $photo = resources.Get "media/research/neural-implant-ant.png" }}{{ end }}
+  <article class="rj-event" id="{{ .id }}" aria-labelledby="{{ .id }}-heading">
+    <figure class="rj-event-figure">
+      {{ with $photo }}
+      {{ $display := .Fit "1200x900 webp q90" }}
+      <a class="rj-event-photo" href="{{ .RelPermalink }}" aria-label="View full image for {{ $event.title }}">
+        <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ if $placeholder }}Ant and neural microsystem, temporary image for {{ $event.title }}{{ else }}{{ $event.image_alt }}{{ end }}" loading="lazy" decoding="async">
+      </a>
+      {{ end }}
+      <figcaption>{{ if $placeholder }}Conference photo coming soon.{{ else }}{{ .caption }}{{ end }}</figcaption>
+    </figure>
+    <div class="rj-event-copy">
+      <div class="rj-event-meta"><time datetime="{{ .date }}">{{ time.Format "2" .date }}&ndash;{{ time.Format "2 Jan 2006" .date_end }}</time><span>{{ .location }}</span></div>
+      <h2 id="{{ .id }}-heading"><a href="{{ .website }}" title="{{ .full_name }}">{{ .title }}</a></h2>
+      {{ with .venue }}<p class="rj-event-venue">{{ . }}</p>{{ end }}
+      <p class="rj-event-description">{{ .text }}</p>
+      <div class="rj-event-links">{{ with .paper }}<a href="{{ . | relURL }}">Related paper &rarr;</a>{{ end }}<a href="{{ .website }}">Conference &nearr;</a></div>
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

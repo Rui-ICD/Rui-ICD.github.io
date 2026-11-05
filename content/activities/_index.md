@@ -1,4 +1,4 @@
 ---
-title: Recent activity
-summary: Publication and conference updates from Rui Jiao and collaborators.
+title: Activities
+summary: Conference moments and research presentations at ICRA, ICASSP, AKC, and ISCAS.
 ---

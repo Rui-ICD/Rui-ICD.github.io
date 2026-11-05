@@ -5,6 +5,6 @@ main:
   - name: Publications
     url: /publications/
     weight: 20
-  - name: Updates
-    url: /#updates
+  - name: Activities
+    url: /activities/
     weight: 30

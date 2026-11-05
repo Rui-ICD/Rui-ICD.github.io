@@ -210,11 +210,26 @@ a:hover { color: var(--rj-accent); }
 .rj-activity-compact .rj-activity-content h3 { font-family: Inter, sans-serif; font-size: 18px; font-weight: 400; line-height: 1.6; }
 .rj-activities-page { padding-block: 55px 75px; }
 .rj-activities-intro { color: var(--rj-text); font-size: 19px; margin: -14px 0 35px; }
+.rj-activity-location { color: var(--rj-muted); }
+.rj-event-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px 36px; }
+.rj-event { min-width: 0; scroll-margin-top: 30px; }
+.rj-event-figure { margin: 0 0 21px; }
+.rj-event-photo { display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; overflow: hidden; background: #f8f7f4; border: 1px solid var(--rj-line); border-radius: 6px; }
+.rj-event-photo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.rj-event-figure figcaption { font-size: 15px; color: var(--rj-muted); line-height: 1.6; margin-top: 9px; }
+.rj-event-meta { display: flex; flex-wrap: wrap; column-gap: 18px; row-gap: 4px; color: var(--rj-muted); font-size: 16px; margin-bottom: 9px; }
+.rj-event-copy h2 { font: 600 27px/1.35 var(--rj-heading); letter-spacing: -.025em; color: var(--rj-ink); margin: 0 0 10px; }
+.rj-event-venue { color: var(--rj-text); font-size: 16px; line-height: 1.6; margin: 0 0 12px; }
+.rj-event-description { color: var(--rj-text); font-size: 18px; line-height: 1.75; margin: 0 0 16px; }
+.rj-event-links { display: flex; flex-wrap: wrap; gap: 24px; color: var(--rj-accent); font-size: 16px; }
+.rj-event-links a:hover { text-decoration: underline; }
 @media (max-width: 380px) {
   .rj-nav { flex-wrap: wrap; padding-block: 15px; row-gap: 12px; }
   .rj-nav-links { width: 100%; justify-content: space-between; }
 }
 @media (max-width: 640px) {
+  .rj-event-grid { grid-template-columns: 1fr; gap: 38px; }
+  .rj-event-meta { font-size: 15px; column-gap: 14px; }
   .rj-activity-list > li { grid-template-columns: 1fr; gap: 7px; padding-block: 23px; }
   .rj-activity-compact > li { gap: 5px; padding-block: 12px; }
   .rj-system-work-grid { grid-template-columns: 1fr; gap: 26px; }
