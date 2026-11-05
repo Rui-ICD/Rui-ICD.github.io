@@ -4,7 +4,7 @@
   <section class="rj-shell rj-hero" id="about" aria-labelledby="profile-name">
     {{ with resources.Get "media/authors/me.png" }}
     {{ $avatar := .Resize "640x webp q92" }}
-    <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="280" height="280" alt="Profile portrait" fetchpriority="high"></div>
+    <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="Portrait of {{ $profile.name.display }}" fetchpriority="high"></div>
     {{ end }}
     <div class="rj-intro">
       <h1 id="profile-name">{{ $profile.name.display }}</h1>
