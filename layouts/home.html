@@ -1,37 +1,40 @@
 {{ define "main" }}
 {{ $profile := hugo.Data.authors.me }}
 <main id="main-content" class="rj-home" data-pagefind-body>
-  <section class="rj-shell rj-hero" id="about" aria-labelledby="profile-name">
-    {{ with resources.Get "media/authors/me.png" }}
-    {{ $avatar := .Resize "640x webp q92" }}
-    <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="Portrait of {{ $profile.name.display }}" fetchpriority="high"></div>
-    {{ end }}
+  <section class="rj-shell rj-home-masthead" id="about" aria-labelledby="profile-name">
+    <div class="rj-hero">
     <div class="rj-intro">
       <h1 id="profile-name">{{ $profile.name.display }}</h1>
       <p class="rj-role">{{ $profile.role }}</p>
-      <p class="rj-focus">{{ $profile.headline }}</p>
+      <p class="rj-focus">{{ hugo.Data.home.headline }}</p>
       <p class="rj-group"><a href="https://blogs.ntu.edu.sg/sunwoo/">Lee Group</a> &middot; Electrical &amp; Electronic Engineering</p>
       <p class="rj-home-bio">{{ hugo.Data.home.bio }}</p>
       <div class="rj-profile-links" aria-label="Academic profiles">
         {{ range $profile.links }}{{ if not (in (slice "Lee Group Profile" "GitHub" "IEEE Xplore") .label) }}<a href="{{ .url | safeURL }}">{{ .label }}</a>{{ end }}{{ end }}
       </div>
     </div>
+    {{ with resources.Get "media/authors/me.png" }}
+    {{ $avatar := .Resize "640x webp q92" }}
+    <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="Portrait of {{ $profile.name.display }}" fetchpriority="high"></div>
+    {{ end }}
+    </div>
+    <nav class="rj-home-focus" aria-label="Research focus">
+      <span>Current focus</span>
+      {{ range hugo.Data.research }}<a href="{{ .url | relURL }}">{{ .home_title }} <span aria-hidden="true">&nearr;</span></a>{{ end }}
+    </nav>
   </section>
-  <div class="rj-shell rj-home-overview">
-    <section aria-labelledby="home-focus-heading">
-      <div class="rj-home-section-heading"><h2 id="home-focus-heading">Research focus</h2></div>
-      <div class="rj-home-projects">
-        {{ range hugo.Data.research }}<article><h3><a href="{{ .url | relURL }}">{{ .home_title }}</a></h3><p>{{ .home_summary }}</p></article>{{ end }}
-      </div>
-      <a class="rj-text-link" href="{{ "/projects/" | relURL }}">Explore projects &rarr;</a>
-    </section>
-    <section aria-labelledby="home-recent-heading">
-      <div class="rj-home-section-heading"><h2 id="home-recent-heading">Recent</h2></div>
+  <section class="rj-shell rj-home-recent" aria-labelledby="home-recent-heading">
+    <div class="rj-home-section-heading"><h2 id="home-recent-heading">Recently</h2><a class="rj-text-link" href="{{ "/highlights/" | relURL }}">Highlights &rarr;</a></div>
+    <div class="rj-home-recent-body">
       <ol class="rj-home-news">
         {{ range hugo.Data.home.news }}<li><time datetime="{{ .month }}">{{ time.Format "Jan 2006" (printf "%s-01" .month) }}</time><a href="{{ .url | relURL }}">{{ .text }}</a></li>{{ end }}
       </ol>
-      <a class="rj-text-link" href="{{ "/highlights/" | relURL }}">More highlights &rarr;</a>
-    </section>
-  </div>
+      {{ $moment := index (where hugo.Data.activities "id" hugo.Data.home.moment) 0 }}
+      {{ with resources.Get $moment.image }}
+      {{ $photo := .Fit "720x520 webp q90" }}
+      <figure class="rj-home-moment"><a href="{{ printf "/highlights/#%s" $moment.id | relURL }}"><img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="{{ $moment.image_alt }}" loading="lazy" decoding="async"></a><figcaption>{{ $moment.title }} &middot; {{ $moment.location }} <span aria-hidden="true">&nearr;</span></figcaption></figure>
+      {{ end }}
+    </div>
+  </section>
 </main>
 {{ end }}
