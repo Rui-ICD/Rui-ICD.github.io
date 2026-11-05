@@ -4,9 +4,9 @@ hugoblox:
     name: Studio
     vendor: custom
     version: 1.0.0
-    description: Manrope headings with Inter body text
+    description: Inter typography for a contemporary academic profile
   families:
-    heading: Manrope
+    heading: Inter
     body: Inter
     code: JetBrains Mono
   weights:

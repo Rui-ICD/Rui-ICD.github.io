@@ -6,7 +6,7 @@
   <p class="rj-topic-description">{{ $area.description }}</p>
   <figure class="rj-topic-figure">
     {{ with resources.Get $area.image }}{{ $image := .Fit "1500x1100 webp q92" }}<a href="{{ .RelPermalink }}"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}"></a>{{ end }}
-    <figcaption>{{ $area.credit }} <a href="https://doi.org/{{ $area.source_doi }}">Source &nearr;</a></figcaption>
+    <figcaption>{{ $area.credit }} <a href="https://doi.org/{{ $area.source_doi }}">Related paper &nearr;</a></figcaption>
   </figure>
   <div class="rj-topic-sections">
   {{ range $area.sections }}

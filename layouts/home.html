@@ -7,7 +7,7 @@
     <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="280" height="280" alt="Profile portrait" fetchpriority="high"></div>
     {{ end }}
     <div class="rj-intro">
-      <h1 id="profile-name">{{ $profile.name.given }} <span>{{ $profile.name.family }}</span></h1>
+      <h1 id="profile-name">{{ $profile.name.display }}</h1>
       <p class="rj-role">{{ $profile.role }}</p>
       <p class="rj-focus">{{ $profile.headline }}</p>
       <p class="rj-group"><a href="https://blogs.ntu.edu.sg/sunwoo/">Lee Group</a> &middot; Electrical &amp; Electronic Engineering</p>
