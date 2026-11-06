@@ -4,6 +4,8 @@
   edit_tool: Built-in imagegen, edit mode.
   edit_intent: Gently brighten exposure and dark midtones from the original photograph while retaining its warm pale-yellow background, white balance, composition, and relative scale. Do not neutralize the warm colour.
   note: Website presentation image; not a replacement for original scientific figures or measurement data.
+  display_adjustment: Native SVG midtone lift with a slight saturation reduction on the website. Black and white endpoints are retained; the stored image pixels are unchanged.
+  display_adjustment_date: '2026-11-06'
 - file: assets/media/research/neural-implant.jpg
   source_url: https://hanson-zheng.github.io/project/tetherless-neural-recording/MOTE_in_Pipette.jpg
   doi: 10.1038/s41928-025-01484-1

@@ -41,6 +41,7 @@
   home_summary: CMOS–optoelectronic integration for chronic neural recording.
   description: Autonomous neural implants combining CMOS circuitry and optoelectronic devices.
   image: media/research/neural-implant-ant.png
+  image_tone: warm-light
   alt: A tiny MOTE microsystem inside a glass micropipette, shown beside an ant head for scale
   source_doi: 10.1038/s41928-025-01484-1
   credit: MOTE microsystem in a glass micropipette, beside an ant for scale. Photograph provided by Rui Jiao; exposure adjusted for display.

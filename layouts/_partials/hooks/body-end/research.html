@@ -1,2 +1,14 @@
 {{ $script := resources.Get "js/research.js" | minify | fingerprint "sha256" }}
 <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+<svg class="rj-photo-filter" width="0" height="0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="rj-warm-photo" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0 0.1 0.24 0.36 0.48 0.60 0.71 0.81 0.90 0.96 1"/>
+        <feFuncG type="table" tableValues="0 0.1 0.24 0.36 0.48 0.60 0.71 0.81 0.90 0.96 1"/>
+        <feFuncB type="table" tableValues="0 0.1 0.24 0.36 0.48 0.60 0.71 0.81 0.90 0.96 1"/>
+      </feComponentTransfer>
+      <feColorMatrix type="saturate" values="0.96"/>
+    </filter>
+  </defs>
+</svg>

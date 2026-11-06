@@ -25,7 +25,7 @@
       {{ with resources.Get $area.image }}
       {{ $image := .Resize "1000x webp q92" }}
       <figure class="rj-home-research-figure">
-        <a href="{{ $area.url | relURL }}" aria-label="Explore optoelectronic neural microsystems"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}" loading="lazy" decoding="async"></a>
+        <a href="{{ $area.url | relURL }}" aria-label="Explore optoelectronic neural microsystems"><img{{ with $area.image_tone }} class="rj-tone-{{ . }}"{{ end }} src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}" loading="lazy" decoding="async"></a>
         <figcaption>A neural microsystem beside an ant, for scale.</figcaption>
       </figure>
       {{ end }}
