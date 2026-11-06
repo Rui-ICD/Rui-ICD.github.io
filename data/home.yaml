@@ -1,8 +1,14 @@
-bio: I work with Prof. Sunwoo Lee on analog and mixed-signal circuits and optoelectronic neural microsystems.
+bio: I design analog and mixed-signal circuits for neural recording, with a focus on light-powered optoelectronic microsystems.
 
-selected_work:
-- light-adaptive-neural-recording
-- subnanolitre-neural-recording
+research:
+- title: Analog & mixed-signal ICs
+  description: Low-noise amplification, optical powering, and signal encoding.
+  url: /projects/analog-mixed-signal-ics/
+  paper: light-adaptive-neural-recording
+- title: Optoelectronic neural microsystems
+  description: Integrating CMOS and optoelectronics for tetherless neural recording.
+  url: /projects/optoelectronic-neural-microsystems/
+  paper: subnanolitre-neural-recording
 
 # 首页只显示简短近况，详细内容链接到各分页。
 news:

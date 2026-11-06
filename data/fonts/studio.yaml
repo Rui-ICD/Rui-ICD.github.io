@@ -4,16 +4,15 @@ hugoblox:
     name: Studio
     vendor: custom
     version: 1.0.0
-    description: Inter typography for a contemporary academic profile
+    description: Upright Manrope headings with Source Sans 3 body text
   families:
-    heading: Inter
-    body: Inter
-    code: JetBrains Mono
+    heading: Manrope
+    body: Source Sans 3
+    code: system-mono
   weights:
     heading:
     - 500
     - 600
-    - 700
     body:
     - 400
     - 500
@@ -25,7 +24,7 @@ hugoblox:
     body: 1.65
     code: 1.5
   tracking:
-    heading: -0.035em
+    heading: -0.025em
     body: '0'
   variable:
     heading: true

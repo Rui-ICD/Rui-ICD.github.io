@@ -7,25 +7,43 @@
     <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="Portrait of {{ $profile.name.display }}" fetchpriority="high"></div>
     {{ end }}
     <div class="rj-intro">
+      <div class="rj-identity">
       <h1 id="profile-name">{{ $profile.name.display }}</h1>
       <p class="rj-role">{{ $profile.role }}</p>
-      <p class="rj-group"><a href="https://blogs.ntu.edu.sg/sunwoo/">Lee Group</a> &middot; Electrical &amp; Electronic Engineering</p>
+      <p class="rj-group"><a href="https://blogs.ntu.edu.sg/sunwoo/">Lee Group</a> &middot; Prof. Sunwoo Lee</p>
+      </div>
       <p class="rj-home-bio">{{ hugo.Data.home.bio }}</p>
       <div class="rj-profile-links" aria-label="Academic profiles">
         {{ range $profile.links }}{{ if not (in (slice "Lee Group Profile" "GitHub" "IEEE Xplore") .label) }}<a href="{{ .url | safeURL }}">{{ .label }}</a>{{ end }}{{ end }}
       </div>
     </div>
   </section>
-    <section class="rj-home-section" aria-labelledby="home-recent-heading">
-      <div class="rj-home-section-heading"><h2 id="home-recent-heading">News</h2></div>
+  <section class="rj-home-section rj-home-research" aria-labelledby="home-research-heading">
+    <div class="rj-home-section-heading"><h2 id="home-research-heading">Research</h2><a class="rj-text-link" href="{{ "/projects/" | relURL }}">Explore projects <span aria-hidden="true">&rarr;</span></a></div>
+    <div class="rj-home-research-body">
+      {{ $area := index hugo.Data.research 1 }}
+      {{ with resources.Get $area.image }}
+      {{ $image := .Resize "1000x webp q92" }}
+      <figure class="rj-home-research-figure">
+        <a href="{{ $area.url | relURL }}" aria-label="Explore optoelectronic neural microsystems"><img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}" loading="lazy" decoding="async"></a>
+        <figcaption>A neural microsystem beside an ant, for scale.</figcaption>
+      </figure>
+      {{ end }}
+      <div class="rj-home-directions">
+        {{ range hugo.Data.home.research }}
+        <article>
+          <h3><a href="{{ .url | relURL }}">{{ .title }} <span aria-hidden="true">&nearr;</span></a></h3>
+          <p>{{ .description }}</p>
+          {{ with site.GetPage (printf "/publications/%s" .paper) }}<a class="rj-home-paper" href="{{ .RelPermalink }}">{{ .Params.publication.short_name }} &middot; {{ .Date.Format "2006" }} <span aria-hidden="true">&rarr;</span></a>{{ end }}
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+    <section class="rj-home-section rj-home-updates" aria-labelledby="home-recent-heading">
+      <div class="rj-home-section-heading"><h2 id="home-recent-heading">News</h2><a class="rj-text-link" href="{{ "/highlights/" | relURL }}">More highlights <span aria-hidden="true">&rarr;</span></a></div>
       <ol class="rj-home-news">
         {{ range hugo.Data.home.news }}<li><time datetime="{{ .month }}">{{ time.Format "Jan 2006" (printf "%s-01" .month) }}</time><a href="{{ .url | relURL }}">{{ .text }}</a></li>{{ end }}
-      </ol>
-    </section>
-    <section class="rj-home-section" aria-labelledby="home-work-heading">
-      <div class="rj-home-section-heading"><h2 id="home-work-heading">Selected work</h2><a class="rj-text-link" href="{{ "/publications/" | relURL }}">All publications &rarr;</a></div>
-      <ol class="rj-home-work">
-        {{ range hugo.Data.home.selected_work }}{{ with site.GetPage (printf "/publications/%s" .) }}<li><span>{{ .Params.publication.short_name }} &middot; {{ .Date.Format "2006" }}</span><h3><a href="{{ .RelPermalink }}">{{ .Params.short_title | default .Title }}</a></h3></li>{{ end }}{{ end }}
       </ol>
     </section>
 </main>
