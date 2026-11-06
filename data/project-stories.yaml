@@ -1,0 +1,103 @@
+neural-microsystems:
+  title: Light-adaptive neural recording ICs
+  summary: Light-harvesting CMOS circuits that adapt neural recording bandwidth to available power.
+  facts:
+  - label: CMOS process
+    value: 180 nm
+  - label: Recording-unit footprint
+    value: 43 × 269 µm
+  - label: Biological validation
+    value: Acute nerve recordings
+  sections:
+  - id: architecture
+    title: Harvesting light in CMOS
+    text: >-
+      Forward-biased CMOS junctions harvest light for the amplifier and encoder.
+      An AlGaAs PVLED powers the optical transmitter. As illumination increases,
+      extra photocurrent expands amplifier bandwidth, while PTAT biasing
+      stabilizes the other circuit blocks.
+    layout: wide
+    figure:
+      image: media/research/fb-mote-signal-chain.jpg
+      alt: FB-MOTE signal chain showing silicon photovoltaic harvesting, amplification, encoding and the PVLED-powered optical transmitter
+      caption: Signal chain and power domains. Jiao et al., IEEE TBioCAS (2026), Fig. 3.
+      doi: 10.1109/TBCAS.2026.3652195
+  - id: silicon
+    title: From circuit to silicon
+    text: >-
+      Each 180 nm CMOS recording unit integrates amplification, biasing, encoding
+      and optical drive in a 43 × 269 µm footprint. The 3 × 26 test array supports
+      electrical and optical characterization; the enlarged layout shows the
+      individual unit and its circuit blocks.
+    layout: split
+    figure:
+      image: media/research/fb-mote-die.jpg
+      alt: A CMOS test die containing a 3 by 26 FB-MOTE array, with an enlarged recording-unit pad map and annotated circuit layout
+      caption: CMOS test die, recording-unit pad map and circuit layout. Jiao et al., IEEE TBioCAS (2026), Fig. 19.
+      doi: 10.1109/TBCAS.2026.3652195
+  - id: measurements
+    title: Measuring adaptation to light
+    text: >-
+      Probe-based optical measurements track gain, bandwidth, timing, supply
+      voltage and noise as illumination changes. Bandwidth increases with optical
+      power while integrated input-referred noise remains approximately stable.
+      Biological validation uses wire-bonded chips and external platinum electrodes
+      in saline and acute earthworm experiments.
+    layout: wide
+    figure:
+      image: media/research/fb-mote-optical-characterization.png
+      alt: Measured FB-MOTE gain, bandwidth, pulse timing, supply voltage and input-referred noise under different optical illumination levels
+      caption: Probe-based optical characterization. Jiao et al., IEEE TBioCAS (2026), Fig. 12.
+      doi: 10.1109/TBCAS.2026.3652195
+
+optical-readout:
+  title: Tetherless optoelectronic neural implants
+  summary: A subnanolitre neural implant powered and read out through light.
+  facts:
+  - label: Integrated device
+    value: Approx. 370 × 70 × 20 µm
+  - label: Power and data
+    value: Optical
+  - label: Chronic validation
+    value: Day-365 averaged LFP
+  sections:
+  - id: system
+    title: An integrated optical neural interface
+    text: >-
+      An AlGaAs diode supplies photovoltaic power and an optical data uplink.
+      CMOS circuits amplify neural voltages, encode them using pulse-position
+      modulation, and drive light pulses. The integrated implant communicates through external illumination
+      and optical detection.
+    layout: split
+    figure:
+      image: media/research/neural-implant-ant.png
+      tone: warm-light
+      alt: A MOTE microsystem inside a glass micropipette beside an ant head for scale
+      caption: MOTE in a glass micropipette beside an ant for scale. Photograph provided by Rui Jiao; exposure adjusted for display.
+      doi: 10.1038/s41928-025-01484-1
+  - id: integration
+    title: Connecting and protecting the microsystem
+    text: >-
+      PVLEDs are transferred onto CMOS and connected through platinum contacts.
+      Annealing, encapsulation and light shielding support operation in biological
+      media. Thinning and release produce individual chiplets with exposed
+      platinum recording electrodes.
+    layout: wide
+    figure:
+      image: media/research/neural-implant-fabrication.png
+      alt: MOTE integration sequence showing PVLED transfer, vacuum annealing, platinum contacts, encapsulation, silicon etching and light shielding
+      caption: MOTE fabrication and integration sequence. Author-shared research figure accompanying Lee et al., Nature Electronics (2025).
+      doi: 10.1038/s41928-025-01484-1
+  - id: recordings
+    title: Recording neural activity over time
+    text: >-
+      Whisker-evoked action potentials were recorded in awake, head-fixed mice,
+      including results on days 13 and 102 shown below. At day 365, averaging
+      repeated trials recovered weak local field potentials. These are distinct
+      results within the long-term study.
+    layout: wide
+    figure:
+      image: media/research/neural-recordings.png
+      alt: Awake-mouse recording setup, implant imaging and whisker-evoked action-potential waveforms with spike statistics on days 13 and 102
+      caption: Recording setup, implant imaging and action-potential recordings on days 13 and 102. Author-shared research figure accompanying Lee et al., Nature Electronics (2025).
+      doi: 10.1038/s41928-025-01484-1

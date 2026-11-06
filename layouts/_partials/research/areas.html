@@ -1,6 +1,7 @@
 <div class="rj-areas">
   {{ range hugo.Data.research }}
   {{ $area := . }}
+  {{ $story := index (index hugo.Data "project-stories") .slug }}
   <article class="rj-area">
     <a class="rj-area-image" href="{{ .url | relURL }}" aria-label="Read about {{ .title }}">
       {{ with resources.Get .image }}{{ $image := .Fit "1100x850 webp q90" }}
@@ -8,10 +9,12 @@
       {{ end }}
     </a>
     <div class="rj-area-copy">
-      <h3><a href="{{ .url | relURL }}">{{ .title }}</a></h3>
-      <p>{{ .description }}</p>
-      <ul class="rj-area-work">{{ range .focus }}<li>{{ . }}</li>{{ end }}</ul>
-      <p class="rj-area-result">{{ .result }}</p>
+      <p class="rj-project-category">{{ .title }}</p>
+      <h2 class="rj-project-preview-title"><a href="{{ .url | relURL }}">{{ $story.title }}</a></h2>
+      <p>{{ $story.summary }}</p>
+      <div class="rj-project-preview-papers" aria-label="Project publications">
+        {{ range .project_papers }}{{ with site.GetPage (printf "/publications/%s" .) }}<a href="{{ .RelPermalink }}">{{ .Params.publication.short_name }} &middot; {{ .Date.Format "2006" }}</a>{{ end }}{{ end }}
+      </div>
       <a class="rj-text-link" href="{{ .url | relURL }}">Project details <span aria-hidden="true">&rarr;</span></a>
     </div>
   </article>

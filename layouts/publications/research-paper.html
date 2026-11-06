@@ -6,7 +6,7 @@
   <h1>{{ .Title }}</h1>
   {{ partial "research/authors.html" .Params.authors }}
   <p class="rj-publication-citation">{{ .Params.publication.name }}{{ with .Params.publication.volume }}, {{ . }}{{ end }}{{ with .Params.publication.issue }}({{ . }}){{ end }}{{ with .Params.publication.pages }}, pp. {{ . }}{{ end }}.</p>
-  <div class="rj-paper-actions"><a class="rj-button" href="https://doi.org/{{ $doi }}">Read paper &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a class="rj-text-link" href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}</div>
+  <div class="rj-paper-actions"><a class="rj-button" href="https://doi.org/{{ $doi }}">Read paper &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a class="rj-text-link" href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}{{ partial "research/project-link.html" . }}</div>
   <div class="rj-paper-body">{{ .Content }}</div>
   <p class="rj-paper-doi">DOI: <a href="https://doi.org/{{ $doi }}">{{ $doi }}</a></p>
 </main>

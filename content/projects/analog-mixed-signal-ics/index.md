@@ -1,7 +1,6 @@
 ---
-title: Analog & mixed-signal IC design
-summary: CMOS circuits for neural recording under optical power. The work addresses low-voltage amplification,
-  power-adaptive biasing, and light-induced effects on circuit operation.
+title: Light-adaptive neural recording ICs
+summary: A forward-bulk CMOS recording circuit that harvests light and adapts its bandwidth to available optical power.
 layout: project
 track: neural-microsystems
 aliases:

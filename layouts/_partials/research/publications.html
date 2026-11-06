@@ -26,7 +26,7 @@
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         {{ partial "research/authors.html" .Params.authors }}
         <p class="rj-publication-citation">{{ .Params.publication.name }}{{ with .Params.publication.volume }}, {{ . }}{{ end }}{{ with .Params.publication.issue }}({{ . }}){{ end }}{{ with .Params.publication.pages }}, pp. {{ . }}{{ end }}.</p>
-        <div class="rj-publication-actions"><a href="https://doi.org/{{ $doi }}">Paper &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}</div>
+        <div class="rj-publication-actions"><a href="https://doi.org/{{ $doi }}">Paper &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}{{ partial "research/project-link.html" . }}</div>
       </div>
       {{ end }}
     </article>

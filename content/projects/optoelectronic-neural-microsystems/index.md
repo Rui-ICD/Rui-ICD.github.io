@@ -1,7 +1,6 @@
 ---
-title: Optoelectronic neural microsystems
-summary: Miniature neural interfaces integrating CMOS with optoelectronic devices. Research spans optical
-  power delivery, untethered communication, and chronic neural recording.
+title: Tetherless optoelectronic neural implants
+summary: Subnanolitre neural implants combining CMOS circuitry, an AlGaAs optical interface, and chronic recording validation.
 layout: project
 track: optical-readout
 aliases:

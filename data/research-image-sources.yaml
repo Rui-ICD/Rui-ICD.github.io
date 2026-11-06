@@ -34,3 +34,11 @@
   source_url: https://hanson-zheng.github.io/project/optical-ppm-decoding/images/poster-measurement-setup.png
   doi: 10.1109/ICASSP55912.2026.11462355
   source: Author poster measurement photograph. Representative image for the optical readout research area.
+- file: assets/media/research/fb-mote-optical-characterization.png
+  source_url: https://hanson-zheng.github.io/project/fb-mote/images/fig-12-optical-characterization.png
+  doi: 10.1109/TBCAS.2026.3652195
+  source: Public research figure shared by co-author Yumin Zheng; optical characterization corresponding to IEEE TBioCAS Fig. 12. Source image retained without edits.
+- file: assets/media/research/neural-implant-fabrication.png
+  source_url: https://hanson-zheng.github.io/project/tetherless-neural-recording/Fabrication_MOTE.png
+  doi: 10.1038/s41928-025-01484-1
+  source: Author-shared MOTE fabrication and integration sequence accompanying Lee et al., Nature Electronics (2025). Source image retained without edits.

@@ -1,20 +1,34 @@
 {{ define "main" }}
 {{ $area := index (where hugo.Data.research "slug" .Params.track) 0 }}
-<main id="main-content" class="rj-shell rj-topic-page" data-pagefind-body>
+{{ $story := index (index hugo.Data "project-stories") .Params.track }}
+<main id="main-content" class="rj-shell rj-topic-page rj-project-page" data-pagefind-body>
   <a class="rj-back" href="{{ "/projects/" | relURL }}">&larr; Projects</a>
-  <h1>{{ $area.title }}</h1>
-  <p class="rj-topic-description">{{ $area.description }}</p>
-  <figure class="rj-topic-figure">
-    {{ with resources.Get $area.image }}{{ $image := .Fit "1500x1100 webp q92" }}<a href="{{ .RelPermalink }}"><img{{ with $area.image_tone }} class="rj-tone-{{ . }}"{{ end }} src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}"></a>{{ end }}
-    <figcaption>{{ $area.credit }} <a href="https://doi.org/{{ $area.source_doi }}">Related paper &nearr;</a></figcaption>
-  </figure>
-  <div class="rj-topic-sections">
-  {{ range $area.sections }}
-    <section><h2>{{ .heading }}</h2>{{ with .text }}<p>{{ . }}</p>{{ end }}{{ with .bullets }}<ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}</section>
-  {{ end }}
+  <header class="rj-project-heading">
+    <p class="rj-project-category">{{ $area.title }}</p>
+    <h1>{{ $story.title }}</h1>
+    <p class="rj-project-lead">{{ $story.summary }}</p>
+  </header>
+  <dl class="rj-project-facts">
+    {{ range $story.facts }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}
+  </dl>
+  <nav class="rj-project-contents" aria-label="On this project">
+    {{ range $story.sections }}<a href="#{{ .id }}">{{ .id | humanize }}</a>{{ end }}<a href="#publications">Publications</a>
+  </nav>
+  <div class="rj-project-story">
+    {{ range $story.sections }}
+    <section class="rj-project-section{{ if eq .layout "split" }} rj-project-section-split{{ end }}" id="{{ .id }}">
+      <div class="rj-project-section-copy"><h2>{{ .title }}</h2><p>{{ .text }}</p></div>
+      {{ with .figure }}{{ partial "research/project-figure.html" . }}{{ end }}
+      {{ with .note }}<p class="rj-project-note">{{ . }}</p>{{ end }}
+    </section>
+    {{ end }}
   </div>
-  <h2>Related publications</h2>
-  {{ $papers := slice }}{{ range $area.papers }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $papers = $papers | append . }}{{ end }}{{ end }}
-  {{ partial "research/publications.html" (dict "pages" $papers "compact" true) }}
+  <section class="rj-project-publications" id="publications" aria-labelledby="project-papers-heading">
+    <h2 id="project-papers-heading">Project publications</h2>
+    {{ $papers := slice }}{{ range $area.project_papers }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $papers = $papers | append . }}{{ end }}{{ end }}
+    {{ partial "research/publications.html" (dict "pages" $papers "compact" true) }}
+    {{ $related := slice }}{{ range $area.papers }}{{ if not (in $area.project_papers .) }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $related = $related | append . }}{{ end }}{{ end }}{{ end }}
+    {{ with $related }}<h3 class="rj-project-related-title">Related work</h3>{{ partial "research/publications.html" (dict "pages" . "compact" true) }}{{ end }}
+  </section>
 </main>
 {{ end }}
