@@ -26,6 +26,9 @@ a:hover { color: var(--rj-accent); }
 .rj-nav-links a { color: var(--rj-text); }
 .rj-nav-links a:hover { color: var(--rj-accent); }
 .rj-nav-links a[aria-current="page"] { color: var(--rj-accent); font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.rj-language-switch { display: inline-flex; flex-shrink: 0; gap: 2px; padding: 3px; border: 1px solid var(--rj-line); border-radius: 20px; font-size: 14px; line-height: 1.5; }
+.rj-language-switch a { color: var(--rj-text); padding: 4px 8px; border-radius: 16px; }
+.rj-language-switch a[aria-current] { background: var(--rj-accent-soft); color: var(--rj-accent); }
 .rj-skip { position: fixed; z-index: 100; left: 16px; top: -65px; padding: 10px 16px; background: white; border: 1px solid var(--rj-accent); }
 .rj-skip:focus { top: 12px; }
 .rj-home { padding-block: 52px 56px; }
@@ -366,4 +369,24 @@ a:hover { color: var(--rj-accent); }
   .rj-project-section h2, .rj-project-publications h2 { font-size: 25px; }
   .rj-project-section-copy p { font-size: 18px; }
   .rj-project-figure-image { padding: 10px; }
+}
+
+html:lang(zh) body { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; line-height: 1.8; }
+html:lang(zh) h1, html:lang(zh) h2, html:lang(zh) h3, html:lang(zh) .rj-project-facts dd { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif; letter-spacing: 0; }
+html:lang(zh) .rj-wordmark, html:lang(zh) #profile-name { font-family: var(--rj-heading); letter-spacing: -.025em; }
+html:lang(zh) .rj-home-bio { font-size: 21px; line-height: 1.85; }
+html:lang(zh) .rj-home-directions h3 { font-size: 22px; }
+html:lang(zh) .rj-home-news li { grid-template-columns: 110px minmax(0,1fr); }
+html:lang(zh) .rj-education-year { white-space: normal; }
+html:lang(zh) .rj-profile-links { font-family: var(--rj-body), 'Microsoft YaHei', sans-serif; }
+@media (max-width: 960px) {
+  .rj-nav { flex-wrap: wrap; padding-block: 16px; gap: 16px; }
+  .rj-wordmark { order: 1; }
+  .rj-language-switch { order: 2; margin-left: auto; }
+  .rj-nav-links { order: 3; width: 100%; flex-wrap: wrap; gap: 10px 24px; }
+}
+@media (max-width: 640px) {
+  html:lang(zh) .rj-home-news li { grid-template-columns: 96px minmax(0,1fr); gap: 14px; }
+  html:lang(zh) .rj-group { font-size: 15px; }
+  html:lang(zh) .rj-home-bio { font-size: 19px; }
 }

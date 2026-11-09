@@ -1,8 +1,8 @@
 {{ $paper := . }}
 {{ range hugo.Data.research }}
   {{ $area := . }}
-  {{ $story := index (index hugo.Data "project-stories") .slug }}
+  {{ $story := partial "locale/entry.html" (dict "kind" "stories" "key" .slug "item" (index (index hugo.Data "project-stories") .slug)) }}
   {{ range .project_papers }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ if eq .RelPermalink $paper.RelPermalink }}
-    <a class="rj-text-link" href="{{ $area.url | relURL }}" aria-label="Explore project: {{ $story.title }}">Project <span aria-hidden="true">&rarr;</span></a>
+    <a class="rj-text-link" href="{{ $area.url | relLangURL }}" aria-label="{{ i18n "projectDetails" }}: {{ $story.title }}">{{ i18n "project" }} <span aria-hidden="true">&rarr;</span></a>
   {{ end }}{{ end }}{{ end }}
 {{ end }}

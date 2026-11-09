@@ -1,0 +1,1160 @@
+{
+  "source": "https://hanson-zheng.github.io/life.html",
+  "photo_credit": {
+    "en": "Photographs © Yumin Zheng (Hanson-Zheng), used with permission.",
+    "zh": "照片 © Yumin Zheng（Hanson-Zheng），经授权使用。",
+    "url": "https://hanson-zheng.github.io/life.html"
+  },
+  "places": [
+    {
+      "id": "beijing",
+      "name": {
+        "en": "Beijing",
+        "zh": "北京"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        39.9075,
+        116.3972
+      ],
+      "photos": [
+        {
+          "file": "media/life/beijing/beijing-night.jpg",
+          "alt": {
+            "en": "Tiananmen in Beijing at night, with a white ZYM signature strip underneath",
+            "zh": "夜色中的北京天安门，下方附有白色 ZYM 签名栏"
+          },
+          "caption": {
+            "en": "Tiananmen, Beijing.",
+            "zh": "北京，天安门。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/beijing/beijing-night.jpg"
+        }
+      ]
+    },
+    {
+      "id": "manila",
+      "name": {
+        "en": "Manila",
+        "zh": "马尼拉"
+      },
+      "country": {
+        "en": "Philippines",
+        "zh": "菲律宾"
+      },
+      "coordinates": [
+        14.5341,
+        120.9848
+      ],
+      "photos": [
+        {
+          "file": "media/life/manila/sm-mall-of-asia.jpg",
+          "alt": {
+            "en": "An evening view of SM Mall of Asia in Manila.",
+            "zh": "傍晚的马尼拉 SM 亚洲购物中心"
+          },
+          "caption": {
+            "en": "SM Mall of Asia, Manila.",
+            "zh": "马尼拉，SM Mall of Asia。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/manila/sm-mall-of-asia.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shanghai",
+      "name": {
+        "en": "Shanghai",
+        "zh": "上海"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        31.2404,
+        121.4861
+      ],
+      "photos": [
+        {
+          "file": "media/life/shanghai/lujiazui.jpg",
+          "alt": {
+            "en": "The Lujiazui skyline across the Huangpu River.",
+            "zh": "隔黄浦江望向上海陆家嘴的夜景与天际线"
+          },
+          "caption": {
+            "en": "Lujiazui, Shanghai.",
+            "zh": "上海，陆家嘴。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/shanghai/lujiazui.jpg"
+        }
+      ]
+    },
+    {
+      "id": "kuala-lumpur",
+      "name": {
+        "en": "Kuala Lumpur",
+        "zh": "吉隆坡"
+      },
+      "country": {
+        "en": "Malaysia",
+        "zh": "马来西亚"
+      },
+      "coordinates": [
+        3.1596,
+        101.7105
+      ],
+      "photos": [
+        {
+          "file": "media/life/kuala-lumpur/petronas-twin-towers.jpg",
+          "alt": {
+            "en": "Looking up at the Petronas Twin Towers in Kuala Lumpur.",
+            "zh": "从下方向上仰望吉隆坡双子塔"
+          },
+          "caption": {
+            "en": "Petronas Twin Towers, Kuala Lumpur.",
+            "zh": "吉隆坡，双子塔。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/kuala-lumpur/petronas-twin-towers.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bangkok",
+      "name": {
+        "en": "Bangkok",
+        "zh": "曼谷"
+      },
+      "country": {
+        "en": "Thailand",
+        "zh": "泰国"
+      },
+      "coordinates": [
+        13.7269,
+        100.5111
+      ],
+      "photos": [
+        {
+          "file": "media/life/bangkok/chao-phraya-river.jpg",
+          "alt": {
+            "en": "A view along the Chao Phraya River in Bangkok.",
+            "zh": "曼谷湄南河沿岸的景色"
+          },
+          "caption": {
+            "en": "Chao Phraya River, Bangkok.",
+            "zh": "曼谷，湄南河。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/bangkok/chao-phraya-river.jpg"
+        },
+        {
+          "file": "media/life/bangkok/first-a380-flight.jpg",
+          "alt": {
+            "en": "An Emirates Airbus A380 parked at a gate, viewed through a terminal window in Bangkok",
+            "zh": "从曼谷机场航站楼窗前看到停靠登机口的阿联酋航空 A380"
+          },
+          "caption": {
+            "en": "Emirates Airbus A380 at an airport gate in Bangkok.",
+            "zh": "曼谷机场登机口的阿联酋航空 A380。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/bangkok/first-a380-flight.jpg"
+        },
+        {
+          "file": "media/life/bangkok/grand-palace.jpg",
+          "alt": {
+            "en": "Ornate golden roofs and spires above trees in the Grand Palace complex in Bangkok",
+            "zh": "曼谷大皇宫内，金色屋顶和尖塔掩映在绿树之间"
+          },
+          "caption": {
+            "en": "Golden roofs and green gardens at the Grand Palace, Bangkok.",
+            "zh": "曼谷大皇宫，金色屋顶下是满眼的绿。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/bangkok/grand-palace.jpg"
+        }
+      ]
+    },
+    {
+      "id": "harbin",
+      "name": {
+        "en": "Harbin",
+        "zh": "哈尔滨"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        45.7459,
+        126.6262
+      ],
+      "photos": [
+        {
+          "file": "media/life/harbin/hit-main-building.jpg",
+          "alt": {
+            "en": "The main building of Harbin Institute of Technology in Harbin.",
+            "zh": "哈尔滨工业大学哈尔滨校区主楼"
+          },
+          "caption": {
+            "en": "Main building, Harbin Institute of Technology, Harbin.",
+            "zh": "哈尔滨，哈尔滨工业大学主楼。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/harbin/hit-main-building.jpg"
+        }
+      ]
+    },
+    {
+      "id": "hong-kong",
+      "name": {
+        "en": "Hong Kong",
+        "zh": "香港"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        22.293,
+        114.169
+      ],
+      "photos": [
+        {
+          "file": "media/life/hong-kong/victoria-harbour.jpg",
+          "alt": {
+            "en": "Hong Kong Island and Victoria Harbour, seen from the waterfront.",
+            "zh": "从海滨望向香港岛和维多利亚港"
+          },
+          "caption": {
+            "en": "Victoria Harbour, Hong Kong.",
+            "zh": "香港，维多利亚港。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/hong-kong/victoria-harbour.jpg"
+        }
+      ]
+    },
+    {
+      "id": "weihai",
+      "name": {
+        "en": "Weihai",
+        "zh": "威海"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        37.529,
+        122.0778
+      ],
+      "photos": [
+        {
+          "file": "media/life/weihai/hit-main-building.jpg",
+          "alt": {
+            "en": "The main building of Harbin Institute of Technology in Weihai.",
+            "zh": "哈尔滨工业大学威海校区主楼"
+          },
+          "caption": {
+            "en": "Main building, Harbin Institute of Technology, Weihai.",
+            "zh": "威海，哈尔滨工业大学主楼。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/weihai/hit-main-building.jpg"
+        },
+        {
+          "file": "media/life/weihai/hit-main-building-at-night.jpg",
+          "alt": {
+            "en": "The illuminated main building of Harbin Institute of Technology, Weihai, surrounded by campus buildings at night",
+            "zh": "夜色中的哈尔滨工业大学威海校区，亮灯的主楼和周围校园建筑"
+          },
+          "caption": {
+            "en": "The main building of Harbin Institute of Technology, Weihai, after dark.",
+            "zh": "威海，亮灯后的哈工大主楼。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/weihai/hit-main-building-at-night.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shenzhen",
+      "name": {
+        "en": "Shenzhen",
+        "zh": "深圳"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        22.5884,
+        113.9691
+      ],
+      "photos": [
+        {
+          "file": "media/life/shenzhen/hit-main-building.jpg",
+          "alt": {
+            "en": "The main building of Harbin Institute of Technology in Shenzhen.",
+            "zh": "哈尔滨工业大学深圳校区主楼"
+          },
+          "caption": {
+            "en": "Main building, Harbin Institute of Technology, Shenzhen.",
+            "zh": "深圳，哈尔滨工业大学主楼。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/shenzhen/hit-main-building.jpg"
+        }
+      ]
+    },
+    {
+      "id": "siem-reap",
+      "name": {
+        "en": "Siem Reap",
+        "zh": "暹粒"
+      },
+      "country": {
+        "en": "Cambodia",
+        "zh": "柬埔寨"
+      },
+      "coordinates": [
+        13.4119,
+        103.8642
+      ],
+      "photos": [
+        {
+          "file": "media/life/siem-reap/angkor-wat.jpg",
+          "alt": {
+            "en": "The silhouette of Angkor Wat and its reflection in Siem Reap.",
+            "zh": "暹粒吴哥窟的建筑轮廓及其水中倒影"
+          },
+          "caption": {
+            "en": "Angkor Wat, Siem Reap.",
+            "zh": "暹粒，吴哥窟。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/siem-reap/angkor-wat.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ntu-eee",
+      "name": {
+        "en": "NTU EEE",
+        "zh": "南洋理工大学"
+      },
+      "country": {
+        "en": "Singapore",
+        "zh": "新加坡"
+      },
+      "coordinates": [
+        1.3409,
+        103.6805
+      ],
+      "photos": [
+        {
+          "file": "media/life/ntu-eee/ntu-eee.jpg",
+          "alt": {
+            "en": "The Electrical and Electronic Engineering building at NTU in Singapore",
+            "zh": "新加坡南洋理工大学电气与电子工程学院的建筑"
+          },
+          "caption": {
+            "en": "School of Electrical and Electronic Engineering, NTU.",
+            "zh": "南洋理工大学，电气与电子工程学院。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/singapore/ntu-eee.jpg"
+        }
+      ]
+    },
+    {
+      "id": "vienna",
+      "name": {
+        "en": "Vienna",
+        "zh": "维也纳"
+      },
+      "country": {
+        "en": "Austria",
+        "zh": "奥地利"
+      },
+      "coordinates": [
+        48.1952,
+        16.3801
+      ],
+      "photos": [
+        {
+          "file": "media/life/vienna/belvedere.jpg",
+          "alt": {
+            "en": "Belvedere Palace and its formal gardens in Vienna",
+            "zh": "维也纳美景宫及其庭园"
+          },
+          "caption": {
+            "en": "Belvedere Palace, Vienna.",
+            "zh": "维也纳，美景宫。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/vienna/belvedere.jpg"
+        },
+        {
+          "file": "media/life/vienna/votivkirche.jpg",
+          "alt": {
+            "en": "Votivkirche in Vienna at night, with an illuminated infinity symbol connecting its twin towers",
+            "zh": "夜晚的维也纳沃蒂夫教堂，双塔之间亮着无限符号形状的灯光装置"
+          },
+          "caption": {
+            "en": "Votivkirche, Vienna - Infinity of Light by Billi Thanner.",
+            "zh": "维也纳，沃蒂夫教堂与 Billi Thanner 的灯光装置《Infinity of Light》。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/vienna/votivkirche.jpg"
+        }
+      ]
+    },
+    {
+      "id": "prague",
+      "name": {
+        "en": "Prague",
+        "zh": "布拉格"
+      },
+      "country": {
+        "en": "Czechia",
+        "zh": "捷克"
+      },
+      "coordinates": [
+        50.0865,
+        14.4107
+      ],
+      "photos": [
+        {
+          "file": "media/life/prague/prague-castle-vltava.jpg",
+          "alt": {
+            "en": "Illuminated Prague Castle above the rooftops near the Vltava River",
+            "zh": "伏尔塔瓦河附近的屋顶上方，灯光映照着布拉格城堡"
+          },
+          "caption": {
+            "en": "Prague Castle and the Vltava, Prague.",
+            "zh": "布拉格城堡与伏尔塔瓦河。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/prague/prague-castle-vltava.jpg"
+        }
+      ]
+    },
+    {
+      "id": "frankfurt",
+      "name": {
+        "en": "Frankfurt",
+        "zh": "法兰克福"
+      },
+      "country": {
+        "en": "Germany",
+        "zh": "德国"
+      },
+      "coordinates": [
+        50.0482,
+        8.581
+      ],
+      "photos": [
+        {
+          "file": "media/life/frankfurt/frankfurt-airport-icbc.jpg",
+          "alt": {
+            "en": "A jet bridge at Frankfurt Airport displaying ICBC branding beneath a Lufthansa sign",
+            "zh": "法兰克福机场廊桥上的工行标志，上方是汉莎航空标识"
+          },
+          "caption": {
+            "en": "ICBC-branded jet bridge at Frankfurt Airport.",
+            "zh": "法兰克福机场廊桥上的工行标识。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/frankfurt/frankfurt-airport-icbc.jpg"
+        }
+      ]
+    },
+    {
+      "id": "paris",
+      "name": {
+        "en": "Paris",
+        "zh": "巴黎"
+      },
+      "country": {
+        "en": "France",
+        "zh": "法国"
+      },
+      "coordinates": [
+        48.8605,
+        2.3352
+      ],
+      "photos": [
+        {
+          "file": "media/life/paris/louvre.jpg",
+          "alt": {
+            "en": "The glass pyramid in the courtyard of the Louvre in Paris",
+            "zh": "巴黎卢浮宫庭院中的玻璃金字塔"
+          },
+          "caption": {
+            "en": "The Louvre, Paris.",
+            "zh": "巴黎，卢浮宫。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/paris/louvre.jpg"
+        }
+      ]
+    },
+    {
+      "id": "munich",
+      "name": {
+        "en": "Munich",
+        "zh": "慕尼黑"
+      },
+      "country": {
+        "en": "Germany",
+        "zh": "德国"
+      },
+      "coordinates": [
+        48.1769,
+        11.5571
+      ],
+      "photos": [
+        {
+          "file": "media/life/munich/bmw-museum.jpg",
+          "alt": {
+            "en": "The BMW Museum and neighbouring BMW building in Munich",
+            "zh": "慕尼黑的宝马博物馆及邻近的宝马大楼"
+          },
+          "caption": {
+            "en": "BMW Museum, Munich.",
+            "zh": "慕尼黑，宝马博物馆。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/munich/bmw-museum.jpg"
+        }
+      ]
+    },
+    {
+      "id": "london",
+      "name": {
+        "en": "London",
+        "zh": "伦敦"
+      },
+      "country": {
+        "en": "United Kingdom",
+        "zh": "英国"
+      },
+      "coordinates": [
+        51.5081,
+        -0.0742
+      ],
+      "photos": [
+        {
+          "file": "media/life/london/tower-bridge.jpg",
+          "alt": {
+            "en": "One of the towers of Tower Bridge and its blue suspension structure in London",
+            "zh": "伦敦塔桥的一座桥塔与蓝色悬索结构"
+          },
+          "caption": {
+            "en": "Tower Bridge, London.",
+            "zh": "伦敦，塔桥。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/london/tower-bridge.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cambridge",
+      "name": {
+        "en": "Cambridge",
+        "zh": "剑桥"
+      },
+      "country": {
+        "en": "United Kingdom",
+        "zh": "英国"
+      },
+      "coordinates": [
+        52.2072,
+        0.118
+      ],
+      "photos": [
+        {
+          "file": "media/life/cambridge/newtons-apple-tree.jpg",
+          "alt": {
+            "en": "An apple tree on the lawn beside the historic buildings of Trinity College, Cambridge",
+            "zh": "剑桥三一学院历史建筑旁草坪上的苹果树"
+          },
+          "caption": {
+            "en": "Newton's apple tree, Trinity College, Cambridge.",
+            "zh": "剑桥三一学院，牛顿的苹果树。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/cambridge/newtons-apple-tree.jpg"
+        }
+      ]
+    },
+    {
+      "id": "barcelona",
+      "name": {
+        "en": "Barcelona",
+        "zh": "巴塞罗那"
+      },
+      "country": {
+        "en": "Spain",
+        "zh": "西班牙"
+      },
+      "coordinates": [
+        41.4193,
+        2.1619
+      ],
+      "photos": [
+        {
+          "file": "media/life/barcelona/turo-de-la-rovira.jpg",
+          "alt": {
+            "en": "A panorama of Barcelona stretching towards the Mediterranean Sea from Turo de la Rovira",
+            "zh": "从焦糖山望向巴塞罗那城区与地中海的全景"
+          },
+          "caption": {
+            "en": "Barcelona from Turó de la Rovira (Bunkers del Carmel).",
+            "zh": "从焦糖山俯瞰巴塞罗那。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/barcelona/turo-de-la-rovira.jpg"
+        }
+      ]
+    },
+    {
+      "id": "doha",
+      "name": {
+        "en": "Doha",
+        "zh": "多哈"
+      },
+      "country": {
+        "en": "Qatar",
+        "zh": "卡塔尔"
+      },
+      "coordinates": [
+        25.2603,
+        51.6153
+      ],
+      "photos": [
+        {
+          "file": "media/life/doha/hamad-airport-dawn.jpg",
+          "alt": {
+            "en": "Early morning light outside Hamad International Airport in Doha",
+            "zh": "清晨光线中的多哈哈马德国际机场外景"
+          },
+          "caption": {
+            "en": "Dawn at Hamad International Airport, Doha.",
+            "zh": "多哈，哈马德国际机场的清晨。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/doha/hamad-airport-dawn.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bali",
+      "name": {
+        "en": "Bali",
+        "zh": "巴厘岛"
+      },
+      "country": {
+        "en": "Indonesia",
+        "zh": "印度尼西亚"
+      },
+      "coordinates": [
+        -8.6182,
+        115.0865
+      ],
+      "photos": [
+        {
+          "file": "media/life/bali/bali.jpg",
+          "alt": {
+            "en": "A Balinese coastal temple above a natural rock arch, overlooking the ocean",
+            "zh": "巴厘岛海边一座建在天然岩拱上方的寺庙，四周是海浪与绿植"
+          },
+          "caption": {
+            "en": "Bali, Indonesia.",
+            "zh": "印度尼西亚，巴厘岛。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/bali/bali.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ningbo",
+      "name": {
+        "en": "Ningbo",
+        "zh": "宁波"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        29.8746,
+        121.526
+      ],
+      "photos": [
+        {
+          "file": "media/life/ningbo/xiaoshi-high-school.jpg",
+          "alt": {
+            "en": "The entrance and school buildings of Xiaoshi High School in Ningbo",
+            "zh": "宁波效实中学的校门和教学楼"
+          },
+          "caption": {
+            "en": "Xiaoshi High School, Ningbo.",
+            "zh": "宁波，效实中学。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/ningbo/xiaoshi-high-school.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cebu",
+      "name": {
+        "en": "Cebu",
+        "zh": "宿务"
+      },
+      "country": {
+        "en": "Philippines",
+        "zh": "菲律宾"
+      },
+      "coordinates": [
+        10.2925,
+        123.9081
+      ],
+      "photos": [
+        {
+          "file": "media/life/cebu/ferry-terminal.jpg",
+          "alt": {
+            "en": "Ferries moored at the port in Cebu under a blue sky with white clouds",
+            "zh": "蓝天白云下，轮渡停泊在菲律宾宿务的港口"
+          },
+          "caption": {
+            "en": "Ferry terminal, Cebu, Philippines.",
+            "zh": "菲律宾宿务，轮渡码头。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/cebu/ferry-terminal.jpg"
+        }
+      ]
+    },
+    {
+      "id": "guangzhou",
+      "name": {
+        "en": "Guangzhou",
+        "zh": "广州"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        23.3924,
+        113.299
+      ],
+      "photos": [
+        {
+          "file": "media/life/guangzhou/baiyun-a380-and-737.jpg",
+          "alt": {
+            "en": "A large Airbus A380 and a smaller Boeing 737 seen together from the terminal at Guangzhou Baiyun Airport",
+            "zh": "从广州白云机场航站楼望去，一架大型 A380 与一架较小的 737 同时出现在画面里"
+          },
+          "caption": {
+            "en": "Airbus A380 and Boeing 737 at Guangzhou Baiyun Airport.",
+            "zh": "广州白云机场的 A380 与 737。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/guangzhou/baiyun-a380-and-737.jpg"
+        }
+      ]
+    },
+    {
+      "id": "macau",
+      "name": {
+        "en": "Macau",
+        "zh": "澳门"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        22.158,
+        113.5767
+      ],
+      "photos": [
+        {
+          "file": "media/life/macau/airport-special-livery.jpg",
+          "alt": {
+            "en": "An aircraft with a colourful special livery parked outside the terminal at Macau International Airport",
+            "zh": "澳门国际机场航站楼前停着一架带有特色彩绘涂装的飞机"
+          },
+          "caption": {
+            "en": "Aircraft at Macau International Airport.",
+            "zh": "澳门国际机场的彩绘飞机。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/macau/airport-special-livery.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bohol",
+      "name": {
+        "en": "Bohol",
+        "zh": "薄荷岛"
+      },
+      "country": {
+        "en": "Philippines",
+        "zh": "菲律宾"
+      },
+      "coordinates": [
+        9.6405,
+        123.8565
+      ],
+      "photos": [
+        {
+          "file": "media/life/bohol/sunset-by-the-water.jpg",
+          "alt": {
+            "en": "Trees silhouetted against an orange sunset beside a pool overlooking the water in Bohol",
+            "zh": "薄荷岛日落时，树木在橙色天空下形成剪影，泳池水面映着晚霞"
+          },
+          "caption": {
+            "en": "Sunset by the water, Bohol, Philippines.",
+            "zh": "菲律宾薄荷岛，日落时分。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/bohol/sunset-by-the-water.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chongqing",
+      "name": {
+        "en": "Chongqing",
+        "zh": "重庆"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        29.5568,
+        106.5346
+      ],
+      "photos": [
+        {
+          "file": "media/life/chongqing/liziba-railway.jpg",
+          "alt": {
+            "en": "An elevated railway beside hillside buildings and a colourful mural at Liziba in Chongqing",
+            "zh": "重庆李子坝的高架轨道、依山而建的楼房和路边彩色壁画"
+          },
+          "caption": {
+            "en": "Liziba, Chongqing.",
+            "zh": "重庆，李子坝。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/chongqing/liziba-railway.jpg"
+        }
+      ]
+    },
+    {
+      "id": "phuket",
+      "name": {
+        "en": "Phuket",
+        "zh": "普吉岛"
+      },
+      "country": {
+        "en": "Thailand",
+        "zh": "泰国"
+      },
+      "coordinates": [
+        7.895,
+        98.295
+      ],
+      "photos": [
+        {
+          "file": "media/life/phuket/patong-beach.jpg",
+          "alt": {
+            "en": "Large colourful PHUKET letters on the sand at Patong Beach beneath a blue sky",
+            "zh": "巴东海滩上彩色的 PHUKET 大字，身后是海面和蓝天"
+          },
+          "caption": {
+            "en": "Patong Beach, Phuket, Thailand.",
+            "zh": "泰国普吉岛，巴东海滩。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/phuket/patong-beach.jpg"
+        }
+      ]
+    },
+    {
+      "id": "krabi",
+      "name": {
+        "en": "Krabi",
+        "zh": "甲米"
+      },
+      "country": {
+        "en": "Thailand",
+        "zh": "泰国"
+      },
+      "coordinates": [
+        8.0108,
+        98.8378
+      ],
+      "photos": [
+        {
+          "file": "media/life/krabi/limestone-cliffs-and-sea.jpg",
+          "alt": {
+            "en": "Tree-covered limestone cliffs beside a sandy beach and turquoise water in Krabi",
+            "zh": "甲米海边覆盖绿树的石灰岩山壁、沙滩和蓝绿色海水"
+          },
+          "caption": {
+            "en": "Krabi coast, Thailand.",
+            "zh": "泰国甲米海岸。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/krabi/limestone-cliffs-and-sea.jpg"
+        }
+      ]
+    },
+    {
+      "id": "qingdao",
+      "name": {
+        "en": "Qingdao",
+        "zh": "青岛"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        36.0609,
+        120.3807
+      ],
+      "photos": [
+        {
+          "file": "media/life/qingdao/may-fourth-square.jpg",
+          "alt": {
+            "en": "The red spiral sculpture at May Fourth Square with modern buildings behind it in Qingdao",
+            "zh": "青岛五四广场上的红色螺旋雕塑，背后是城市高楼"
+          },
+          "caption": {
+            "en": "May Fourth Square, Qingdao.",
+            "zh": "青岛，五四广场。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/qingdao/may-fourth-square.jpg"
+        }
+      ]
+    },
+    {
+      "id": "chengdu",
+      "name": {
+        "en": "Chengdu",
+        "zh": "成都"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        30.6568,
+        104.0773
+      ],
+      "photos": [
+        {
+          "file": "media/life/chengdu/ifs-climbing-panda.jpg",
+          "alt": {
+            "en": "The giant panda sculpture on the facade of Chengdu IFS, viewed from street level",
+            "zh": "从街边仰望成都 IFS 外墙上的巨型熊猫雕塑"
+          },
+          "caption": {
+            "en": "The climbing panda at Chengdu IFS.",
+            "zh": "成都 IFS，爬楼的大熊猫。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/chengdu/ifs-climbing-panda.jpg"
+        }
+      ]
+    },
+    {
+      "id": "xian",
+      "name": {
+        "en": "Xi'an",
+        "zh": "西安"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        34.2515,
+        108.9413
+      ],
+      "photos": [
+        {
+          "file": "media/life/xian/city-wall-at-dusk.jpg",
+          "alt": {
+            "en": "Xi'an city wall and a traditional gate tower above street traffic under an evening sky",
+            "zh": "傍晚天空下的西安城墙和城楼，墙下是街道与车流"
+          },
+          "caption": {
+            "en": "By the city wall, Xi'an.",
+            "zh": "西安，城墙边的傍晚。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/xian/city-wall-at-dusk.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lintong",
+      "name": {
+        "en": "Lintong, Xi'an",
+        "zh": "西安·临潼"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        34.385,
+        109.2731
+      ],
+      "photos": [
+        {
+          "file": "media/life/lintong/terracotta-warriors.jpg",
+          "alt": {
+            "en": "Rows of terracotta warriors in an excavation pit beneath a large exhibition hall roof",
+            "zh": "兵马俑展厅内，成排的陶俑立在巨大的考古坑中"
+          },
+          "caption": {
+            "en": "Terracotta Warriors, Lintong, Xi'an.",
+            "zh": "西安临潼，兵马俑。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/lintong/terracotta-warriors.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ordos",
+      "name": {
+        "en": "Ordos",
+        "zh": "鄂尔多斯"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        39.1552,
+        109.2967
+      ],
+      "photos": [
+        {
+          "file": "media/life/ordos/grassland-sunset.jpg",
+          "alt": {
+            "en": "An orange sunset above the grassland in Ordos with a wooden boardwalk in the foreground",
+            "zh": "鄂尔多斯草原上的橙色晚霞，前景是一条木栈道"
+          },
+          "caption": {
+            "en": "Sunset over the grassland, Ordos.",
+            "zh": "鄂尔多斯草原，日落时分。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/ordos/grassland-sunset.jpg"
+        }
+      ]
+    },
+    {
+      "id": "wuhan",
+      "name": {
+        "en": "Wuhan",
+        "zh": "武汉"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        30.548,
+        114.2931
+      ],
+      "photos": [
+        {
+          "file": "media/life/wuhan/yellow-crane-tower-at-night.jpg",
+          "alt": {
+            "en": "Yellow Crane Tower illuminated in gold and red against a dark night sky in Wuhan",
+            "zh": "武汉黄鹤楼在夜空下亮起金色和红色灯光"
+          },
+          "caption": {
+            "en": "Yellow Crane Tower, Wuhan.",
+            "zh": "武汉，黄鹤楼。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/wuhan/yellow-crane-tower-at-night.jpg"
+        }
+      ]
+    },
+    {
+      "id": "changsha",
+      "name": {
+        "en": "Changsha",
+        "zh": "长沙"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        28.2419,
+        112.9723
+      ],
+      "photos": [
+        {
+          "file": "media/life/changsha/xiang-river-evening.jpg",
+          "alt": {
+            "en": "A riverside terrace overlooking the Xiang River and the opposite skyline beneath an evening sky in Changsha",
+            "zh": "长沙湘江边的露台，隔着江面可以看到傍晚的天空和对岸天际线"
+          },
+          "caption": {
+            "en": "By the Xiang River, Changsha.",
+            "zh": "长沙，湘江边。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/changsha/xiang-river-evening.jpg"
+        }
+      ]
+    },
+    {
+      "id": "yuncheng",
+      "name": {
+        "en": "Yuncheng",
+        "zh": "运城"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        34.8396,
+        110.2652
+      ],
+      "photos": [
+        {
+          "file": "media/life/yuncheng/guanque-tower.jpg",
+          "alt": {
+            "en": "Guanque Tower rising above a broad stone plaza beneath a cloudy sky in Yongji, Yuncheng",
+            "zh": "运城永济的鹳雀楼，楼前是宽阔的石铺广场，天空布满云层"
+          },
+          "caption": {
+            "en": "Guanque Tower, Yongji, Yuncheng.",
+            "zh": "运城永济，鹳雀楼。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/yuncheng/guanque-tower.jpg"
+        }
+      ]
+    },
+    {
+      "id": "yueyang",
+      "name": {
+        "en": "Yueyang",
+        "zh": "岳阳"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        29.3847,
+        113.0883
+      ],
+      "photos": [
+        {
+          "file": "media/life/yueyang/yueyang-tower.jpg",
+          "alt": {
+            "en": "The golden curved roofs and dark wooden facade of Yueyang Tower with visitors in the foreground",
+            "zh": "岳阳楼金色的弯曲屋顶和深色木构立面，楼前有参观的游客"
+          },
+          "caption": {
+            "en": "Yueyang Tower, Yueyang.",
+            "zh": "岳阳，岳阳楼。"
+          },
+          "source_url": "https://hanson-zheng.github.io/images/life/yueyang/yueyang-tower.jpg"
+        }
+      ]
+    }
+  ]
+}

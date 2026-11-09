@@ -3,10 +3,11 @@
 {{ if .compact }}
 <ol class="rj-activity-list rj-activity-compact">
   {{ range $events }}
+  {{ $entry := partial "locale/entry.html" (dict "kind" "activities" "key" .id "item" .) }}
   <li>
-    <time datetime="{{ time.Format "2006-01" .date }}">{{ time.Format "Jan 2006" .date }}</time>
+    <time datetime="{{ time.Format "2006-01" .date }}">{{ partial "locale/date.html" (dict "date" .date) }}</time>
     <div class="rj-activity-content">
-      <h3><a href="{{ printf "/highlights/#%s" .id | relURL }}">{{ .title }} <span class="rj-activity-location">&middot; {{ .location }}</span></a></h3>
+      <h3><a href="{{ printf "/highlights/#%s" .id | relLangURL }}">{{ .title }} <span class="rj-activity-location">&middot; {{ $entry.location }}</span></a></h3>
     </div>
   </li>
   {{ end }}
@@ -14,28 +15,30 @@
 {{ else }}
 <div class="rj-event-grid">
   {{ range $events }}
-  {{ $event := . }}
+  {{ $event := partial "locale/entry.html" (dict "kind" "activities" "key" .id "item" .) }}
   {{ $photo := resources.Get .image }}
   {{ $placeholder := not $photo }}
   {{ if $placeholder }}{{ $photo = resources.Get "media/research/neural-implant-ant.png" }}{{ end }}
+  {{ with $event }}
   <article class="rj-event" id="{{ .id }}" aria-labelledby="{{ .id }}-heading">
     <figure class="rj-event-figure">
       {{ with $photo }}
       {{ $display := .Fit "1200x900 webp q90" }}
-      <a class="rj-event-photo" href="{{ .RelPermalink }}" aria-label="View full image for {{ $event.title }}">
-        <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ if $placeholder }}Ant and neural microsystem, temporary image for {{ $event.title }}{{ else }}{{ $event.image_alt }}{{ end }}" loading="lazy" decoding="async">
+      <a class="rj-event-photo" href="{{ .RelPermalink }}" aria-label="{{ i18n "viewImage" }}: {{ $event.title }}">
+        <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ if $placeholder }}{{ i18n "photoComing" }}: {{ $event.title }}{{ else }}{{ $event.image_alt }}{{ end }}" loading="lazy" decoding="async">
       </a>
       {{ end }}
-      <figcaption>{{ if $placeholder }}Conference photo coming soon.{{ else }}{{ .caption }}{{ end }}</figcaption>
+      <figcaption>{{ if $placeholder }}{{ i18n "photoComing" }}{{ else }}{{ .caption }}{{ end }}</figcaption>
     </figure>
     <div class="rj-event-copy">
-      <div class="rj-event-meta"><time datetime="{{ .date }}">{{ time.Format "2" .date }}&ndash;{{ time.Format "2 Jan 2006" .date_end }}</time><span>{{ .location }}</span></div>
+      <div class="rj-event-meta"><time datetime="{{ .date }}">{{ partial "locale/range.html" (dict "start" .date "end" .date_end) }}</time><span>{{ .location }}</span></div>
       <h2 id="{{ .id }}-heading"><a href="{{ .website }}" title="{{ .full_name }}">{{ .title }}</a></h2>
       {{ with .venue }}<p class="rj-event-venue">{{ . }}</p>{{ end }}
       <p class="rj-event-description">{{ .text }}</p>
-      <div class="rj-event-links">{{ with .paper }}<a href="{{ . | relURL }}">Related paper &rarr;</a>{{ end }}<a href="{{ .website }}">Conference &nearr;</a></div>
+      <div class="rj-event-links">{{ with .paper }}<a href="{{ . | relLangURL }}">{{ i18n "relatedPaper" }} &rarr;</a>{{ end }}<a href="{{ .website }}">{{ i18n "conference" }} &nearr;</a></div>
     </div>
   </article>
+  {{ end }}
   {{ end }}
 </div>
 {{ end }}

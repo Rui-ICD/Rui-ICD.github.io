@@ -1,7 +1,8 @@
-{{ if or .IsHome (in (slice "projects" "publications" "background" "highlights") .Section) }}<a class="rj-skip" href="#main-content">Skip to content</a>{{ end }}
+{{ if or .IsHome (in (slice "projects" "publications" "background" "highlights" "life") .Section) }}<a class="rj-skip" href="#main-content">{{ i18n "skipContent" }}</a>{{ end }}
 <header class="rj-header">
-  <nav class="rj-shell rj-nav" aria-label="Main navigation">
-    <a class="rj-wordmark" href="{{ "/" | relURL }}">Rui Jiao</a>
-    <div class="rj-nav-links">{{ range site.Menus.main }}{{ $active := false }}{{ if eq .URL "/" }}{{ $active = $.IsHome }}{{ else }}{{ $active = hasPrefix $.RelPermalink .URL }}{{ end }}<a href="{{ .URL | relURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>{{ end }}</div>
+  <nav class="rj-shell rj-nav" aria-label="{{ i18n "mainNavigation" }}">
+    <a class="rj-wordmark" href="{{ "/" | relLangURL }}">Rui Jiao</a>
+    <div class="rj-nav-links">{{ range site.Menus.main }}{{ $url := .URL | relLangURL }}{{ $active := false }}{{ if eq .Identifier "home" }}{{ $active = $.IsHome }}{{ else }}{{ $active = hasPrefix $.RelPermalink $url }}{{ end }}<a href="{{ $url }}"{{ if $active }} aria-current="page"{{ end }}>{{ i18n .Identifier | default .Name }}</a>{{ end }}</div>
+    {{ partial "locale/language-switch.html" . }}
   </nav>
 </header>

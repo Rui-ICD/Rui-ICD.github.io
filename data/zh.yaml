@@ -1,0 +1,130 @@
+# 中文按语境改写；数字、图片路径和论文信息沿用原始数据。
+profile:
+  me:
+    role: 博士生 · 新加坡南洋理工大学
+home:
+  main:
+    bio: 我研究面向神经记录的模拟与混合信号电路，重点关注利用光供能的光电微系统。
+home_research:
+  light-adaptive-neural-recording:
+    title: 模拟与混合信号集成电路
+    description: 低噪声放大、光能采集与信号编码。
+  subnanolitre-neural-recording:
+    title: 光电神经微系统
+    description: 将 CMOS 电路与光电器件集成，实现无需导线连接的神经记录。
+news:
+  '2026-06': {text: 在维也纳参加 ICRA 2026。}
+  '2026-05': {text: 在巴塞罗那的 ICASSP 2026 进行海报交流。}
+  '2026-04': {text: 光自适应神经记录芯片研究发表于 IEEE TBioCAS。}
+research:
+  neural-microsystems:
+    title: 模拟与混合信号集成电路设计
+    alt: FB-MOTE 的 CMOS 测试芯片、记录单元引脚分布和电路版图
+  optical-readout:
+    title: 光电神经微系统
+    alt: 玻璃微管中的 MOTE 微系统，旁边以蚂蚁头部作尺寸参照
+research_overview:
+  main:
+    overview: 从光供能 CMOS 电路，到集成式光电植入器件，探索神经记录的不同实现层次。
+stories:
+  neural-microsystems:
+    title: 光自适应神经记录芯片
+    summary: 在 CMOS 中收集光能，并让神经记录带宽随可用功率自动调整。
+  optical-readout:
+    title: 无系留光电神经植入系统
+    summary: 一个亚纳升级的神经植入器件，用光供能，也用光传回神经信号。
+facts:
+  neural-microsystems-0: {label: CMOS 工艺}
+  neural-microsystems-1: {label: 记录单元尺寸}
+  neural-microsystems-2: {label: 生物实验验证, value: 急性神经记录}
+  optical-readout-0: {label: 集成器件尺寸, value: 约 370 × 70 × 20 µm}
+  optical-readout-1: {label: 供能与数据传输, value: 光学方式}
+  optical-readout-2: {label: 长期验证, value: 第 365 天的平均局部场电位}
+sections:
+  neural-microsystems/architecture:
+    title: 在 CMOS 中收集光能
+    text: 正向偏置的 CMOS 结收集光能，为放大器和编码器供电；AlGaAs 光伏发光二极管（PVLED）则为光发射电路供电。光照增强时，额外的光电流主要流向放大器，使其带宽随之扩大；其他电路模块通过 PTAT 偏置保持相对稳定。
+    figure:
+      alt: FB-MOTE 的光能采集、放大、编码和光发射信号链，以及对应的供电域
+      caption: 信号链与供电域。Jiao 等，IEEE TBioCAS（2026），图 3。
+  neural-microsystems/silicon:
+    title: 从电路到芯片
+    text: 每个记录单元采用 180 nm CMOS 工艺，在 43 × 269 µm 的面积内集成放大、偏置、编码和光驱动电路。3 × 26 测试阵列用于电学与光学表征；放大的引脚图和版图展示了单个记录单元及其电路模块。
+    figure:
+      alt: 含 3 × 26 个 FB-MOTE 单元的测试芯片，以及放大的单元引脚图和电路版图
+      caption: CMOS 测试芯片、记录单元引脚图与电路版图。Jiao 等，IEEE TBioCAS（2026），图 19。
+  neural-microsystems/measurements:
+    title: 测量电路如何适应光照
+    text: 探针测试用于观察不同光照下的增益、带宽、时序、供电电压与噪声。随着可用光功率增加，带宽上升，而输入等效积分噪声保持近似稳定。生物实验采用引线键合芯片和外置铂电极，在生理盐水及蚯蚓急性神经实验中验证记录能力。
+    figure:
+      alt: 不同光照强度下实测的增益、带宽、脉冲时序、供电电压和输入等效噪声
+      caption: 基于探针的光学表征。Jiao 等，IEEE TBioCAS（2026），图 12。
+  optical-readout/system:
+    title: 用光连接神经接口
+    text: AlGaAs 二极管同时承担光伏供能与光信号回传的功能。CMOS 电路放大神经电压，以脉冲位置调制进行编码，再驱动光脉冲输出。器件通过外部照明和光检测建立供能与通信链路。
+    figure:
+      alt: 玻璃微管内的 MOTE 器件，与蚂蚁头部对比展示尺寸
+      caption: 玻璃微管中的 MOTE，旁边以蚂蚁作尺寸参照。照片由 Rui Jiao 提供，网页显示时做了明暗调整。
+  optical-readout/integration:
+    title: 把器件连接起来，也保护起来
+    text: PVLED 转移到 CMOS 芯片后，通过铂接触实现电连接。退火、封装和遮光结构帮助器件在生物环境中工作；经过减薄与释放，得到独立的植入微芯片，并保留用于记录的裸露铂电极。
+    figure:
+      alt: MOTE 的 PVLED 转移、接触、封装、减薄、遮光与器件释放流程
+      caption: MOTE 制备与集成流程。共同作者提供的研究图，相关工作发表于 Lee 等，Nature Electronics（2025）。
+  optical-readout/recordings:
+    title: 观察长期神经记录
+    text: 研究在清醒、头部固定的小鼠中记录了胡须刺激诱发的动作电位，下图展示了第 13 天和第 102 天的结果。第 365 天的测量则通过多次试验平均，恢复了较弱的局部场电位。这些是长期研究中不同类型的记录结果。
+    figure:
+      alt: 清醒小鼠的实验装置、植入成像，以及第 13 天和第 102 天的动作电位波形与统计
+      caption: 记录装置、植入成像及第 13 天和第 102 天的动作电位结果。共同作者提供的研究图，相关工作发表于 Lee 等，Nature Electronics（2025）。
+education:
+  '0':
+    year: 2023 年至今
+    short_degree: 博士在读 · 电气与电子工程
+    short_institution: 南洋理工大学
+  '1':
+    short_degree: 硕士 · 集成电路设计（TUM–NTU 联合项目）
+    short_institution: 慕尼黑工业大学与南洋理工大学
+  '2':
+    short_degree: 本科 · 电子信息科学与技术
+    short_institution: 电子科技大学
+industry:
+  MediaTek:
+    org: MediaTek（联发科）
+    role: 射频／模拟电路实习生
+    image_alt: 在 MediaTek 实习期间的照片
+awards:
+  daad-2022:
+    title: DAAD 奖学金
+    institution: 慕尼黑工业大学（TUM）
+    image_alt: Rui Jiao 在 2022 年 DAAD 奖学金颁奖现场
+    caption: 2022 年 DAAD 奖学金颁奖现场。
+  academic-distinction-2021:
+    title: 学业优异奖学金
+    institution: 慕尼黑工业大学（TUM）
+  women-in-stem-2021:
+    title: STEM 女性奖学金
+    institution: 慕尼黑工业大学（TUM）
+activities:
+  icra-2026:
+    location: 奥地利 · 维也纳
+    venue: VIECON 维也纳会议会展中心
+    text: 参加 ICRA 2026，记录下维也纳的大会开幕现场。
+    image_alt: ICRA 2026 开幕式上，主席在大屏幕前致辞
+    caption: ICRA 2026 开幕式。
+  icassp-2026:
+    location: 西班牙 · 巴塞罗那
+    venue: 巴塞罗那国际会议中心（CCIB）
+    text: 在海报交流中分享神经植入系统的光信号解码研究。
+    image_alt: Rui Jiao 在 ICASSP 2026 的研究海报旁
+    caption: ICASSP 2026 海报交流。
+  akc-2025:
+    location: 新加坡
+    text: 分享集成电路与光电神经微系统方面的近期研究。
+    image_alt: Rui Jiao 在新加坡 AKC 2025 进行研究报告
+    caption: AKC 2025 研究分享。
+  iscas-2025:
+    location: 英国 · 伦敦
+    text: 与同事参加 ISCAS 2025，并交流耐光神经记录电路的研究。
+    image_alt: ISCAS 2025 投影幕布前的合影
+    caption: 与同事在 ISCAS 2025 合影。

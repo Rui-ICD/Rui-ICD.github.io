@@ -1,0 +1,9 @@
+{{- $item := .item -}}
+{{- if eq site.Language.Lang "zh" -}}
+  {{- with index hugo.Data.zh .kind -}}
+    {{- with index . (string $.key) -}}
+      {{- $item = merge $item . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $item -}}

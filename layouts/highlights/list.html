@@ -1,14 +1,14 @@
 {{ define "main" }}
 <main id="main-content" class="rj-shell rj-highlights-page" data-pagefind-body>
-  <div class="rj-page-heading"><h1>Highlights</h1></div>
-  <p class="rj-page-intro">Awards and conference moments.</p>
-  <nav class="rj-section-nav" aria-label="Highlights sections"><a href="#awards">Awards</a><a href="#conferences">Conferences &amp; talks</a></nav>
+  <div class="rj-page-heading"><h1>{{ i18n "highlightsTitle" }}</h1></div>
+  <p class="rj-page-intro">{{ i18n "highlightsIntro" }}</p>
+  <nav class="rj-section-nav" aria-label="{{ i18n "highlightsSections" }}"><a href="#awards">{{ i18n "awards" }}</a><a href="#conferences">{{ i18n "conferencesTalks" }}</a></nav>
   <section class="rj-content-section" id="awards" aria-labelledby="awards-heading">
-    <div class="rj-section-heading"><h2 id="awards-heading">Awards</h2></div>
+    <div class="rj-section-heading"><h2 id="awards-heading">{{ i18n "awards" }}</h2></div>
     {{ partial "research/awards.html" . }}
   </section>
   <section class="rj-content-section" id="conferences" aria-labelledby="conferences-heading">
-    <div class="rj-section-heading"><h2 id="conferences-heading">Conferences &amp; talks</h2></div>
+    <div class="rj-section-heading"><h2 id="conferences-heading">{{ i18n "conferencesTalks" }}</h2></div>
     {{ partial "research/activities.html" (dict "compact" false) }}
   </section>
 </main>

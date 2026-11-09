@@ -1,0 +1,7 @@
+{{- $format := "Jan 2006" -}}
+{{- if eq .format "day" }}{{ $format = "2 Jan 2006" }}{{ end -}}
+{{- if eq site.Language.Lang "zh" -}}
+  {{- $format = "2006年1月" -}}
+  {{- if eq .format "day" }}{{ $format = "2006年1月2日" }}{{ end -}}
+{{- end -}}
+{{- return (time.Format $format .date) -}}

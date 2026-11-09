@@ -1,7 +1,8 @@
 {{ define "main" }}
 <main id="main-content" class="rj-shell rj-research-page" data-pagefind-body>
-  <div class="rj-page-heading"><h1>Projects</h1></div>
-  <p class="rj-research-overview">{{ index hugo.Data "research-context" "overview" }}</p>
+  <div class="rj-page-heading"><h1>{{ i18n "projects" }}</h1></div>
+  {{ $context := partial "locale/entry.html" (dict "kind" "research_overview" "key" "main" "item" (index hugo.Data "research-context")) }}
+  <p class="rj-research-overview">{{ $context.overview }}</p>
   {{ partial "research/areas.html" . }}
 </main>
 {{ end }}

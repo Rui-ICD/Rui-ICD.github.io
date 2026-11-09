@@ -16,7 +16,9 @@ document.querySelectorAll('[data-publications]').forEach((section) => {
       if (visible) count += 1;
     });
     empty.hidden = count > 0;
-    status.textContent = `${count} publication${count === 1 ? '' : 's'} shown.`;
+    status.textContent = document.documentElement.lang.startsWith('zh')
+      ? `显示 ${count} 篇论文。`
+      : `${count} publication${count === 1 ? '' : 's'} shown.`;
   };
   buttons.forEach((button) => button.addEventListener('click', () => {
     selected = button.dataset.filter;
@@ -28,4 +30,11 @@ document.querySelectorAll('[data-publications]').forEach((section) => {
   }));
   search.addEventListener('input', update);
   update();
+});
+
+document.querySelectorAll('[data-language]').forEach((link) => {
+  const destination = new URL(link.href);
+  destination.search = window.location.search;
+  destination.hash = window.location.hash;
+  link.href = destination.href;
 });

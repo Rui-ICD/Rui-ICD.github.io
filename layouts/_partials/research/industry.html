@@ -1,21 +1,23 @@
 {{ range . }}
-{{ $job := . }}
-{{ $photo := resources.Get .image }}
+{{ $job := partial "locale/entry.html" (dict "kind" "industry" "key" .org "item" .) }}
+{{ $photo := resources.Get $job.image }}
+{{ with $job }}
 <article class="rj-industry-entry">
-  <p class="rj-industry-dates"><time datetime="{{ .start }}">{{ time.Format "Jan 2006" (printf "%s-01" .start) }}</time> &ndash; <time datetime="{{ .end }}">{{ time.Format "Jan 2006" (printf "%s-01" .end) }}</time></p>
+  <p class="rj-industry-dates"><time datetime="{{ .start }}">{{ partial "locale/date.html" (dict "date" (printf "%s-01" .start)) }}</time> &ndash; <time datetime="{{ .end }}">{{ partial "locale/date.html" (dict "date" (printf "%s-01" .end)) }}</time></p>
   <div class="rj-industry-copy">
     <h3>{{ .org }}</h3>
     <p class="rj-industry-role">{{ .role }}</p>
     {{ with .summary }}<p class="rj-industry-summary">{{ . }}</p>{{ end }}
   {{ with $photo }}
   {{ $display := .Fit "1000x750 webp q90" }}
-  <details class="rj-photo-details"><summary>Photo</summary>
+  <details class="rj-photo-details"><summary>{{ i18n "photo" }}</summary>
   <figure class="rj-industry-figure">
-    <a class="rj-industry-photo" href="{{ .RelPermalink }}" aria-label="View full {{ $job.org }} internship photo"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $job.image_alt }}" loading="lazy" decoding="async"></a>
-    <figcaption>{{ $job.org }} internship &middot; {{ $job.period }}.</figcaption>
+    <a class="rj-industry-photo" href="{{ .RelPermalink }}" aria-label="{{ i18n "viewImage" }}: {{ $job.org }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $job.image_alt }}" loading="lazy" decoding="async"></a>
+    <figcaption>{{ $job.org }} · {{ i18n "internship" }} · {{ partial "locale/date.html" (dict "date" (printf "%s-01" $job.start)) }}–{{ partial "locale/date.html" (dict "date" (printf "%s-01" $job.end)) }}</figcaption>
   </figure>
   </details>
   {{ end }}
   </div>
 </article>
+{{ end }}
 {{ end }}

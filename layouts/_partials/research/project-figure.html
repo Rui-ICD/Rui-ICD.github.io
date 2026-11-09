@@ -2,9 +2,9 @@
 {{ with resources.Get .image }}
 {{ $display := .Fit "1800x1800 webp q94" }}
 <figure class="rj-project-figure">
-  <a class="rj-project-figure-image{{ with $figure.tone }} is-photo{{ end }}" href="{{ .RelPermalink }}" aria-label="View full figure: {{ $figure.alt }}">
+  <a class="rj-project-figure-image{{ with $figure.tone }} is-photo{{ end }}" href="{{ .RelPermalink }}" aria-label="{{ i18n "viewImage" }}: {{ $figure.alt }}">
     <img{{ with $figure.tone }} class="rj-tone-{{ . }}"{{ end }} src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $figure.alt }}" loading="lazy" decoding="async">
   </a>
-  <figcaption><p>{{ $figure.caption }}</p><div><a href="{{ .RelPermalink }}">Full figure <span aria-hidden="true">&nearr;</span></a>{{ with $figure.doi }}<a href="https://doi.org/{{ . }}">Paper <span aria-hidden="true">&nearr;</span></a>{{ end }}</div></figcaption>
+  <figcaption><p>{{ $figure.caption }}</p><div><a href="{{ .RelPermalink }}">{{ i18n "fullFigure" }} <span aria-hidden="true">&nearr;</span></a>{{ with $figure.doi }}<a href="https://doi.org/{{ . }}">{{ i18n "paper" }} <span aria-hidden="true">&nearr;</span></a>{{ end }}</div></figcaption>
 </figure>
 {{ end }}

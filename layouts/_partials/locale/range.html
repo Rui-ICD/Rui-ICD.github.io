@@ -1,0 +1,10 @@
+{{- $start := partial "locale/date.html" (dict "date" .start "format" "day") -}}
+{{- $end := partial "locale/date.html" (dict "date" .end "format" "day") -}}
+{{- if eq (time.Format "2006-01" .start) (time.Format "2006-01" .end) -}}
+  {{- if eq site.Language.Lang "zh" -}}
+    {{- $end = time.Format "2日" .end -}}
+  {{- else -}}
+    {{- $start = time.Format "2" .start -}}
+  {{- end -}}
+{{- end -}}
+{{- return (printf "%s–%s" $start $end) -}}

@@ -1,0 +1,9 @@
+{{- $page := . -}}
+<div class="rj-language-switch" role="group" aria-label="{{ i18n "language" }}">
+  {{- range hugo.Sites -}}
+    {{- $code := .Language.Lang -}}
+    {{- $url := .Home.RelPermalink -}}
+    {{- range $page.AllTranslations }}{{ if eq .Language.Lang $code }}{{ $url = .RelPermalink }}{{ end }}{{ end -}}
+    <a href="{{ $url }}" lang="{{ $code }}" hreflang="{{ $code }}" data-language="{{ $code }}"{{ if eq $page.Language.Lang $code }} aria-current="true"{{ end }}>{{ if eq $code "zh" }}中文{{ else }}EN{{ end }}</a>
+  {{- end -}}
+</div>

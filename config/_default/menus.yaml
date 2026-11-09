@@ -1,16 +1,25 @@
 main:
   - name: Home
+    identifier: home
     url: /
     weight: 1
   - name: Projects
+    identifier: projects
     url: /projects/
     weight: 10
   - name: Publications
+    identifier: publications
     url: /publications/
     weight: 20
   - name: Background
+    identifier: background
     url: /background/
     weight: 30
   - name: Highlights
+    identifier: highlights
     url: /highlights/
     weight: 40
+  - name: Life
+    identifier: life
+    url: /life/
+    weight: 50

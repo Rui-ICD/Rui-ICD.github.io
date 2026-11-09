@@ -1,17 +1,18 @@
 <div class="rj-awards">
   {{ range hugo.Data.awards }}
-  {{ $award := . }}
+  {{ $award := partial "locale/entry.html" (dict "kind" "awards" "key" .id "item" .) }}
   {{ $photo := false }}
   {{ with .image }}{{ $photo = resources.Get . }}{{ end }}
+  {{ with $award }}
   <article class="rj-award" id="{{ .id }}">
     <div class="rj-award-copy">
       <span class="rj-award-year">{{ .year }}</span>
       <div><h3>{{ .title }}</h3><p>{{ .institution }}</p>
     {{ with $photo }}
     {{ $display := .Fit "1000x750 webp q90" }}
-    <details class="rj-photo-details"><summary>Photo</summary>
+    <details class="rj-photo-details"><summary>{{ i18n "photo" }}</summary>
     <figure class="rj-award-figure">
-      <a class="rj-award-photo" href="{{ .RelPermalink }}" aria-label="View full photo: {{ $award.title }}, {{ $award.year }}" title="{{ $award.caption }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $award.image_alt }}" loading="lazy" decoding="async"></a>
+      <a class="rj-award-photo" href="{{ .RelPermalink }}" aria-label="{{ i18n "viewImage" }}: {{ $award.title }}, {{ $award.year }}" title="{{ $award.caption }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $award.image_alt }}" loading="lazy" decoding="async"></a>
       <figcaption>{{ $award.caption }}</figcaption>
     </figure>
     </details>
@@ -19,5 +20,6 @@
       </div>
     </div>
   </article>
+  {{ end }}
   {{ end }}
 </div>

@@ -1,34 +1,37 @@
 {{ define "main" }}
-{{ $area := index (where hugo.Data.research "slug" .Params.track) 0 }}
-{{ $story := index (index hugo.Data "project-stories") .Params.track }}
+{{ $raw := index (where hugo.Data.research "slug" .Params.track) 0 }}
+{{ $area := partial "locale/entry.html" (dict "kind" "research" "key" .Params.track "item" $raw) }}
+{{ $story := partial "locale/entry.html" (dict "kind" "stories" "key" .Params.track "item" (index (index hugo.Data "project-stories") .Params.track)) }}
+{{ $track := .Params.track }}
 <main id="main-content" class="rj-shell rj-topic-page rj-project-page" data-pagefind-body>
-  <a class="rj-back" href="{{ "/projects/" | relURL }}">&larr; Projects</a>
+  <a class="rj-back" href="{{ "/projects/" | relLangURL }}">&larr; {{ i18n "projects" }}</a>
   <header class="rj-project-heading">
     <p class="rj-project-category">{{ $area.title }}</p>
     <h1>{{ $story.title }}</h1>
     <p class="rj-project-lead">{{ $story.summary }}</p>
   </header>
   <dl class="rj-project-facts">
-    {{ range $story.facts }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}
+    {{ range $index, $raw := $story.facts }}{{ $fact := partial "locale/entry.html" (dict "kind" "facts" "key" (printf "%s-%d" $track $index) "item" $raw) }}<div><dt>{{ $fact.label }}</dt><dd>{{ $fact.value }}</dd></div>{{ end }}
   </dl>
-  <nav class="rj-project-contents" aria-label="On this project">
-    {{ range $story.sections }}<a href="#{{ .id }}">{{ .id | humanize }}</a>{{ end }}<a href="#publications">Publications</a>
+  <nav class="rj-project-contents" aria-label="{{ i18n "onProject" }}">
+    {{ range $story.sections }}<a href="#{{ .id }}">{{ i18n .id }}</a>{{ end }}<a href="#publications">{{ i18n "publications" }}</a>
   </nav>
   <div class="rj-project-story">
     {{ range $story.sections }}
-    <section class="rj-project-section{{ if eq .layout "split" }} rj-project-section-split{{ end }}" id="{{ .id }}">
-      <div class="rj-project-section-copy"><h2>{{ .title }}</h2><p>{{ .text }}</p></div>
-      {{ with .figure }}{{ partial "research/project-figure.html" . }}{{ end }}
-      {{ with .note }}<p class="rj-project-note">{{ . }}</p>{{ end }}
+    {{ $section := partial "locale/entry.html" (dict "kind" "sections" "key" (printf "%s/%s" $track .id) "item" .) }}
+    <section class="rj-project-section{{ if eq $section.layout "split" }} rj-project-section-split{{ end }}" id="{{ .id }}">
+      <div class="rj-project-section-copy"><h2>{{ $section.title }}</h2><p>{{ $section.text }}</p></div>
+      {{ with $section.figure }}{{ partial "research/project-figure.html" . }}{{ end }}
+      {{ with $section.note }}<p class="rj-project-note">{{ . }}</p>{{ end }}
     </section>
     {{ end }}
   </div>
   <section class="rj-project-publications" id="publications" aria-labelledby="project-papers-heading">
-    <h2 id="project-papers-heading">Project publications</h2>
+    <h2 id="project-papers-heading">{{ i18n "projectPapers" }}</h2>
     {{ $papers := slice }}{{ range $area.project_papers }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $papers = $papers | append . }}{{ end }}{{ end }}
     {{ partial "research/publications.html" (dict "pages" $papers "compact" true) }}
     {{ $related := slice }}{{ range $area.papers }}{{ if not (in $area.project_papers .) }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $related = $related | append . }}{{ end }}{{ end }}{{ end }}
-    {{ with $related }}<h3 class="rj-project-related-title">Related work</h3>{{ partial "research/publications.html" (dict "pages" . "compact" true) }}{{ end }}
+    {{ with $related }}<h3 class="rj-project-related-title">{{ i18n "relatedWork" }}</h3>{{ partial "research/publications.html" (dict "pages" . "compact" true) }}{{ end }}
   </section>
 </main>
 {{ end }}

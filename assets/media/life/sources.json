@@ -1,0 +1,393 @@
+{
+  "source_site": "https://hanson-zheng.github.io/life.html",
+  "source_dataset": "https://github.com/hanson-zheng/hanson-zheng.github.io/blob/main/data/travel.js",
+  "photo_credit": "Yumin Zheng (Hanson-Zheng)",
+  "permission_basis": "User confirmed permission in conversation,2026-11-09",
+  "source_rights_url": "https://github.com/hanson-zheng/hanson-zheng.github.io/blob/main/ASSET_LICENSE.md",
+  "preservation": "Original JPEG bytes retained; no cropping, resizing, filters, recoloring, AI edits or logo extraction. Embedded credits and watermarks remain intact.",
+  "coordinates_order": "latitude,longitude",
+  "places": 38,
+  "countries": 14,
+  "photo_count": 42,
+  "total_bytes": 17037865,
+  "files": [
+    {
+      "place_id": "beijing",
+      "file": "media/life/beijing/beijing-night.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/beijing/beijing-night.jpg",
+      "bytes": 226654,
+      "sha256": "aa60dadb9f1b8bba281ead16e990796a455a7322ef1c96604c503c71e8a2ac35",
+      "width": 1600,
+      "height": 997
+    },
+    {
+      "place_id": "manila",
+      "file": "media/life/manila/sm-mall-of-asia.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/manila/sm-mall-of-asia.jpg",
+      "bytes": 338130,
+      "sha256": "1065023920d0f3be631eeb5fca6b2b8d01a0f0a5f6bd3d6290e0230a6195f4ba",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "shanghai",
+      "file": "media/life/shanghai/lujiazui.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/shanghai/lujiazui.jpg",
+      "bytes": 387045,
+      "sha256": "383b0d85025bb854d1da4ada332dd524161ea39396ef73dbb296c5fcf2acd1b4",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "kuala-lumpur",
+      "file": "media/life/kuala-lumpur/petronas-twin-towers.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/kuala-lumpur/petronas-twin-towers.jpg",
+      "bytes": 454742,
+      "sha256": "bbf5a6969f37298bf651be43a57b9a5696f3138919183ba2d49a5e69255b5187",
+      "width": 1291,
+      "height": 1798
+    },
+    {
+      "place_id": "bangkok",
+      "file": "media/life/bangkok/chao-phraya-river.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/bangkok/chao-phraya-river.jpg",
+      "bytes": 479331,
+      "sha256": "b709e67ec71fc809184afb1be4cd11f75702708890ee29e5cd051a66705d8179",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "bangkok",
+      "file": "media/life/bangkok/first-a380-flight.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/bangkok/first-a380-flight.jpg",
+      "bytes": 264403,
+      "sha256": "ade75b1a919150c5b03d706819178d405e80160e63902a4edcfa144ad366485b",
+      "width": 1600,
+      "height": 996
+    },
+    {
+      "place_id": "bangkok",
+      "file": "media/life/bangkok/grand-palace.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/bangkok/grand-palace.jpg",
+      "bytes": 767457,
+      "sha256": "eeda378b1379a47cdb1721165b89a50990eae2a2bcdd3e5f0b09db9210cc5495",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "harbin",
+      "file": "media/life/harbin/hit-main-building.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/harbin/hit-main-building.jpg",
+      "bytes": 382992,
+      "sha256": "f41457983b89b9f802bf631560e5da1a0ebfc7557de1e96877926654b1dd8a6e",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "hong-kong",
+      "file": "media/life/hong-kong/victoria-harbour.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/hong-kong/victoria-harbour.jpg",
+      "bytes": 274694,
+      "sha256": "542ecddc916b3fb4cb63296d28a1ab78749408e9d349e6ea8d0d5eb78a18feac",
+      "width": 1600,
+      "height": 996
+    },
+    {
+      "place_id": "weihai",
+      "file": "media/life/weihai/hit-main-building.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/weihai/hit-main-building.jpg",
+      "bytes": 432755,
+      "sha256": "ada3e2f5aaf3c3573a1e7807e0ff132515bdab6975af0feeb08fab24542ab922",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "weihai",
+      "file": "media/life/weihai/hit-main-building-at-night.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/weihai/hit-main-building-at-night.jpg",
+      "bytes": 304618,
+      "sha256": "f8b34ae03fe9cb29bfb49b2d0501c05e85149b4dc03de8b5625a1b318a394daf",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "shenzhen",
+      "file": "media/life/shenzhen/hit-main-building.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/shenzhen/hit-main-building.jpg",
+      "bytes": 443985,
+      "sha256": "39ae7d407975d04323d952670286eeea5c1e507285cf2ea71c0a622f4e5f4cc7",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "siem-reap",
+      "file": "media/life/siem-reap/angkor-wat.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/siem-reap/angkor-wat.jpg",
+      "bytes": 207150,
+      "sha256": "a727497a8f4c4c91ca95ebd44e557393f718ec38042c46057c3e654e1b7b2326",
+      "width": 1600,
+      "height": 996
+    },
+    {
+      "place_id": "ntu-eee",
+      "file": "media/life/ntu-eee/ntu-eee.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/singapore/ntu-eee.jpg",
+      "bytes": 574855,
+      "sha256": "af43931332fbfb3e45d906674c03c89d4f25da0551c5900422787092e45ffd0b",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "vienna",
+      "file": "media/life/vienna/belvedere.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/vienna/belvedere.jpg",
+      "bytes": 448103,
+      "sha256": "00e7f1a2dfc514a9a14f32000b426ee3864ce81dc6c41b2e6beccbd334073aee",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "vienna",
+      "file": "media/life/vienna/votivkirche.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/vienna/votivkirche.jpg",
+      "bytes": 220721,
+      "sha256": "c0accd45ede3972b204504fd4facb64c485051d9e0e806a57741b2826e6784d4",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "prague",
+      "file": "media/life/prague/prague-castle-vltava.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/prague/prague-castle-vltava.jpg",
+      "bytes": 261921,
+      "sha256": "0d975e31853678e26a3f5bfb4587aed962984d323e35bb251eb9d493a9c199d2",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "frankfurt",
+      "file": "media/life/frankfurt/frankfurt-airport-icbc.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/frankfurt/frankfurt-airport-icbc.jpg",
+      "bytes": 423785,
+      "sha256": "53b4a2ee5519e4bca062abbb162a9b0cd46e01c646e261b1eb7e23dcff8383f8",
+      "width": 1291,
+      "height": 1798
+    },
+    {
+      "place_id": "paris",
+      "file": "media/life/paris/louvre.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/paris/louvre.jpg",
+      "bytes": 540950,
+      "sha256": "756ecb28984b16891e67dec07a6180e24a269930f0d061241615b14f64f0aa4a",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "munich",
+      "file": "media/life/munich/bmw-museum.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/munich/bmw-museum.jpg",
+      "bytes": 340345,
+      "sha256": "7c5070c404ccbe73c326e5d01b4db282a81bdf972c1bfeb1e581f8daf8b4f058",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "london",
+      "file": "media/life/london/tower-bridge.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/london/tower-bridge.jpg",
+      "bytes": 477386,
+      "sha256": "9ad4c6e5aea4308cc4877f541063be6c4748ae52080d3e1403faf8823cb9800c",
+      "width": 1291,
+      "height": 1798
+    },
+    {
+      "place_id": "cambridge",
+      "file": "media/life/cambridge/newtons-apple-tree.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/cambridge/newtons-apple-tree.jpg",
+      "bytes": 608543,
+      "sha256": "b3cf00dac4b0f24b592ac53a38bcdb009ecc37fab516042e080efee20e1b4513",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "barcelona",
+      "file": "media/life/barcelona/turo-de-la-rovira.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/barcelona/turo-de-la-rovira.jpg",
+      "bytes": 532721,
+      "sha256": "2cd12d1bc5788e89f9c084e92b36a49e56350d19d2640ad7bf5bed638a0e2722",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "doha",
+      "file": "media/life/doha/hamad-airport-dawn.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/doha/hamad-airport-dawn.jpg",
+      "bytes": 328840,
+      "sha256": "dc87be8808214793c73753891375f17c262d3492d789492866fad06f85625e47",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "bali",
+      "file": "media/life/bali/bali.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/bali/bali.jpg",
+      "bytes": 486072,
+      "sha256": "59baa2e8bcc36ed26e33bb220f2ef5ae06aa53b741032e65018bcc11d1f9bb72",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "ningbo",
+      "file": "media/life/ningbo/xiaoshi-high-school.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/ningbo/xiaoshi-high-school.jpg",
+      "bytes": 330479,
+      "sha256": "d53850e5674dea332678efefb4a59c44ffa1d8518465dd92dfba641602b46cac",
+      "width": 1600,
+      "height": 996
+    },
+    {
+      "place_id": "cebu",
+      "file": "media/life/cebu/ferry-terminal.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/cebu/ferry-terminal.jpg",
+      "bytes": 312862,
+      "sha256": "919a8fd07b82ef36e5ba0ca487af8a656443b5fce57a40da0de84a7db1cdaef0",
+      "width": 1600,
+      "height": 996
+    },
+    {
+      "place_id": "guangzhou",
+      "file": "media/life/guangzhou/baiyun-a380-and-737.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/guangzhou/baiyun-a380-and-737.jpg",
+      "bytes": 225955,
+      "sha256": "f5a39f98f38068490d9231f37f3e64a276ed5789ead0d1c61089365ef664abbd",
+      "width": 1600,
+      "height": 996
+    },
+    {
+      "place_id": "macau",
+      "file": "media/life/macau/airport-special-livery.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/macau/airport-special-livery.jpg",
+      "bytes": 401708,
+      "sha256": "0dd9642880ba936ed954600d162535a3440fe159b5c572c2a42cf5011358bc02",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "bohol",
+      "file": "media/life/bohol/sunset-by-the-water.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/bohol/sunset-by-the-water.jpg",
+      "bytes": 277784,
+      "sha256": "3e15f6352a601294954597ef52cc9bfbd18ce3dfb475fe6dae410c0aa4e14b75",
+      "width": 1600,
+      "height": 996
+    },
+    {
+      "place_id": "chongqing",
+      "file": "media/life/chongqing/liziba-railway.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/chongqing/liziba-railway.jpg",
+      "bytes": 573744,
+      "sha256": "46bee6acc268d58e06c666ea12c580364aac1702eca81b90b5430d8bff3c03a3",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "phuket",
+      "file": "media/life/phuket/patong-beach.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/phuket/patong-beach.jpg",
+      "bytes": 333966,
+      "sha256": "88d8352f636363be5d845feca15d86b71873f909942a587c6bd8f9e5db23faf6",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "krabi",
+      "file": "media/life/krabi/limestone-cliffs-and-sea.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/krabi/limestone-cliffs-and-sea.jpg",
+      "bytes": 510521,
+      "sha256": "5d892baeae5411df0a2cea2a4dff6dcf2dc7492e89ded0eddebbad67fb5a246f",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "qingdao",
+      "file": "media/life/qingdao/may-fourth-square.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/qingdao/may-fourth-square.jpg",
+      "bytes": 402057,
+      "sha256": "0c6012c6a5043570153d24f303c669478da391f1cad5625670096b605fe80e22",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "chengdu",
+      "file": "media/life/chengdu/ifs-climbing-panda.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/chengdu/ifs-climbing-panda.jpg",
+      "bytes": 570140,
+      "sha256": "3e8ebbc2d178687a16e837d719b125dc4daabde0892bfe04ceb1263b87060f23",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "xian",
+      "file": "media/life/xian/city-wall-at-dusk.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/xian/city-wall-at-dusk.jpg",
+      "bytes": 429027,
+      "sha256": "200077bd0fa0e484e5c28ca3f49daff3d31b93ebeee1c48e30ca466e8ca079b1",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "lintong",
+      "file": "media/life/lintong/terracotta-warriors.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/lintong/terracotta-warriors.jpg",
+      "bytes": 510740,
+      "sha256": "830b7f9cb143b2869e109837626afaef829ca24497eb99ec36c37acc804cdeb9",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "ordos",
+      "file": "media/life/ordos/grassland-sunset.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/ordos/grassland-sunset.jpg",
+      "bytes": 301054,
+      "sha256": "af7cf7a68477b66e146c868803fbc0a89e96827ac079e962a9caef4868a96cc7",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "wuhan",
+      "file": "media/life/wuhan/yellow-crane-tower-at-night.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/wuhan/yellow-crane-tower-at-night.jpg",
+      "bytes": 458453,
+      "sha256": "86fe399b2bbfd06a87affb1ab2fa230606f5780a2f3dca28683d9b46c20670c3",
+      "width": 1291,
+      "height": 1798
+    },
+    {
+      "place_id": "changsha",
+      "file": "media/life/changsha/xiang-river-evening.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/changsha/xiang-river-evening.jpg",
+      "bytes": 393973,
+      "sha256": "0be8578b7f3e0965cb5bd9cf1bb21ceb4745b185d4d135d00487addc47abc97c",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "yuncheng",
+      "file": "media/life/yuncheng/guanque-tower.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/yuncheng/guanque-tower.jpg",
+      "bytes": 364865,
+      "sha256": "f9e0be688b2c05d8d3fb7648b7e523e62e607e980b379460ea9555feeb61ea0e",
+      "width": 1600,
+      "height": 1296
+    },
+    {
+      "place_id": "yueyang",
+      "file": "media/life/yueyang/yueyang-tower.jpg",
+      "source_url": "https://hanson-zheng.github.io/images/life/yueyang/yueyang-tower.jpg",
+      "bytes": 432339,
+      "sha256": "78cd7508e80236f91b1dbc6467ed3fa568fe5cda8da7c8900a3596d4477ad02f",
+      "width": 1600,
+      "height": 1296
+    }
+  ]
+}

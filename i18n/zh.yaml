@@ -1,0 +1,75 @@
+home: {other: 首页}
+projects: {other: 研究项目}
+publications: {other: 论文}
+background: {other: 经历}
+highlights: {other: 学术动态}
+life: {other: 生活}
+language: {other: 切换语言}
+skipContent: {other: 跳至正文}
+mainNavigation: {other: 主导航}
+profileLinks: {other: 联系方式与学术主页}
+portrait: {other: Rui Jiao 的照片}
+email: {other: 邮箱}
+groupLine: {other: Lee 课题组 · 导师 Sunwoo Lee 教授}
+research: {other: 研究方向}
+exploreProjects: {other: 查看研究项目}
+news: {other: 近况}
+moreHighlights: {other: 更多学术动态}
+antCaption: {other: 玻璃微管中的神经微系统，旁边的蚂蚁用于展示尺寸。}
+projectDetails: {other: 了解这个项目}
+projectPapers: {other: 项目相关论文}
+relatedWork: {other: 相关工作}
+onProject: {other: 本页导航}
+architecture: {other: 电路架构}
+silicon: {other: 芯片实现}
+measurements: {other: 测量结果}
+system: {other: 系统原理}
+integration: {other: 器件集成}
+recordings: {other: 神经记录}
+fullFigure: {other: 查看原图}
+paper: {other: 论文}
+readPaper: {other: 阅读论文}
+relatedPaper: {other: 相关论文}
+project: {other: 项目介绍}
+viewImage: {other: 查看完整图片}
+all: {other: 全部}
+journals: {other: 期刊}
+conferences: {other: 会议}
+searchPublications: {other: 搜索论文}
+filterPublications: {other: 按论文类型筛选}
+noPublications: {other: 没有找到符合条件的论文。}
+allAuthors: {other: '全部 {{ .Count }} 位作者'}
+backgroundIntro: {other: 学习经历，以及在产业界的实践。}
+education: {other: 教育经历}
+industry: {other: 企业实习}
+photo: {other: 查看照片}
+internship: {other: 实习}
+highlightsTitle: {other: 获奖与学术交流}
+highlightsIntro: {other: 一些值得记下的时刻：获奖、参会与研究分享。}
+highlightsSections: {other: 本页栏目}
+awards: {other: 获奖}
+conferencesTalks: {other: 会议与报告}
+conference: {other: 会议官网}
+photoComing: {other: 会议照片待补充。}
+lifeTagline: {other: 走过的地方，慢慢点亮。}
+lifeIntro: {other: 实验室之外，也想多看看这个世界。}
+lifePlacesCount: {other: 个地点}
+lifeCountriesCount: {other: 个国家}
+lifeMapLabel: {other: 我去过的地方，可点击的旅行地图}
+lifeMapHelp: {other: 点一束光，看看那里的风景。拖动地图或使用按钮缩放。}
+lifeAllPlaces: {other: 我的足迹}
+lifeEurope: {other: 欧洲}
+lifeAsia: {other: 亚洲}
+lifeWorld: {other: 世界全图}
+lifeZoomIn: {other: 放大地图}
+lifeZoomOut: {other: 缩小地图}
+lifePause: {other: 暂停闪烁}
+lifePlay: {other: 点亮星光}
+lifeChoose: {other: 选择一个地点}
+lifeVisited: {other: 去过的地方}
+lifeCredit: {other: 照片由 Yumin Zheng 拍摄，已获授权使用。}
+lifeSource: {other: 照片原始来源}
+lifePrevious: {other: 上一张照片}
+lifeNext: {other: 下一张照片}
+lifeMapCredit: {other: 地图数据：Natural Earth · 公共领域}
+lifeNoJS: {other: 开启 JavaScript，即可点亮地图、浏览照片。}
