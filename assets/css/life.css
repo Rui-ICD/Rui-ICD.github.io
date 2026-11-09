@@ -1,0 +1,92 @@
+.rj-life-page { padding-block: 48px 62px; --map-k: 1; }
+.rj-life-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
+.rj-life-heading h1 { font: 600 46px/1.2 var(--rj-heading); letter-spacing: -.03em; margin: 0 0 15px; }
+.rj-life-heading > div > p { color: var(--rj-text); font-size: 23px; line-height: 1.5; margin: 0; }
+.rj-life-count { display: flex; align-items: center; gap: 9px; white-space: nowrap; font-size: 16px; color: var(--rj-muted); margin: 0 0 3px; }
+.rj-atlas { border: 1px solid #ece1cf; border-radius: 12px; background: #fffcf7; overflow: hidden; }
+.rj-atlas-toolbar { display: flex; align-items: center; gap: 15px; padding: 15px 18px; position: relative; z-index: 2; background: rgba(255,255,255,.85); border-bottom: 1px solid #f0e7d8; }
+.rj-atlas-tabs { display: flex; gap: 4px; }
+.rj-atlas-tabs button { background: transparent; color: var(--rj-text); border: 0; border-radius: 18px; padding: 7px 13px; font-size: 16px; cursor: pointer; white-space: nowrap; }
+.rj-atlas-tabs button[aria-pressed="true"] { background: #fff0d8; color: #99521c; }
+.rj-life-select { margin-left: auto; min-width: 0; }
+.rj-life-select select { width: 240px; max-width: 100%; color: var(--rj-text); border: 1px solid var(--rj-line); border-radius: 6px; background: white; font: inherit; font-size: 16px; padding: 7px 32px 7px 11px; cursor: pointer; }
+.rj-life-motion { flex: 0 0 34px; width: 34px; height: 34px; border: 1px solid var(--rj-line); border-radius: 50%; background: #fff; color: #a77b44; cursor: pointer; font-size: 16px; }
+.rj-atlas-stage { position: relative; overflow: hidden; aspect-ratio: 1040 / 540; cursor: grab; background: radial-gradient(ellipse at 68% 45%,#fff7e7 0%,#fffdf8 47%,#faf7f0 100%); touch-action: pan-y; }
+.rj-atlas-stage.is-dragging { cursor: grabbing; }
+.rj-atlas-stage:focus-visible { outline-offset: -4px; }
+.rj-atlas-layer { position: absolute; inset: 0; transform-origin: 0 0; }
+.rj-world-svg { display: block; width: 100%; height: 100%; }
+.rj-ocean { fill: #fdfbf5; }
+.rj-graticule { fill: none; stroke: #ede7db; stroke-width: .5; opacity: .45; }
+.rj-land { fill: #edeae3; stroke: #fffcf6; stroke-width: .6; vector-effect: non-scaling-stroke; }
+.rj-land.is-visited { fill: url('#rj-visited-land'); stroke: #dfc395; stroke-width: .7; }
+.rj-land.is-active-country { fill: #f5d49f; }
+.rj-atlas-points { position: absolute; inset: 0; pointer-events: none; }
+.rj-spark { position: absolute; width: 32px; height: 32px; padding: 0; border: 0; background: none; color: #704923; transform: translate(-50%,-50%) scale(calc(1 / var(--map-k))); cursor: pointer; pointer-events: auto; z-index: 1; }
+.rj-spark-glow { position: absolute; inset: -12px; border-radius: 50%; background: radial-gradient(circle,rgba(255,255,255,.97) 0%,rgba(255,228,165,.65) 20%,rgba(242,182,74,.16) 44%,transparent 70%); animation: rj-light-breathe 5.2s ease-in-out infinite; animation-delay: var(--spark-delay); }
+.rj-spark-star { position: absolute; width: 18px; height: 18px; top: 7px; left: 7px; background: linear-gradient(135deg,#fffce8,#e4ad45 62%,#c88627); clip-path: polygon(50% 0,61% 37%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%); filter: drop-shadow(0 0 2px white); animation: rj-star-turn 6.3s ease-in-out infinite; animation-delay: var(--spark-delay); }
+.rj-spark.is-selected { z-index: 3; }
+.rj-spark.is-selected .rj-spark-star { width: 23px; height: 23px; top: 4.5px; left: 4.5px; background: linear-gradient(135deg,#fff9dc,#db902a); }
+.rj-spark.is-selected .rj-spark-star { animation: none; opacity: 1; }
+.rj-spark-label { position: absolute; left: 50%; top: 31px; transform: translateX(-50%); padding: 3px 8px; background: rgba(255,253,246,.95); border: 1px solid #eadbc4; border-radius: 12px; color: #75562f; font-size: 13px; line-height: 1.4; white-space: nowrap; opacity: 0; transition: opacity .18s; box-shadow: 0 2px 8px #b99b6720; }
+.rj-spark:hover, .rj-spark:focus-visible { z-index: 4; }
+.rj-spark:hover .rj-spark-label, .rj-spark:focus-visible .rj-spark-label, .rj-spark.is-selected .rj-spark-label { opacity: 1; }
+.rj-spark.is-low:not(.is-cluster) .rj-spark-label { top: auto; bottom: 33px; }
+.rj-spark.is-cluster .rj-spark-label { opacity: 1; top: 8px; left: 27px; min-width: 18px; padding: 1px 4px; border: 0; background: #fff5dc; font-size: 11px; font-weight: 600; }
+.rj-atlas-controls { position: absolute; right: 15px; top: 15px; display: grid; gap: 5px; z-index: 5; }
+.rj-atlas-controls button { width: 34px; height: 34px; color: #8b6433; background: rgba(255,255,255,.94); border: 1px solid #e9dfce; border-radius: 7px; cursor: pointer; font-size: 23px; line-height: 1; }
+.rj-atlas-legend { position: absolute; display: flex; gap: 9px; align-items: center; left: 18px; bottom: 14px; color: #8a7357; font-size: 14px; pointer-events: none; }
+.rj-atlas-legend > span { width: 8px; height: 8px; background: #e1ae54; border-radius: 50%; box-shadow: 0 0 9px #e8b951; }
+.rj-atlas-credit { position: absolute; right: 15px; bottom: 12px; color: #8b8172; font-size: 12px; }
+.rj-life-help { margin: 0; padding: 11px 18px; border-top: 1px solid #f0e7d8; color: var(--rj-muted); font-size: 16px; line-height: 1.6; }
+.rj-life-detail { display: grid; grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); gap: 48px; align-items: center; padding-top: 40px; }
+.rj-life-country { color: var(--rj-accent); font-size: 17px; margin: 0 0 8px; }
+.rj-life-detail h2 { color: var(--rj-ink); font: 600 34px/1.3 var(--rj-heading); letter-spacing: -.025em; margin: 0 0 15px; }
+.rj-life-caption { color: var(--rj-text); font-size: 19px; line-height: 1.6; margin: 0 0 20px; }
+.rj-life-photo-controls { display: flex; gap: 18px; align-items: center; margin-bottom: 24px; color: var(--rj-muted); font-size: 16px; }
+.rj-life-photo-controls button { width: 37px; height: 37px; border: 1px solid var(--rj-line); border-radius: 50%; color: var(--rj-accent); background: white; cursor: pointer; }
+.rj-life-photo-credit { color: var(--rj-muted); font-size: 16px; line-height: 1.7; margin: 0; max-width: 300px; }
+.rj-life-photo-credit a { display: block; color: var(--rj-accent); margin-top: 7px; }
+.rj-life-photo { display: flex; justify-content: center; align-items: center; min-width: 0; min-height: 300px; background: #faf9f6; border-radius: 5px; overflow: hidden; }
+.rj-life-photo img { display: block; max-width: 100%; max-height: 560px; width: auto; height: auto; }
+.rj-cluster-menu { position: absolute; z-index: 6; display: grid; min-width: 170px; max-height: 180px; overflow-y: auto; padding: 7px; border: 1px solid #e3d3b9; border-radius: 9px; background: #fffdf8; box-shadow: 0 6px 22px #71532424; }
+.rj-cluster-menu button { background: none; border: 0; text-align: left; padding: 7px 10px; color: #725331; font: inherit; font-size: 16px; cursor: pointer; border-radius: 4px; }
+.rj-cluster-menu button:hover { background: #fff0d8; }
+.rj-life-lightbox { border: 0; border-radius: 8px; padding: 14px 20px; margin: auto; background: #fffdfa; max-width: 94vw; max-height: 95vh; color: var(--rj-text); }
+.rj-life-lightbox::backdrop { background: rgba(45,38,28,.52); backdrop-filter: blur(5px); }
+.rj-life-lightbox form { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+.rj-life-lightbox button { border: 0; background: transparent; color: var(--rj-text); font-size: 28px; line-height: 1; width: 32px; height: 32px; cursor: pointer; }
+.rj-life-lightbox img { display: block; max-width: 100%; max-height: 77vh; width: auto; height: auto; margin-inline: auto; }
+.rj-life-lightbox p { font-size: 16px; margin: 12px 0 3px; text-align: center; }
+[data-motion="off"] .rj-spark-glow, [data-motion="off"] .rj-spark-star { animation: none; }
+[data-motion="off"] .rj-spark-glow { opacity: .65; }
+@keyframes rj-light-breathe { 0%,100% { opacity: .45; transform: scale(.78); } 50% { opacity: .95; transform: scale(1.18); } }
+@keyframes rj-star-turn { 0%,100% { opacity: .8; transform: scale(.88) rotate(-7deg); } 50% { opacity: 1; transform: scale(1.06) rotate(7deg); } }
+@media (prefers-reduced-motion: reduce) {
+  [data-motion="auto"] .rj-spark-glow, [data-motion="auto"] .rj-spark-star { animation: none; }
+}
+@media (max-width: 760px) {
+  .rj-life-heading { align-items: flex-start; gap: 15px; }
+  .rj-life-heading h1 { font-size: 39px; }
+  .rj-life-heading > div > p { font-size: 21px; }
+  .rj-life-count { font-size: 15px; gap: 5px; padding-top: 8px; }
+  .rj-atlas-toolbar { flex-wrap: wrap; gap: 12px; padding: 12px; }
+  .rj-life-select { order: 3; width: 100%; }
+  .rj-life-select select { width: 100%; }
+  .rj-life-motion { margin-left: auto; }
+  .rj-atlas-stage { aspect-ratio: 1040 / 630; }
+  .rj-atlas-layer { bottom: auto; height: calc(100% * 540 / 630); top: calc(100% * 45 / 630); }
+  .rj-atlas-controls { right: 9px; top: 10px; }
+  .rj-atlas-controls button { width: 31px; height: 31px; }
+  .rj-atlas-legend { left: 12px; bottom: 12px; font-size: 12px; }
+  .rj-life-detail { grid-template-columns: 1fr; gap: 23px; padding-top: 30px; }
+  .rj-life-photo { min-height: 200px; }
+  .rj-life-photo-credit { max-width: none; }
+}
+@media (max-width: 480px) {
+  .rj-life-page { padding-block: 30px 40px; }
+  .rj-life-heading { display: block; margin-bottom: 22px; }
+  .rj-life-count { margin-top: 15px; }
+  .rj-atlas-tabs button { padding: 6px 11px; }
+  .rj-life-detail h2 { font-size: 30px; }
+}

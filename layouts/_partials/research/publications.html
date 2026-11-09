@@ -2,12 +2,12 @@
 <div class="rj-publications{{ if .compact }} rj-publications-compact{{ end }}" data-publications>
   {{ if not .compact }}
   <div class="rj-publication-toolbar">
-    <div class="rj-filters" role="group" aria-label="{{ i18n "filterPublications" }}">
-      <button type="button" class="is-active" data-filter="all" aria-pressed="true">{{ i18n "all" }} <span>{{ len $papers }}</span></button>
-      <button type="button" data-filter="article-journal" aria-pressed="false">{{ i18n "journals" }}</button>
-      <button type="button" data-filter="paper-conference" aria-pressed="false">{{ i18n "conferences" }}</button>
+    <div class="rj-filters" role="group" aria-label="{{ i18n "rj-filterPublications" }}">
+      <button type="button" class="is-active" data-filter="all" aria-pressed="true">{{ i18n "rj-all" }} <span>{{ len $papers }}</span></button>
+      <button type="button" data-filter="article-journal" aria-pressed="false">{{ i18n "rj-journals" }}</button>
+      <button type="button" data-filter="paper-conference" aria-pressed="false">{{ i18n "rj-conferences" }}</button>
     </div>
-    <label class="rj-publication-search"><span class="rj-visually-hidden">{{ i18n "searchPublications" }}</span><input type="search" placeholder="{{ i18n "searchPublications" }}" data-paper-search autocomplete="off"></label>
+    <label class="rj-publication-search"><span class="rj-visually-hidden">{{ i18n "rj-searchPublications" }}</span><input type="search" placeholder="{{ i18n "rj-searchPublications" }}" data-paper-search autocomplete="off"></label>
   </div>
   <p class="rj-visually-hidden" role="status" aria-live="polite" data-paper-status></p>
   {{ end }}
@@ -19,18 +19,18 @@
       {{ if $.compact }}
       <h3><a href="{{ .RelPermalink }}">{{ .Params.short_title | default .Title }}</a></h3>
       <p class="rj-publication-venue">{{ .Params.publication.short_name }} <span>&middot; {{ .Date.Format "2006" }}</span></p>
-      <a class="rj-publication-arrow" href="{{ .RelPermalink }}" aria-label="{{ i18n "readPaper" }}: {{ .Params.short_title | default .Title }}">&nearr;</a>
+      <a class="rj-publication-arrow" href="{{ .RelPermalink }}" aria-label="{{ i18n "rj-readPaper" }}: {{ .Params.short_title | default .Title }}">&nearr;</a>
       {{ else }}
       <p class="rj-publication-year">{{ .Date.Format "2006" }}</p>
       <div class="rj-publication-copy">
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         {{ partial "research/authors.html" .Params.authors }}
         <p class="rj-publication-citation">{{ .Params.publication.name }}{{ with .Params.publication.volume }}, {{ . }}{{ end }}{{ with .Params.publication.issue }}({{ . }}){{ end }}{{ with .Params.publication.pages }}, pp. {{ . }}{{ end }}.</p>
-        <div class="rj-publication-actions"><a href="https://doi.org/{{ $doi }}">{{ i18n "paper" }} &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}{{ partial "research/project-link.html" . }}</div>
+        <div class="rj-publication-actions"><a href="https://doi.org/{{ $doi }}">{{ i18n "rj-paper" }} &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}{{ partial "research/project-link.html" . }}</div>
       </div>
       {{ end }}
     </article>
     {{ end }}
   </div>
-  <p class="rj-empty" data-paper-empty hidden>{{ i18n "noPublications" }}</p>
+  <p class="rj-empty" data-paper-empty hidden>{{ i18n "rj-noPublications" }}</p>
 </div>

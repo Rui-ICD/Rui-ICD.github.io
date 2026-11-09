@@ -3,7 +3,7 @@
   {{ $area := partial "locale/entry.html" (dict "kind" "research" "key" .slug "item" .) }}
   {{ $story := partial "locale/entry.html" (dict "kind" "stories" "key" .slug "item" (index (index hugo.Data "project-stories") .slug)) }}
   <article class="rj-area">
-    <a class="rj-area-image" href="{{ .url | relLangURL }}" aria-label="{{ i18n "projectDetails" }}: {{ $story.title }}">
+    <a class="rj-area-image" href="{{ .url | relLangURL }}" aria-label="{{ i18n "rj-projectDetails" }}: {{ $story.title }}">
       {{ with resources.Get .image }}{{ $image := .Fit "1100x850 webp q90" }}
       <img{{ with $area.image_tone }} class="rj-tone-{{ . }}"{{ end }} src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}" loading="lazy" decoding="async">
       {{ end }}
@@ -12,10 +12,10 @@
       <p class="rj-project-category">{{ $area.title }}</p>
       <h2 class="rj-project-preview-title"><a href="{{ .url | relLangURL }}">{{ $story.title }}</a></h2>
       <p>{{ $story.summary }}</p>
-      <div class="rj-project-preview-papers" aria-label="{{ i18n "projectPapers" }}">
+      <div class="rj-project-preview-papers" aria-label="{{ i18n "rj-projectPapers" }}">
         {{ range .project_papers }}{{ with site.GetPage (printf "/publications/%s" .) }}<a href="{{ .RelPermalink }}">{{ .Params.publication.short_name }} &middot; {{ .Date.Format "2006" }}</a>{{ end }}{{ end }}
       </div>
-      <a class="rj-text-link" href="{{ .url | relLangURL }}">{{ i18n "projectDetails" }} <span aria-hidden="true">&rarr;</span></a>
+      <a class="rj-text-link" href="{{ .url | relLangURL }}">{{ i18n "rj-projectDetails" }} <span aria-hidden="true">&rarr;</span></a>
     </div>
   </article>
   {{ end }}

@@ -1,75 +1,154 @@
-home: {other: Home}
-projects: {other: Projects}
-publications: {other: Publications}
-background: {other: Background}
-highlights: {other: Highlights}
-life: {other: Life}
-language: {other: Language}
-skipContent: {other: Skip to content}
-mainNavigation: {other: Main navigation}
-profileLinks: {other: Academic profiles}
-portrait: {other: Portrait of Rui Jiao}
-email: {other: Email}
-groupLine: {other: Lee Group · Prof. Sunwoo Lee}
-research: {other: Research}
-exploreProjects: {other: Explore projects}
-news: {other: News}
-moreHighlights: {other: More highlights}
-antCaption: {other: 'A neural microsystem beside an ant, for scale.'}
-projectDetails: {other: Project details}
-projectPapers: {other: Project publications}
-relatedWork: {other: Related work}
-onProject: {other: On this project}
-architecture: {other: Architecture}
-silicon: {other: Silicon}
-measurements: {other: Measurements}
-system: {other: System}
-integration: {other: Integration}
-recordings: {other: Recordings}
-fullFigure: {other: Full figure}
-paper: {other: Paper}
-readPaper: {other: Read paper}
-relatedPaper: {other: Related paper}
-project: {other: Project}
-viewImage: {other: View full image}
-all: {other: All}
-journals: {other: Journals}
-conferences: {other: Conferences}
-searchPublications: {other: Search publications}
-filterPublications: {other: Filter publications}
-noPublications: {other: No publications match your search.}
-allAuthors: {other: 'All {{ .Count }} authors'}
-backgroundIntro: {other: Education and industry experience.}
-education: {other: Education}
-industry: {other: Industry experience}
-photo: {other: Photo}
-internship: {other: internship}
-highlightsTitle: {other: Highlights}
-highlightsIntro: {other: Awards and conference moments.}
-highlightsSections: {other: Highlights sections}
-awards: {other: Awards}
-conferencesTalks: {other: Conferences & talks}
-conference: {other: Conference}
-photoComing: {other: Conference photo coming soon.}
-lifeTagline: {other: 'Places visited. Moments kept.'}
-lifeIntro: {other: 'A little map of the world outside the lab.'}
-lifePlacesCount: {other: places}
-lifeCountriesCount: {other: countries}
-lifeMapLabel: {other: Interactive map of places I have visited}
-lifeMapHelp: {other: 'Choose a light to explore. Drag the map or use the zoom controls.'}
-lifeAllPlaces: {other: My places}
-lifeEurope: {other: Europe}
-lifeAsia: {other: Asia}
-lifeWorld: {other: World view}
-lifeZoomIn: {other: Zoom in}
-lifeZoomOut: {other: Zoom out}
-lifePause: {other: Pause shimmer}
-lifePlay: {other: Let it shimmer}
-lifeChoose: {other: Choose a place}
-lifeVisited: {other: A place I've been}
-lifeCredit: {other: 'Photographs by Yumin Zheng, shared with permission.'}
-lifeSource: {other: Original photograph}
-lifePrevious: {other: Previous photograph}
-lifeNext: {other: Next photograph}
-lifeMapCredit: {other: 'Map: Natural Earth · public domain'}
-lifeNoJS: {other: Enable JavaScript to explore the lights and photographs.}
+rj-home:
+  other: Home
+rj-projects:
+  other: Projects
+rj-publications:
+  other: Publications
+rj-background:
+  other: Background
+rj-highlights:
+  other: Highlights
+rj-life:
+  other: Life
+rj-language:
+  other: Language
+rj-close:
+  other: Close
+rj-skipContent:
+  other: Skip to content
+rj-mainNavigation:
+  other: Main navigation
+rj-profileLinks:
+  other: Academic profiles
+rj-portrait:
+  other: Portrait of Rui Jiao
+rj-email:
+  other: Email
+rj-groupLine:
+  other: Lee Group · Prof. Sunwoo Lee
+rj-research:
+  other: Research
+rj-exploreProjects:
+  other: Explore projects
+rj-news:
+  other: News
+rj-moreHighlights:
+  other: More highlights
+rj-antCaption:
+  other: A neural microsystem beside an ant, for scale.
+rj-projectDetails:
+  other: Project details
+rj-projectPapers:
+  other: Project publications
+rj-relatedWork:
+  other: Related work
+rj-onProject:
+  other: On this project
+rj-architecture:
+  other: Architecture
+rj-silicon:
+  other: Silicon
+rj-measurements:
+  other: Measurements
+rj-system:
+  other: System
+rj-integration:
+  other: Integration
+rj-recordings:
+  other: Recordings
+rj-fullFigure:
+  other: Full figure
+rj-paper:
+  other: Paper
+rj-readPaper:
+  other: Read paper
+rj-relatedPaper:
+  other: Related paper
+rj-project:
+  other: Project
+rj-viewImage:
+  other: View full image
+rj-all:
+  other: All
+rj-journals:
+  other: Journals
+rj-conferences:
+  other: Conferences
+rj-searchPublications:
+  other: Search publications
+rj-filterPublications:
+  other: Filter publications
+rj-noPublications:
+  other: No publications match your search.
+rj-allAuthors:
+  other: All {{ .Count }} authors
+rj-backgroundIntro:
+  other: Education and industry experience.
+rj-education:
+  other: Education
+rj-industry:
+  other: Industry experience
+rj-photo:
+  other: Photo
+rj-internship:
+  other: internship
+rj-highlightsTitle:
+  other: Highlights
+rj-highlightsIntro:
+  other: Awards and conference moments.
+rj-highlightsSections:
+  other: Highlights sections
+rj-awards:
+  other: Awards
+rj-conferencesTalks:
+  other: Conferences & talks
+rj-conference:
+  other: Conference
+rj-photoComing:
+  other: Conference photo coming soon.
+rj-lifeTagline:
+  other: Places visited. Moments kept.
+rj-lifeIntro:
+  other: A little map of the world outside the lab.
+rj-lifePlacesCount:
+  other: places
+rj-lifeCountriesCount:
+  other: countries
+rj-lifeMapLabel:
+  other: Interactive map of places I have visited
+rj-lifeMapHelp:
+  other: Choose a light to explore. Drag the map or use the zoom controls.
+rj-lifeAllPlaces:
+  other: My places
+rj-lifeEurope:
+  other: Europe
+rj-lifeAsia:
+  other: Asia
+rj-lifeWorld:
+  other: World view
+rj-lifeZoomIn:
+  other: Zoom in
+rj-lifeZoomOut:
+  other: Zoom out
+rj-lifePause:
+  other: Pause shimmer
+rj-lifePlay:
+  other: Let it shimmer
+rj-lifeChoose:
+  other: Choose a place
+rj-lifeVisited:
+  other: A place I've been
+rj-lifeCredit:
+  other: Photographs by Yumin Zheng, shared with permission.
+rj-photographBy:
+  other: 'Photograph: {{ .Name }}'
+rj-lifeSource:
+  other: Original photograph
+rj-lifePrevious:
+  other: Previous photograph
+rj-lifeNext:
+  other: Next photograph
+rj-lifeMapCredit:
+  other: 'Map: Natural Earth · public domain'
+rj-lifeNoJS:
+  other: Enable JavaScript to explore the lights and photographs.

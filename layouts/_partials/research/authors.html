@@ -10,6 +10,6 @@
     {{- end -}}
   {{- end -}}
 </span>
-{{ if $long }}<span class="rj-author-count">{{ i18n "allAuthors" (dict "Count" (len $authors)) }}</span></summary>
+{{ if $long }}<span class="rj-author-count">{{ i18n "rj-allAuthors" (dict "Count" (len $authors)) }}</span></summary>
 <p class="rj-authors rj-authors-full">{{ range $i, $name := $authors }}{{ if gt $i 0 }}, {{ end }}{{ if eq $name "me" }}<strong>{{ hugo.Data.authors.me.name.display }}</strong>{{ else }}{{ $name }}{{ end }}{{ end }}</p>
 </details>{{ end }}

@@ -10,10 +10,10 @@
     {{ with .summary }}<p class="rj-industry-summary">{{ . }}</p>{{ end }}
   {{ with $photo }}
   {{ $display := .Fit "1000x750 webp q90" }}
-  <details class="rj-photo-details"><summary>{{ i18n "photo" }}</summary>
+  <details class="rj-photo-details"><summary>{{ i18n "rj-photo" }}</summary>
   <figure class="rj-industry-figure">
-    <a class="rj-industry-photo" href="{{ .RelPermalink }}" aria-label="{{ i18n "viewImage" }}: {{ $job.org }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $job.image_alt }}" loading="lazy" decoding="async"></a>
-    <figcaption>{{ $job.org }} · {{ i18n "internship" }} · {{ partial "locale/date.html" (dict "date" (printf "%s-01" $job.start)) }}–{{ partial "locale/date.html" (dict "date" (printf "%s-01" $job.end)) }}</figcaption>
+    <a class="rj-industry-photo" href="{{ .RelPermalink }}" aria-label="{{ i18n "rj-viewImage" }}: {{ $job.org }}"><img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ $job.image_alt }}" loading="lazy" decoding="async"></a>
+    <figcaption>{{ $job.org }} · {{ i18n "rj-internship" }} · {{ partial "locale/date.html" (dict "date" (printf "%s-01" $job.start)) }}–{{ partial "locale/date.html" (dict "date" (printf "%s-01" $job.end)) }}</figcaption>
   </figure>
   </details>
   {{ end }}

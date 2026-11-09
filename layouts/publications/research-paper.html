@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{ $doi := .Params.hugoblox.ids.doi }}
 <main id="main-content" class="rj-shell rj-paper-page" data-pagefind-body>
-  <a class="rj-back" href="{{ "/publications/" | relLangURL }}">&larr; {{ i18n "publications" }}</a>
+  <a class="rj-back" href="{{ "/publications/" | relLangURL }}">&larr; {{ i18n "rj-publications" }}</a>
   <p class="rj-paper-venue">{{ .Params.publication.short_name }} &middot; {{ .Date.Format "2006" }}</p>
   <h1>{{ .Title }}</h1>
   {{ partial "research/authors.html" .Params.authors }}
   <p class="rj-publication-citation">{{ .Params.publication.name }}{{ with .Params.publication.volume }}, {{ . }}{{ end }}{{ with .Params.publication.issue }}({{ . }}){{ end }}{{ with .Params.publication.pages }}, pp. {{ . }}{{ end }}.</p>
-  <div class="rj-paper-actions"><a class="rj-button" href="https://doi.org/{{ $doi }}">{{ i18n "readPaper" }} &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a class="rj-text-link" href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}{{ partial "research/project-link.html" . }}</div>
+  <div class="rj-paper-actions"><a class="rj-button" href="https://doi.org/{{ $doi }}">{{ i18n "rj-readPaper" }} &nearr;</a>{{ with .Resources.GetMatch "cite.bib" }}<a class="rj-text-link" href="{{ .RelPermalink }}" download>BibTeX &darr;</a>{{ end }}{{ partial "research/project-link.html" . }}</div>
   <div class="rj-paper-body">{{ .Content }}</div>
   <p class="rj-paper-doi">DOI: <a href="https://doi.org/{{ $doi }}">{{ $doi }}</a></p>
 </main>

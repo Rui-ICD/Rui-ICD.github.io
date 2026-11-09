@@ -1,0 +1,4 @@
+{{ if eq .Section "life" }}
+  {{ $style := resources.Get "css/life.css" | minify | fingerprint "sha256" }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ end }}

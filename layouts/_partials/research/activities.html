@@ -24,18 +24,18 @@
     <figure class="rj-event-figure">
       {{ with $photo }}
       {{ $display := .Fit "1200x900 webp q90" }}
-      <a class="rj-event-photo" href="{{ .RelPermalink }}" aria-label="{{ i18n "viewImage" }}: {{ $event.title }}">
-        <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ if $placeholder }}{{ i18n "photoComing" }}: {{ $event.title }}{{ else }}{{ $event.image_alt }}{{ end }}" loading="lazy" decoding="async">
+      <a class="rj-event-photo" href="{{ .RelPermalink }}" aria-label="{{ i18n "rj-viewImage" }}: {{ $event.title }}">
+        <img src="{{ $display.RelPermalink }}" width="{{ $display.Width }}" height="{{ $display.Height }}" alt="{{ if $placeholder }}{{ i18n "rj-photoComing" }}: {{ $event.title }}{{ else }}{{ $event.image_alt }}{{ end }}" loading="lazy" decoding="async">
       </a>
       {{ end }}
-      <figcaption>{{ if $placeholder }}{{ i18n "photoComing" }}{{ else }}{{ .caption }}{{ end }}</figcaption>
+      <figcaption>{{ if $placeholder }}{{ i18n "rj-photoComing" }}{{ else }}{{ .caption }}{{ end }}</figcaption>
     </figure>
     <div class="rj-event-copy">
       <div class="rj-event-meta"><time datetime="{{ .date }}">{{ partial "locale/range.html" (dict "start" .date "end" .date_end) }}</time><span>{{ .location }}</span></div>
       <h2 id="{{ .id }}-heading"><a href="{{ .website }}" title="{{ .full_name }}">{{ .title }}</a></h2>
       {{ with .venue }}<p class="rj-event-venue">{{ . }}</p>{{ end }}
       <p class="rj-event-description">{{ .text }}</p>
-      <div class="rj-event-links">{{ with .paper }}<a href="{{ . | relLangURL }}">{{ i18n "relatedPaper" }} &rarr;</a>{{ end }}<a href="{{ .website }}">{{ i18n "conference" }} &nearr;</a></div>
+      <div class="rj-event-links">{{ with .paper }}<a href="{{ . | relLangURL }}">{{ i18n "rj-relatedPaper" }} &rarr;</a>{{ end }}<a href="{{ .website }}">{{ i18n "rj-conference" }} &nearr;</a></div>
     </div>
   </article>
   {{ end }}

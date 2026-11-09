@@ -43,7 +43,7 @@ figures:
   alt: FB-MOTE signal chain and optical power domains
   caption: Circuit architecture and power domains, Fig. 3 of the TBioCAS article.
   doi: 10.1109/TBCAS.2026.3652195
-short_title: 光自适应神经记录芯片
+short_title: 光照自适应神经记录芯片
 ---
 
 FB-MOTE 利用正向偏置的硅结，直接在 CMOS 体区中采集光能。放大器根据可用功率调整工作状态，神经信号则编码为成对的光脉冲。

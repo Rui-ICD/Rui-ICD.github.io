@@ -1,10 +1,10 @@
 {{ define "main" }}
 {{ $profile := hugo.Data.authors.me }}
 <main id="main-content" class="rj-shell rj-background-page" data-pagefind-body>
-  <div class="rj-page-heading"><h1>{{ i18n "background" }}</h1></div>
-  <p class="rj-page-intro">{{ i18n "backgroundIntro" }}</p>
+  <div class="rj-page-heading"><h1>{{ i18n "rj-background" }}</h1></div>
+  <p class="rj-page-intro">{{ i18n "rj-backgroundIntro" }}</p>
   <section class="rj-content-section" id="education" aria-labelledby="education-heading">
-    <div class="rj-section-heading"><h2 id="education-heading">{{ i18n "education" }}</h2></div>
+    <div class="rj-section-heading"><h2 id="education-heading">{{ i18n "rj-education" }}</h2></div>
     <ol class="rj-education-list">
       {{ range $index, $raw := $profile.education }}{{ $entry := partial "locale/entry.html" (dict "kind" "education" "key" $index "item" $raw) }}
       <li><span class="rj-education-year">{{ $entry.year }}</span><div><h3>{{ $entry.short_degree | default $entry.degree }}</h3><p>{{ $entry.short_institution | default $entry.institution }}</p></div></li>
@@ -13,7 +13,7 @@
   </section>
   {{ with $profile.experience }}
   <section class="rj-content-section" id="industry" aria-labelledby="industry-heading">
-    <div class="rj-section-heading"><h2 id="industry-heading">{{ i18n "industry" }}</h2></div>
+    <div class="rj-section-heading"><h2 id="industry-heading">{{ i18n "rj-industry" }}</h2></div>
     {{ partial "research/industry.html" . }}
   </section>
   {{ end }}

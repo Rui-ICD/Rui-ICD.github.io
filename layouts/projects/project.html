@@ -4,7 +4,7 @@
 {{ $story := partial "locale/entry.html" (dict "kind" "stories" "key" .Params.track "item" (index (index hugo.Data "project-stories") .Params.track)) }}
 {{ $track := .Params.track }}
 <main id="main-content" class="rj-shell rj-topic-page rj-project-page" data-pagefind-body>
-  <a class="rj-back" href="{{ "/projects/" | relLangURL }}">&larr; {{ i18n "projects" }}</a>
+  <a class="rj-back" href="{{ "/projects/" | relLangURL }}">&larr; {{ i18n "rj-projects" }}</a>
   <header class="rj-project-heading">
     <p class="rj-project-category">{{ $area.title }}</p>
     <h1>{{ $story.title }}</h1>
@@ -13,8 +13,8 @@
   <dl class="rj-project-facts">
     {{ range $index, $raw := $story.facts }}{{ $fact := partial "locale/entry.html" (dict "kind" "facts" "key" (printf "%s-%d" $track $index) "item" $raw) }}<div><dt>{{ $fact.label }}</dt><dd>{{ $fact.value }}</dd></div>{{ end }}
   </dl>
-  <nav class="rj-project-contents" aria-label="{{ i18n "onProject" }}">
-    {{ range $story.sections }}<a href="#{{ .id }}">{{ i18n .id }}</a>{{ end }}<a href="#publications">{{ i18n "publications" }}</a>
+  <nav class="rj-project-contents" aria-label="{{ i18n "rj-onProject" }}">
+    {{ range $story.sections }}<a href="#{{ .id }}">{{ i18n (printf "rj-%s" .id) }}</a>{{ end }}<a href="#publications">{{ i18n "rj-publications" }}</a>
   </nav>
   <div class="rj-project-story">
     {{ range $story.sections }}
@@ -27,11 +27,11 @@
     {{ end }}
   </div>
   <section class="rj-project-publications" id="publications" aria-labelledby="project-papers-heading">
-    <h2 id="project-papers-heading">{{ i18n "projectPapers" }}</h2>
+    <h2 id="project-papers-heading">{{ i18n "rj-projectPapers" }}</h2>
     {{ $papers := slice }}{{ range $area.project_papers }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $papers = $papers | append . }}{{ end }}{{ end }}
     {{ partial "research/publications.html" (dict "pages" $papers "compact" true) }}
     {{ $related := slice }}{{ range $area.papers }}{{ if not (in $area.project_papers .) }}{{ with site.GetPage (printf "/publications/%s" .) }}{{ $related = $related | append . }}{{ end }}{{ end }}{{ end }}
-    {{ with $related }}<h3 class="rj-project-related-title">{{ i18n "relatedWork" }}</h3>{{ partial "research/publications.html" (dict "pages" . "compact" true) }}{{ end }}
+    {{ with $related }}<h3 class="rj-project-related-title">{{ i18n "rj-relatedWork" }}</h3>{{ partial "research/publications.html" (dict "pages" . "compact" true) }}{{ end }}
   </section>
 </main>
 {{ end }}

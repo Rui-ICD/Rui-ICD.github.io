@@ -386,6 +386,7 @@ html:lang(zh) .rj-profile-links { font-family: var(--rj-body), 'Microsoft YaHei'
   .rj-nav-links { order: 3; width: 100%; flex-wrap: wrap; gap: 10px 24px; }
 }
 @media (max-width: 640px) {
+  .rj-nav-links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px 14px; }
   html:lang(zh) .rj-home-news li { grid-template-columns: 96px minmax(0,1fr); gap: 14px; }
   html:lang(zh) .rj-group { font-size: 15px; }
   html:lang(zh) .rj-home-bio { font-size: 19px; }

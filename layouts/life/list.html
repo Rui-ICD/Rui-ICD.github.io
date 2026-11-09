@@ -1,0 +1,61 @@
+{{ define "main" }}
+{{ $language := .Language.Lang }}
+{{ $places := slice }}
+{{ $countries := slice }}
+{{ range hugo.Data.life.places }}
+  {{ $place := . }}{{ $photos := slice }}
+  {{ $countries = $countries | append .country.en }}
+  {{ range .photos }}{{ $photo := . }}{{ with resources.Get .file }}
+    {{ $author := $photo.author | default hugo.Data.life.photo_credit.name }}
+    {{ $credit := i18n "rj-photographBy" (dict "Name" $author) }}
+    {{ if eq $author "Yumin Zheng" }}{{ $credit = i18n "rj-lifeCredit" }}{{ end }}
+    {{ $photos = $photos | append (dict "url" .RelPermalink "width" .Width "height" .Height "alt" (index $photo.alt $language) "caption" (index $photo.caption $language) "source" ($photo.source_url | default "") "author" $author "credit" $credit) }}
+  {{ end }}{{ end }}
+  {{ $point := index (index hugo.Data "life-map").points .id }}
+  {{ $places = $places | append (dict "id" .id "name" (index .name $language) "country" (index .country $language) "countryKey" .country.en "point" $point "photos" $photos) }}
+{{ end }}
+{{ $initial := index (where $places "id" "bali") 0 }}
+{{ $photo := index $initial.photos 0 }}
+<main id="main-content" class="rj-shell rj-life-page" data-pagefind-body data-life data-motion="auto">
+  <header class="rj-life-heading">
+    <div><h1>{{ i18n "rj-life" }}</h1><p>{{ i18n "rj-lifeTagline" }}</p></div>
+    <p class="rj-life-count">{{ len $places }} {{ i18n "rj-lifePlacesCount" }} <span aria-hidden="true">·</span> {{ len ($countries | uniq) }} {{ i18n "rj-lifeCountriesCount" }}</p>
+  </header>
+  <section class="rj-atlas" aria-label="{{ i18n "rj-lifeMapLabel" }}">
+    <div class="rj-atlas-toolbar">
+      <div class="rj-atlas-tabs" role="group" aria-label="{{ i18n "rj-lifeMapLabel" }}">
+        <button type="button" data-region="all" aria-pressed="true">{{ i18n "rj-lifeAllPlaces" }}</button>
+        <button type="button" data-region="europe" aria-pressed="false">{{ i18n "rj-lifeEurope" }}</button>
+        <button type="button" data-region="asia" aria-pressed="false">{{ i18n "rj-lifeAsia" }}</button>
+      </div>
+      <label class="rj-life-select"><span class="rj-visually-hidden">{{ i18n "rj-lifeChoose" }}</span><select data-place-select>{{ range $places }}<option value="{{ .id }}"{{ if eq .id $initial.id }} selected{{ end }}>{{ .name }} · {{ .country }}</option>{{ end }}</select></label>
+      <button type="button" class="rj-life-motion" data-life-motion aria-pressed="false" aria-label="{{ i18n "rj-lifePause" }}" title="{{ i18n "rj-lifePause" }}"><span aria-hidden="true">Ⅱ</span></button>
+    </div>
+    <div class="rj-atlas-stage" role="group" tabindex="0" aria-label="{{ i18n "rj-lifeMapLabel" }}" aria-describedby="life-map-help" data-atlas-stage>
+      <div class="rj-atlas-layer" data-atlas-layer>{{ with resources.Get "maps/world.svg" }}{{ .Content | safeHTML }}{{ end }}<div class="rj-atlas-points" data-atlas-points></div></div>
+      <div class="rj-atlas-controls">
+        <button type="button" data-zoom="in" aria-label="{{ i18n "rj-lifeZoomIn" }}" title="{{ i18n "rj-lifeZoomIn" }}">+</button>
+        <button type="button" data-zoom="out" aria-label="{{ i18n "rj-lifeZoomOut" }}" title="{{ i18n "rj-lifeZoomOut" }}">−</button>
+        <button type="button" data-world aria-label="{{ i18n "rj-lifeWorld" }}" title="{{ i18n "rj-lifeWorld" }}">↺</button>
+      </div>
+      <div class="rj-atlas-legend"><span aria-hidden="true"></span>{{ i18n "rj-lifeVisited" }}</div>
+      <a class="rj-atlas-credit" href="https://www.naturalearthdata.com/">Natural Earth</a>
+    </div>
+    <p class="rj-life-help" id="life-map-help">{{ i18n "rj-lifeMapHelp" }}</p>
+  </section>
+  <section class="rj-life-detail" aria-labelledby="life-place-name">
+    <div class="rj-life-detail-copy">
+      <p class="rj-life-country" data-place-country>{{ $initial.country }}</p>
+      <h2 id="life-place-name" data-place-name>{{ $initial.name }}</h2>
+      <p class="rj-life-caption" data-photo-caption>{{ $photo.caption }}</p>
+      <div class="rj-life-photo-controls" data-photo-controls hidden><button type="button" data-photo-prev aria-label="{{ i18n "rj-lifePrevious" }}">&larr;</button><span data-photo-count></span><button type="button" data-photo-next aria-label="{{ i18n "rj-lifeNext" }}">&rarr;</button></div>
+      <p class="rj-life-photo-credit"><span data-photo-credit>{{ $photo.credit }}</span> <a href="{{ $photo.source }}" data-photo-source{{ if not $photo.source }} hidden{{ end }}>{{ i18n "rj-lifeSource" }} &nearr;</a></p>
+    </div>
+    <a class="rj-life-photo" href="{{ $photo.url }}" data-life-photo-link aria-label="{{ i18n "rj-viewImage" }}"><img src="{{ $photo.url }}" width="{{ $photo.width }}" height="{{ $photo.height }}" alt="{{ $photo.alt }}" data-life-photo decoding="async"></a>
+  </section>
+  <p class="rj-visually-hidden" role="status" aria-live="polite" data-life-status></p>
+  <noscript><p>{{ i18n "rj-lifeNoJS" }}</p></noscript>
+  <script type="application/json" id="rj-life-data">{{ dict "places" $places "initial" $initial.id "language" $language "pause" (i18n "rj-lifePause") "play" (i18n "rj-lifePlay") "placesLabel" (i18n "rj-lifePlacesCount") | jsonify | safeJS }}</script>
+</main>
+<dialog class="rj-life-lightbox" data-life-lightbox aria-label="{{ i18n "rj-viewImage" }}"><form method="dialog"><button type="submit" aria-label="{{ i18n "rj-close" }}">×</button></form><img alt="" data-lightbox-photo><p data-lightbox-caption></p></dialog>
+{{ end }}

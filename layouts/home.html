@@ -5,30 +5,30 @@
   <section class="rj-home-profile" id="about" aria-labelledby="profile-name">
     {{ with resources.Get "media/authors/me.png" }}
     {{ $avatar := .Resize "640x webp q92" }}
-    <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="{{ i18n "portrait" }}" fetchpriority="high"></div>
+    <div class="rj-portrait"><img src="{{ $avatar.RelPermalink }}" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}" alt="{{ i18n "rj-portrait" }}" fetchpriority="high"></div>
     {{ end }}
     <div class="rj-intro">
       <div class="rj-identity">
       <h1 id="profile-name">{{ $profile.name.display }}</h1>
       <p class="rj-role">{{ $profile.role }}</p>
-      <p class="rj-group"><a href="https://blogs.ntu.edu.sg/sunwoo/">{{ i18n "groupLine" }}</a></p>
+      <p class="rj-group"><a href="https://blogs.ntu.edu.sg/sunwoo/">{{ i18n "rj-groupLine" }}</a></p>
       </div>
       <p class="rj-home-bio">{{ $home.bio }}</p>
-      <div class="rj-profile-links" aria-label="{{ i18n "profileLinks" }}">
-        {{ range $profile.links }}{{ if not (in (slice "Lee Group Profile" "GitHub" "IEEE Xplore") .label) }}<a href="{{ .url | safeURL }}">{{ if eq .label "Email" }}{{ i18n "email" }}{{ else }}{{ .label }}{{ end }}</a>{{ end }}{{ end }}
+      <div class="rj-profile-links" aria-label="{{ i18n "rj-profileLinks" }}">
+        {{ range $profile.links }}{{ if not (in (slice "Lee Group Profile" "GitHub" "IEEE Xplore") .label) }}<a href="{{ .url | safeURL }}">{{ if eq .label "Email" }}{{ i18n "rj-email" }}{{ else }}{{ .label }}{{ end }}</a>{{ end }}{{ end }}
       </div>
     </div>
   </section>
   <section class="rj-home-section rj-home-research" aria-labelledby="home-research-heading">
-    <div class="rj-home-section-heading"><h2 id="home-research-heading">{{ i18n "research" }}</h2><a class="rj-text-link" href="{{ "/projects/" | relLangURL }}">{{ i18n "exploreProjects" }} <span aria-hidden="true">&rarr;</span></a></div>
+    <div class="rj-home-section-heading"><h2 id="home-research-heading">{{ i18n "rj-research" }}</h2><a class="rj-text-link" href="{{ "/projects/" | relLangURL }}">{{ i18n "rj-exploreProjects" }} <span aria-hidden="true">&rarr;</span></a></div>
     <div class="rj-home-research-body">
       {{ $raw := index hugo.Data.research 1 }}
       {{ $area := partial "locale/entry.html" (dict "kind" "research" "key" $raw.slug "item" $raw) }}
       {{ with resources.Get $area.image }}
       {{ $image := .Resize "1000x webp q92" }}
       <figure class="rj-home-research-figure">
-        <a href="{{ $area.url | relLangURL }}" aria-label="{{ i18n "projectDetails" }}: {{ $area.title }}"><img{{ with $area.image_tone }} class="rj-tone-{{ . }}"{{ end }} src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}" loading="lazy" decoding="async"></a>
-        <figcaption>{{ i18n "antCaption" }}</figcaption>
+        <a href="{{ $area.url | relLangURL }}" aria-label="{{ i18n "rj-projectDetails" }}: {{ $area.title }}"><img{{ with $area.image_tone }} class="rj-tone-{{ . }}"{{ end }} src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $area.alt }}" loading="lazy" decoding="async"></a>
+        <figcaption>{{ i18n "rj-antCaption" }}</figcaption>
       </figure>
       {{ end }}
       <div class="rj-home-directions">
@@ -44,7 +44,7 @@
     </div>
   </section>
     <section class="rj-home-section rj-home-updates" aria-labelledby="home-recent-heading">
-      <div class="rj-home-section-heading"><h2 id="home-recent-heading">{{ i18n "news" }}</h2><a class="rj-text-link" href="{{ "/highlights/" | relLangURL }}">{{ i18n "moreHighlights" }} <span aria-hidden="true">&rarr;</span></a></div>
+      <div class="rj-home-section-heading"><h2 id="home-recent-heading">{{ i18n "rj-news" }}</h2><a class="rj-text-link" href="{{ "/highlights/" | relLangURL }}">{{ i18n "rj-moreHighlights" }} <span aria-hidden="true">&rarr;</span></a></div>
       <ol class="rj-home-news">
         {{ range hugo.Data.home.news }}{{ $entry := partial "locale/entry.html" (dict "kind" "news" "key" .month "item" .) }}<li><time datetime="{{ .month }}">{{ partial "locale/date.html" (dict "date" (printf "%s-01" .month)) }}</time><a href="{{ .url | relLangURL }}">{{ $entry.text }}</a></li>{{ end }}
       </ol>
