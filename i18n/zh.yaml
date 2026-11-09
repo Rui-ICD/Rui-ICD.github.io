@@ -107,7 +107,7 @@ rj-conference:
 rj-photoComing:
   other: 会议照片待补充。
 rj-lifeTagline:
-  other: 走过的地方，慢慢点亮。
+  other: 留下足迹，也把目光放远。
 rj-lifeIntro:
   other: 实验室之外，也想多看看这个世界。
 rj-lifePlacesCount:
@@ -117,7 +117,7 @@ rj-lifeCountriesCount:
 rj-lifeMapLabel:
   other: 我去过的地方，可点击的旅行地图
 rj-lifeMapHelp:
-  other: 点一束光，看看那里的风景。拖动地图或使用按钮缩放。
+  other: 滚轮随鼠标位置缩放，拖动探索；触屏可双指缩放。
 rj-lifeAllPlaces:
   other: 我的足迹
 rj-lifeEurope:
@@ -138,8 +138,6 @@ rj-lifeChoose:
   other: 选择一个地点
 rj-lifeVisited:
   other: 去过的地方
-rj-lifeCredit:
-  other: 照片由 Yumin Zheng 拍摄，已获授权使用。
 rj-photographBy:
   other: '照片：{{ .Name }}'
 rj-lifeSource:
@@ -151,4 +149,30 @@ rj-lifeNext:
 rj-lifeMapCredit:
   other: 地图数据：Natural Earth · 公共领域
 rj-lifeNoJS:
-  other: 开启 JavaScript，即可点亮地图、浏览照片。
+  other: 开启 JavaScript，即可探索地图与城市风景。
+rj-lifeViews:
+  other: 浏览旅行足迹
+rj-lifeAtlas:
+  other: 足迹地图
+rj-lifeScenes:
+  other: 风景集
+rj-lifeViewNote:
+  other: 去不同的地方，看不同的光。
+rj-lifeRegions:
+  other: 按地区浏览
+rj-lifeChina:
+  other: 中国
+rj-lifeCapital:
+  other: 北京 · 首都
+rj-lifeFullscreen:
+  other: 切换全屏地图
+rj-lifeSearch:
+  other: 找一座城市…
+rj-lifeNoPlaces:
+  other: 没有找到这座城市。
+rj-lifePreviousPlace:
+  other: 上一个地点
+rj-lifeNextPlace:
+  other: 下一个地点
+rj-lifeShowOnMap:
+  other: 在地图上看看

@@ -22,8 +22,6 @@ async function main() {
     'https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js',
   ]) vm.runInContext(await text(url), context, { timeout: 10000 });
 
-  const topology = JSON.parse(await text('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json'));
-  const countries = context.topojson.feature(topology, topology.objects.countries);
   const projection = context.d3.geoNaturalEarth1().fitExtent([[20, 16], [1020, 524]], { type: 'Sphere' });
   const geoPath = context.d3.geoPath(projection).digits(2);
   const ids = {
@@ -35,20 +33,28 @@ async function main() {
     if (!ids[place.country.en]) throw new Error(`Unmapped country: ${place.country.en}`);
     return ids[place.country.en];
   }));
-  const paths = countries.features.map((country) => {
-    const id = String(country.id).padStart(3, '0');
-    return `<path class="rj-land${visited.has(id) ? ' is-visited' : ''}" data-country="${id}" d="${geoPath(country)}"/>`;
-  }).join('');
   const sphere = geoPath({ type: 'Sphere' });
   const graticule = geoPath(context.d3.geoGraticule10());
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 540" class="rj-world-svg" aria-hidden="true"><defs><linearGradient id="rj-visited-land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe8bc"/><stop offset="1" stop-color="#efd4ac"/></linearGradient></defs><path class="rj-ocean" d="${sphere}"/><path class="rj-graticule" d="${graticule}"/>${paths}</svg>`;
+  await fs.mkdir(path.join(root, 'assets/maps'), { recursive: true });
+  // Draw each shared border once. SVG viewBox zoom + non-scaling strokes keeps
+  // borders fine at every scale, instead of magnifying a CSS-transformed map.
+  for (const resolution of ['50', '10']) {
+    const topology = JSON.parse(await text(`https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-${resolution}m.json`));
+    const countries = context.topojson.feature(topology, topology.objects.countries);
+    const paths = countries.features.map((country) => {
+      const id = String(country.id).padStart(3, '0');
+      return `<path class="rj-land${visited.has(id) ? ' is-visited' : ''}" data-country="${id}" d="${geoPath(country)}"/>`;
+    }).join('');
+    const borders = geoPath(context.topojson.mesh(topology, topology.objects.countries, (a, b) => a !== b));
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 540" class="rj-world-svg" aria-hidden="true"><defs><linearGradient id="rj-visited-land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff1cf"/><stop offset="1" stop-color="#f4dbad"/></linearGradient></defs><path class="rj-ocean" d="${sphere}"/><path class="rj-graticule" vector-effect="non-scaling-stroke" d="${graticule}"/>${paths}<path class="rj-borders" vector-effect="non-scaling-stroke" d="${borders}"/></svg>`;
+    await fs.writeFile(path.join(root, `assets/maps/${resolution === '50' ? 'world' : 'world-detail'}.svg`), svg);
+    console.log(`${resolution}m map: ${countries.features.length} countries, ${svg.length.toLocaleString()} bytes.`);
+  }
   const points = Object.fromEntries(life.places.map((place) => {
     const [latitude, longitude] = place.coordinates;
     const [x, y] = projection([longitude, latitude]);
     return [place.id, { x: +x.toFixed(4), y: +y.toFixed(4), country: ids[place.country.en] }];
   }));
-  await fs.mkdir(path.join(root, 'assets/maps'), { recursive: true });
-  await fs.writeFile(path.join(root, 'assets/maps/world.svg'), svg);
   await fs.writeFile(path.join(root, 'data/life-map.json'), JSON.stringify({ width: 1040, height: 540, points }, null, 2) + '\n');
   const licenseSources = {
     'world-atlas': 'https://raw.githubusercontent.com/topojson/world-atlas/v2.0.2/LICENSE',
@@ -59,6 +65,6 @@ async function main() {
   for (const [name, url] of Object.entries(licenseSources)) {
     await fs.writeFile(path.join(root, `assets/maps/${name}-LICENSE.txt`), await text(url));
   }
-  console.log(`Atlas ready: ${countries.features.length} countries; ${points ? Object.keys(points).length : 0} places; ${visited.size} visited countries.`);
+  console.log(`Atlas ready: ${Object.keys(points).length} places; ${visited.size} visited countries.`);
 }
 main().catch((error) => { console.error(error); process.exitCode = 1; });

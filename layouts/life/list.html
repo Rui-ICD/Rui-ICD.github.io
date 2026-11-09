@@ -1,61 +1,88 @@
 {{ define "main" }}
 {{ $language := .Language.Lang }}
-{{ $places := slice }}
-{{ $countries := slice }}
+{{ $places := slice }}{{ $countries := slice }}
 {{ range hugo.Data.life.places }}
-  {{ $place := . }}{{ $photos := slice }}
-  {{ $countries = $countries | append .country.en }}
+  {{ $place := . }}{{ $photos := slice }}{{ $countries = $countries | append .country.en }}
   {{ range .photos }}{{ $photo := . }}{{ with resources.Get .file }}
-    {{ $author := $photo.author | default hugo.Data.life.photo_credit.name }}
-    {{ $credit := i18n "rj-photographBy" (dict "Name" $author) }}
-    {{ if eq $author "Yumin Zheng" }}{{ $credit = i18n "rj-lifeCredit" }}{{ end }}
-    {{ $photos = $photos | append (dict "url" .RelPermalink "width" .Width "height" .Height "alt" (index $photo.alt $language) "caption" (index $photo.caption $language) "source" ($photo.source_url | default "") "author" $author "credit" $credit) }}
-  {{ end }}{{ end }}
+    {{ $thumb := .Fit "640x480 webp q82" }}
+    {{ $photos = $photos | append (dict "url" .RelPermalink "thumb" $thumb.RelPermalink "width" .Width "height" .Height "alt" (index $photo.alt $language) "caption" (index $photo.caption $language) "source" ($photo.source_url | default "") "author" ($photo.author | default "") "license" ($photo.license | default "") "licenseUrl" ($photo.license_url | default "")) }}
+  {{ else }}{{ errorf "Life photo not found in assets/: %s (place: %s)" $photo.file $place.id }}{{ end }}{{ end }}
+  {{ if not $photos }}{{ errorf "Life place needs at least one valid photograph: %s" .id }}{{ end }}
   {{ $point := index (index hugo.Data "life-map").points .id }}
-  {{ $places = $places | append (dict "id" .id "name" (index .name $language) "country" (index .country $language) "countryKey" .country.en "point" $point "photos" $photos) }}
+  {{ if not $point }}{{ errorf "Life map position missing for %s; run node scripts/build-life-map.cjs" .id }}{{ end }}
+  {{ $places = $places | append (dict "id" .id "name" (index .name $language) "search" (printf "%s %s %s %s" .name.en .name.zh .country.en .country.zh) "country" (index .country $language) "countryKey" .country.en "marker" (.marker | default "light") "point" $point "photos" $photos) }}
 {{ end }}
-{{ $initial := index (where $places "id" "bali") 0 }}
+{{ $initial := index (where $places "id" hugo.Data.life.initial) 0 }}
 {{ $photo := index $initial.photos 0 }}
-<main id="main-content" class="rj-shell rj-life-page" data-pagefind-body data-life data-motion="auto">
+{{ $detailMap := resources.Get "maps/world-detail.svg" | fingerprint }}
+<main id="main-content" class="rj-shell rj-life-page" data-pagefind-body data-life data-motion="auto" data-view="atlas">
   <header class="rj-life-heading">
     <div><h1>{{ i18n "rj-life" }}</h1><p>{{ i18n "rj-lifeTagline" }}</p></div>
-    <p class="rj-life-count">{{ len $places }} {{ i18n "rj-lifePlacesCount" }} <span aria-hidden="true">·</span> {{ len ($countries | uniq) }} {{ i18n "rj-lifeCountriesCount" }}</p>
+    <p class="rj-life-count"><strong>{{ len $places }}</strong> {{ i18n "rj-lifePlacesCount" }}<span aria-hidden="true">/</span><strong>{{ len ($countries | uniq) }}</strong> {{ i18n "rj-lifeCountriesCount" }}</p>
   </header>
-  <section class="rj-atlas" aria-label="{{ i18n "rj-lifeMapLabel" }}">
-    <div class="rj-atlas-toolbar">
-      <div class="rj-atlas-tabs" role="group" aria-label="{{ i18n "rj-lifeMapLabel" }}">
-        <button type="button" data-region="all" aria-pressed="true">{{ i18n "rj-lifeAllPlaces" }}</button>
-        <button type="button" data-region="europe" aria-pressed="false">{{ i18n "rj-lifeEurope" }}</button>
-        <button type="button" data-region="asia" aria-pressed="false">{{ i18n "rj-lifeAsia" }}</button>
+  <div class="rj-life-viewbar">
+    <div class="rj-life-views" role="tablist" aria-label="{{ i18n "rj-lifeViews" }}">
+      <button type="button" id="life-tab-atlas" role="tab" aria-selected="true" aria-controls="life-atlas-panel" data-life-view="atlas">{{ i18n "rj-lifeAtlas" }}</button>
+      <button type="button" id="life-tab-scenes" role="tab" aria-selected="false" aria-controls="life-scenes-panel" tabindex="-1" data-life-view="scenes">{{ i18n "rj-lifeScenes" }}</button>
+    </div>
+    <span class="rj-life-viewnote">{{ i18n "rj-lifeViewNote" }}</span>
+  </div>
+  <div id="life-atlas-panel" role="tabpanel" aria-labelledby="life-tab-atlas" data-life-panel="atlas">
+    <section class="rj-atlas" aria-label="{{ i18n "rj-lifeMapLabel" }}" data-atlas>
+      <div class="rj-atlas-toolbar">
+        <div class="rj-atlas-tabs" role="group" aria-label="{{ i18n "rj-lifeRegions" }}">
+          {{ range slice (dict "id" "all" "label" "rj-lifeAllPlaces") (dict "id" "china" "label" "rj-lifeChina") (dict "id" "asia" "label" "rj-lifeAsia") (dict "id" "europe" "label" "rj-lifeEurope") }}<button type="button" data-region="{{ .id }}" aria-pressed="{{ if eq .id "all" }}true{{ else }}false{{ end }}">{{ i18n .label }}</button>{{ end }}
+        </div>
+        <label class="rj-life-select"><span class="rj-visually-hidden">{{ i18n "rj-lifeChoose" }}</span><select data-place-select>{{ range $places }}<option value="{{ .id }}"{{ if eq .id $initial.id }} selected{{ end }}>{{ .name }} · {{ .country }}</option>{{ end }}</select></label>
+        <button type="button" class="rj-life-motion" data-life-motion aria-pressed="false" aria-label="{{ i18n "rj-lifePause" }}" title="{{ i18n "rj-lifePause" }}"><span aria-hidden="true">Ⅱ</span></button>
       </div>
-      <label class="rj-life-select"><span class="rj-visually-hidden">{{ i18n "rj-lifeChoose" }}</span><select data-place-select>{{ range $places }}<option value="{{ .id }}"{{ if eq .id $initial.id }} selected{{ end }}>{{ .name }} · {{ .country }}</option>{{ end }}</select></label>
-      <button type="button" class="rj-life-motion" data-life-motion aria-pressed="false" aria-label="{{ i18n "rj-lifePause" }}" title="{{ i18n "rj-lifePause" }}"><span aria-hidden="true">Ⅱ</span></button>
-    </div>
-    <div class="rj-atlas-stage" role="group" tabindex="0" aria-label="{{ i18n "rj-lifeMapLabel" }}" aria-describedby="life-map-help" data-atlas-stage>
-      <div class="rj-atlas-layer" data-atlas-layer>{{ with resources.Get "maps/world.svg" }}{{ .Content | safeHTML }}{{ end }}<div class="rj-atlas-points" data-atlas-points></div></div>
-      <div class="rj-atlas-controls">
-        <button type="button" data-zoom="in" aria-label="{{ i18n "rj-lifeZoomIn" }}" title="{{ i18n "rj-lifeZoomIn" }}">+</button>
-        <button type="button" data-zoom="out" aria-label="{{ i18n "rj-lifeZoomOut" }}" title="{{ i18n "rj-lifeZoomOut" }}">−</button>
-        <button type="button" data-world aria-label="{{ i18n "rj-lifeWorld" }}" title="{{ i18n "rj-lifeWorld" }}">↺</button>
+      <div class="rj-atlas-stage" role="group" tabindex="0" aria-label="{{ i18n "rj-lifeMapLabel" }}" aria-describedby="life-map-help" data-atlas-stage>
+        <div class="rj-atlas-layer" data-atlas-layer>{{ with resources.Get "maps/world.svg" }}{{ .Content | safeHTML }}{{ end }}</div>
+        <div class="rj-atlas-points" data-atlas-points></div>
+        <div class="rj-atlas-controls">
+          <button type="button" data-zoom="in" aria-label="{{ i18n "rj-lifeZoomIn" }}" title="{{ i18n "rj-lifeZoomIn" }}">+</button>
+          <output data-zoom-level aria-live="off">1×</output>
+          <button type="button" data-zoom="out" aria-label="{{ i18n "rj-lifeZoomOut" }}" title="{{ i18n "rj-lifeZoomOut" }}">−</button>
+          <button type="button" data-world aria-label="{{ i18n "rj-lifeWorld" }}" title="{{ i18n "rj-lifeWorld" }}">↺</button>
+          <button type="button" data-map-fullscreen aria-label="{{ i18n "rj-lifeFullscreen" }}" title="{{ i18n "rj-lifeFullscreen" }}">⛶</button>
+        </div>
+        <div class="rj-atlas-legend"><span class="rj-legend-light" aria-hidden="true">✧</span>{{ i18n "rj-lifeVisited" }}<span class="rj-legend-capital" aria-hidden="true">★</span>{{ i18n "rj-lifeCapital" }}</div>
+        <a class="rj-atlas-credit" href="https://www.naturalearthdata.com/">Natural Earth</a>
       </div>
-      <div class="rj-atlas-legend"><span aria-hidden="true"></span>{{ i18n "rj-lifeVisited" }}</div>
-      <a class="rj-atlas-credit" href="https://www.naturalearthdata.com/">Natural Earth</a>
+      <p class="rj-life-help" id="life-map-help">{{ i18n "rj-lifeMapHelp" }}</p>
+    </section>
+    <section class="rj-life-detail" aria-labelledby="life-place-name">
+      <a class="rj-life-photo" href="{{ $photo.url }}" data-life-photo-link aria-label="{{ i18n "rj-viewImage" }}"><img src="{{ $photo.url }}" width="{{ $photo.width }}" height="{{ $photo.height }}" alt="{{ $photo.alt }}" data-life-photo decoding="async"></a>
+      <div class="rj-life-detail-copy">
+        <p class="rj-life-country" data-place-country>{{ $initial.country }}</p>
+        <h2 id="life-place-name" data-place-name>{{ $initial.name }}</h2>
+        <p class="rj-life-caption" data-photo-caption>{{ $photo.caption }}</p>
+        <p class="rj-life-photo-credit"><span data-photo-credit>{{ $photo.author }}</span><span aria-hidden="true"> · </span><a href="{{ $photo.licenseUrl }}" data-photo-license>{{ $photo.license }}</a><a href="{{ $photo.source }}" data-photo-source>{{ i18n "rj-lifeSource" }} ↗</a></p>
+        <div class="rj-life-place-controls"><button type="button" data-place-prev aria-label="{{ i18n "rj-lifePreviousPlace" }}">←</button><span data-place-count></span><button type="button" data-place-next aria-label="{{ i18n "rj-lifeNextPlace" }}">→</button></div>
+      </div>
+    </section>
+  </div>
+  <section id="life-scenes-panel" role="tabpanel" aria-labelledby="life-tab-scenes" data-life-panel="scenes" hidden>
+    <div class="rj-scenes-toolbar">
+      <div class="rj-atlas-tabs" role="group" aria-label="{{ i18n "rj-lifeRegions" }}">{{ range slice (dict "id" "all" "label" "rj-all") (dict "id" "china" "label" "rj-lifeChina") (dict "id" "asia" "label" "rj-lifeAsia") (dict "id" "europe" "label" "rj-lifeEurope") }}<button type="button" data-scenes-region="{{ .id }}" aria-pressed="{{ if eq .id "all" }}true{{ else }}false{{ end }}">{{ i18n .label }}</button>{{ end }}</div>
+      <label class="rj-scene-search"><span class="rj-visually-hidden">{{ i18n "rj-lifeSearch" }}</span><input type="search" data-place-search placeholder="{{ i18n "rj-lifeSearch" }}" autocomplete="off"></label>
     </div>
-    <p class="rj-life-help" id="life-map-help">{{ i18n "rj-lifeMapHelp" }}</p>
+    <div class="rj-scenes-grid">{{ range $places }}{{ $place := . }}{{ with index .photos 0 }}
+      <button type="button" class="rj-scene" data-scene="{{ $place.id }}" aria-label="{{ $place.name }} · {{ $place.country }}">
+        <span class="rj-scene-image"><img src="{{ .thumb }}" alt="{{ .alt }}" loading="lazy" decoding="async" width="640" height="480"></span>
+        <span class="rj-scene-copy"><strong>{{ $place.name }}</strong><span>{{ $place.country }}</span><span class="rj-scene-arrow" aria-hidden="true">↗</span></span>
+      </button>
+    {{ end }}{{ end }}</div>
+    <p class="rj-scenes-empty" data-scenes-empty hidden>{{ i18n "rj-lifeNoPlaces" }}</p>
   </section>
-  <section class="rj-life-detail" aria-labelledby="life-place-name">
-    <div class="rj-life-detail-copy">
-      <p class="rj-life-country" data-place-country>{{ $initial.country }}</p>
-      <h2 id="life-place-name" data-place-name>{{ $initial.name }}</h2>
-      <p class="rj-life-caption" data-photo-caption>{{ $photo.caption }}</p>
-      <div class="rj-life-photo-controls" data-photo-controls hidden><button type="button" data-photo-prev aria-label="{{ i18n "rj-lifePrevious" }}">&larr;</button><span data-photo-count></span><button type="button" data-photo-next aria-label="{{ i18n "rj-lifeNext" }}">&rarr;</button></div>
-      <p class="rj-life-photo-credit"><span data-photo-credit>{{ $photo.credit }}</span> <a href="{{ $photo.source }}" data-photo-source{{ if not $photo.source }} hidden{{ end }}>{{ i18n "rj-lifeSource" }} &nearr;</a></p>
-    </div>
-    <a class="rj-life-photo" href="{{ $photo.url }}" data-life-photo-link aria-label="{{ i18n "rj-viewImage" }}"><img src="{{ $photo.url }}" width="{{ $photo.width }}" height="{{ $photo.height }}" alt="{{ $photo.alt }}" data-life-photo decoding="async"></a>
-  </section>
+  <p class="rj-life-image-note">{{ index hugo.Data.life.image_note $language }}</p>
   <p class="rj-visually-hidden" role="status" aria-live="polite" data-life-status></p>
   <noscript><p>{{ i18n "rj-lifeNoJS" }}</p></noscript>
-  <script type="application/json" id="rj-life-data">{{ dict "places" $places "initial" $initial.id "language" $language "pause" (i18n "rj-lifePause") "play" (i18n "rj-lifePlay") "placesLabel" (i18n "rj-lifePlacesCount") | jsonify | safeJS }}</script>
+  <script type="application/json" id="rj-life-data">{{ dict "places" $places "initial" $initial.id "language" $language "detailMap" $detailMap.RelPermalink "pause" (i18n "rj-lifePause") "play" (i18n "rj-lifePlay") "capital" (i18n "rj-lifeCapital") | jsonify | safeJS }}</script>
 </main>
-<dialog class="rj-life-lightbox" data-life-lightbox aria-label="{{ i18n "rj-viewImage" }}"><form method="dialog"><button type="submit" aria-label="{{ i18n "rj-close" }}">×</button></form><img alt="" data-lightbox-photo><p data-lightbox-caption></p></dialog>
+<dialog class="rj-life-lightbox" data-life-lightbox aria-label="{{ i18n "rj-viewImage" }}">
+  <div class="rj-lightbox-top"><div><h2 data-lightbox-name></h2><span data-lightbox-country></span></div><form method="dialog"><button type="submit" aria-label="{{ i18n "rj-close" }}">×</button></form></div>
+  <img alt="" data-lightbox-photo><p data-lightbox-caption></p>
+  <div class="rj-lightbox-bottom"><p><span data-lightbox-author></span> · <a data-lightbox-license></a> · <a data-lightbox-source>{{ i18n "rj-lifeSource" }} ↗</a></p><button type="button" data-lightbox-map>{{ i18n "rj-lifeShowOnMap" }} →</button></div>
+</dialog>
 {{ end }}

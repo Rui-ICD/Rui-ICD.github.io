@@ -107,7 +107,7 @@ rj-conference:
 rj-photoComing:
   other: Conference photo coming soon.
 rj-lifeTagline:
-  other: Places visited. Moments kept.
+  other: A few footprints. A wider world.
 rj-lifeIntro:
   other: A little map of the world outside the lab.
 rj-lifePlacesCount:
@@ -117,7 +117,7 @@ rj-lifeCountriesCount:
 rj-lifeMapLabel:
   other: Interactive map of places I have visited
 rj-lifeMapHelp:
-  other: Choose a light to explore. Drag the map or use the zoom controls.
+  other: Scroll to zoom where you point. Drag to wander; pinch on touchscreens.
 rj-lifeAllPlaces:
   other: My places
 rj-lifeEurope:
@@ -138,8 +138,6 @@ rj-lifeChoose:
   other: Choose a place
 rj-lifeVisited:
   other: A place I've been
-rj-lifeCredit:
-  other: Photographs by Yumin Zheng, shared with permission.
 rj-photographBy:
   other: 'Photograph: {{ .Name }}'
 rj-lifeSource:
@@ -151,4 +149,30 @@ rj-lifeNext:
 rj-lifeMapCredit:
   other: 'Map: Natural Earth · public domain'
 rj-lifeNoJS:
-  other: Enable JavaScript to explore the lights and photographs.
+  other: Enable JavaScript to explore the atlas and city scenes.
+rj-lifeViews:
+  other: Explore my travels
+rj-lifeAtlas:
+  other: Atlas
+rj-lifeScenes:
+  other: City scenes
+rj-lifeViewNote:
+  other: Different places, different light.
+rj-lifeRegions:
+  other: Explore by region
+rj-lifeChina:
+  other: China
+rj-lifeCapital:
+  other: Beijing · capital
+rj-lifeFullscreen:
+  other: Toggle fullscreen map
+rj-lifeSearch:
+  other: Find a city…
+rj-lifeNoPlaces:
+  other: No places match your search.
+rj-lifePreviousPlace:
+  other: Previous place
+rj-lifeNextPlace:
+  other: Next place
+rj-lifeShowOnMap:
+  other: Find on atlas

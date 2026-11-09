@@ -1,4 +1,4 @@
 ---
 title: Life
-summary: Places visited, photographs, and a little light beyond the lab.
+summary: A personal atlas and a collection of city scenes from places I have visited.
 ---
