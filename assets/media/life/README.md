@@ -7,7 +7,7 @@
 - 郑州、昆明：`landmarks/zhengzhou.jpg`、`landmarks/kunming.jpg`
 - 槟城、马六甲、怡保：`landmarks/penang.jpg`、`landmarks/melaka.jpg`、`landmarks/ipoh.jpg`
 
-地点、经纬度、照片路径、中英文图注、摄影者、许可和来源在仓库根目录的 `data/life.json`。目前为 37 个地点、12 个国家；巴厘岛、岳阳、澳门及菲律宾的地点已移除。成都和运城保留原有条目，没有重复添加。
+地点、经纬度、照片路径、中英文图注、摄影者、许可和来源在仓库根目录的 `data/life.json`。目前为 42 个地点、12 个国家；巴厘岛、岳阳、澳门及菲律宾的地点已移除。成都和运城保留原有条目，没有重复添加。
 
 ## 替换照片
 

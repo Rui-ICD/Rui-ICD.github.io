@@ -228,33 +228,6 @@
       "attribution": "Shihu7 / Wikimedia Commons / CC BY-SA 4.0"
     },
     {
-      "id": "siem-reap",
-      "file": "media/life/landmarks/siem-reap.jpg",
-      "author": "Satdeep Gill",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Angkor_Wat_with_its_reflection.jpg",
-      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Angkor_Wat_with_its_reflection.jpg/1920px-Angkor_Wat_with_its_reflection.jpg",
-      "landmark": {
-        "en": "Angkor Wat",
-        "zh": "吴哥窟"
-      },
-      "alt": {
-        "en": "Angkor Wat in Siem Reap.",
-        "zh": "暹粒吴哥窟及其在池水中的倒影。"
-      },
-      "coordinates": [
-        13.4125,
-        103.867
-      ],
-      "sha256": "6d87f1ea763ab80ef329fbc7cf3cd716b10fa5f682aa5a324e36eb8c060ed6b8",
-      "width": 1920,
-      "height": 1282,
-      "bytes": 465788,
-      "changes": "Wikimedia-served proportional thumbnail; no local crop, filter or image edits.",
-      "attribution": "Satdeep Gill"
-    },
-    {
       "id": "singapore",
       "file": "media/life/landmarks/singapore.jpg",
       "author": "Daniel Case",
@@ -786,36 +759,6 @@
       "attribution": "Windmemories / Wikimedia Commons / CC BY-SA 4.0"
     },
     {
-      "id": "ordos",
-      "author": "Popolon",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Ordos_Museum.jpg",
-      "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Ordos_Museum.jpg",
-      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Ordos_Museum.jpg/1920px-Ordos_Museum.jpg",
-      "source_title": "File:Ordos_Museum.jpg",
-      "file": "media/life/landmarks/ordos.jpg",
-      "landmark": {
-        "en": "Ordos Museum",
-        "zh": "鄂尔多斯博物馆"
-      },
-      "alt": {
-        "en": "Ordos Museum, China.",
-        "zh": "鄂尔多斯博物馆。"
-      },
-      "coordinates": [
-        39.60004,
-        109.77845
-      ],
-      "sha256": "4a2734194402a0391bd0f99dc909c30cf6e33f9bc9112ad8b83805a6830b639e",
-      "width": 1920,
-      "height": 1272,
-      "bytes": 371117,
-      "processing": "Unchanged Commons thumbnail or original; no local editing.",
-      "architecture_credit": "Ordos Museum: MAD Architects (Ma Yansong, Yosuke Hayano and Dang Qun).",
-      "attribution": "Popolon / Wikimedia Commons / CC BY-SA 4.0"
-    },
-    {
       "id": "wuhan",
       "file": "media/life/landmarks/wuhan.jpg",
       "author": "Gary Todd from Xinzheng, China",
@@ -1034,6 +977,209 @@
       "bytes": 634649,
       "changes": "Wikimedia-served proportional thumbnail; no local crop, filter or image edits.",
       "attribution": "FBilula"
+    },
+    {
+      "id": "xiamen",
+      "file": "media/life/landmarks/xiamen.jpg",
+      "author": "Jakob Montrasio",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gulangyu.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Gulangyu.jpg/1920px-Gulangyu.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Gulangyu.jpg",
+      "landmark": {
+        "en": "Gulangyu Island",
+        "zh": "厦门鼓浪屿"
+      },
+      "alt": {
+        "en": "View of Gulangyu Island.",
+        "zh": "厦门鼓浪屿景观。"
+      },
+      "coordinates": [
+        24.4475,
+        118.061944
+      ],
+      "sha256": "c03b90f243a26f49d2e328085f83b08a1c28719b760586dae60968958d6721a2",
+      "width": 1920,
+      "height": 1272,
+      "bytes": 1421381,
+      "source_title": "File:Gulangyu.jpg",
+      "attribution": "Jakob Montrasio / Wikimedia Commons / CC BY 2.0",
+      "processing": "Wikimedia-supplied proportional thumbnail where available; no local cropping, retouching, watermark removal or AI edits."
+    },
+    {
+      "id": "taiyuan",
+      "file": "media/life/landmarks/taiyuan.jpg",
+      "author": "Patrick20242023",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%E6%99%8B%E7%A5%A0%E5%9C%A3%E6%AF%8D%E6%AE%BF%E5%92%8C%E9%B1%BC%E6%B2%BC%E9%A3%9E%E6%A2%81.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/%E6%99%8B%E7%A5%A0%E5%9C%A3%E6%AF%8D%E6%AE%BF%E5%92%8C%E9%B1%BC%E6%B2%BC%E9%A3%9E%E6%A2%81.jpg/1920px-%E6%99%8B%E7%A5%A0%E5%9C%A3%E6%AF%8D%E6%AE%BF%E5%92%8C%E9%B1%BC%E6%B2%BC%E9%A3%9E%E6%A2%81.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/%E6%99%8B%E7%A5%A0%E5%9C%A3%E6%AF%8D%E6%AE%BF%E5%92%8C%E9%B1%BC%E6%B2%BC%E9%A3%9E%E6%A2%81.jpg",
+      "landmark": {
+        "en": "Saint Mother Hall, Jinci Temple",
+        "zh": "太原晋祠圣母殿"
+      },
+      "alt": {
+        "en": "View of Saint Mother Hall, Jinci Temple.",
+        "zh": "太原晋祠圣母殿景观。"
+      },
+      "coordinates": [
+        37.708318,
+        112.43579
+      ],
+      "sha256": "c54cf2b50e5401ead184301ef77a6bdf07b31c1f1205d40c292a19fe6b0f4136",
+      "width": 1920,
+      "height": 1440,
+      "bytes": 1100111,
+      "source_title": "File:晋祠圣母殿和鱼沼飞梁.jpg",
+      "attribution": "Patrick20242023 / Wikimedia Commons / CC BY-SA 4.0",
+      "processing": "Wikimedia-supplied proportional thumbnail where available; no local cropping, retouching, watermark removal or AI edits."
+    },
+    {
+      "id": "nanjing",
+      "file": "media/life/landmarks/nanjing.jpg",
+      "author": "Windmemories",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:20240118_Gate_of_Fuzi_Miao.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/20240118_Gate_of_Fuzi_Miao.jpg/1920px-20240118_Gate_of_Fuzi_Miao.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/20240118_Gate_of_Fuzi_Miao.jpg",
+      "landmark": {
+        "en": "Nanjing Confucius Temple",
+        "zh": "南京夫子庙"
+      },
+      "alt": {
+        "en": "View of Nanjing Confucius Temple.",
+        "zh": "南京夫子庙景观。"
+      },
+      "coordinates": [
+        32.0205,
+        118.789
+      ],
+      "sha256": "e6be89d1ba38093e99fc1c6a8e9e0784812621f70d0805fbef21a1998a0684d3",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 534844,
+      "source_title": "File:20240118 Gate of Fuzi Miao.jpg",
+      "attribution": "Windmemories / Wikimedia Commons / CC BY-SA 4.0",
+      "processing": "Wikimedia-supplied proportional thumbnail where available; no local cropping, retouching, watermark removal or AI edits."
+    },
+    {
+      "id": "haikou",
+      "file": "media/life/landmarks/haikou.jpg",
+      "author": "Yolanda Yao",
+      "attribution": "Yolanda Yao",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Altstadt_von_Haikou_(Hainan).jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Altstadt_von_Haikou_%28Hainan%29.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Altstadt_von_Haikou_%28Hainan%29.jpg/1920px-Altstadt_von_Haikou_%28Hainan%29.jpg",
+      "source_title": "File:Altstadt von Haikou (Hainan).jpg",
+      "landmark": {
+        "en": "Qilou Old Street",
+        "zh": "骑楼老街"
+      },
+      "alt": {
+        "en": "Historic arcaded buildings along Haikou's old town streets.",
+        "zh": "海口骑楼老街的历史建筑与街景。"
+      },
+      "coordinates": [
+        20.0444,
+        110.3385
+      ],
+      "sha256": "07ffa8e787e70d210e2eb932f5232511e1859b6b6b8598afd38129622877dc6a",
+      "width": 1920,
+      "height": 1440,
+      "bytes": 784080,
+      "processing": "Wikimedia-served proportional1920px thumbnail; full frame retained. No local cropping, filtering, recoloring, AI editing or watermark removal."
+    },
+    {
+      "id": "hangzhou",
+      "file": "media/life/landmarks/hangzhou.jpg",
+      "author": "Bjoertvedt",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:West_Lake_IMG_8755_hangzhou_panorama.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/West_Lake_IMG_8755_hangzhou_panorama.jpg/1920px-West_Lake_IMG_8755_hangzhou_panorama.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/West_Lake_IMG_8755_hangzhou_panorama.jpg",
+      "landmark": {
+        "en": "West Lake",
+        "zh": "杭州西湖"
+      },
+      "alt": {
+        "en": "View of West Lake.",
+        "zh": "杭州西湖景观。"
+      },
+      "coordinates": [
+        30.252592,
+        120.142997
+      ],
+      "sha256": "c77327a9ed00102d55d2cfc36d9bf8a759b8a983e93a431d02743b252437a18c",
+      "width": 1920,
+      "height": 1119,
+      "bytes": 376847,
+      "source_title": "File:West Lake IMG 8755 hangzhou panorama.jpg",
+      "attribution": "Bjoertvedt / Wikimedia Commons / CC BY-SA 4.0",
+      "processing": "Wikimedia-supplied proportional thumbnail where available; no local cropping, retouching, watermark removal or AI edits."
+    },
+    {
+      "id": "sanya",
+      "file": "media/life/landmarks/sanya.jpg",
+      "author": "Gary Todd",
+      "attribution": "Gary Todd",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Yalong_Bay,_Sanya,_Hainan_Island_(10098690006).jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Yalong_Bay%2C_Sanya%2C_Hainan_Island_%2810098690006%29.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Yalong_Bay%2C_Sanya%2C_Hainan_Island_%2810098690006%29.jpg/1920px-Yalong_Bay%2C_Sanya%2C_Hainan_Island_%2810098690006%29.jpg",
+      "source_title": "File:Yalong Bay, Sanya, Hainan Island (10098690006).jpg",
+      "landmark": {
+        "en": "Yalong Bay",
+        "zh": "亚龙湾"
+      },
+      "alt": {
+        "en": "The beach, boats and clear water at Yalong Bay in Sanya.",
+        "zh": "三亚亚龙湾的沙滩、游船与海水。"
+      },
+      "coordinates": [
+        18.2261,
+        109.6438
+      ],
+      "sha256": "c84ef581cc9924dd47f3a2b1bbabe2d416ef5c654682a71927a759d062189153",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 315015,
+      "processing": "Wikimedia-served proportional1920px thumbnail; full frame retained. No local cropping, filtering, recoloring, AI editing or watermark removal."
+    },
+    {
+      "id": "surabaya",
+      "file": "media/life/landmarks/surabaya.jpg",
+      "author": "P. Hughes",
+      "attribution": "P. Hughes",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Surabaya_-_Heroes_Monument,_or_Tugu_Pahlawan.jpg",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Surabaya_-_Heroes_Monument%2C_or_Tugu_Pahlawan.jpg",
+      "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Surabaya_-_Heroes_Monument%2C_or_Tugu_Pahlawan.jpg/1920px-Surabaya_-_Heroes_Monument%2C_or_Tugu_Pahlawan.jpg",
+      "source_title": "File:Surabaya - Heroes Monument, or Tugu Pahlawan.jpg",
+      "landmark": {
+        "en": "Heroes Monument (Tugu Pahlawan)",
+        "zh": "英雄纪念碑"
+      },
+      "alt": {
+        "en": "The Heroes Monument and surrounding grounds in Surabaya, Indonesia.",
+        "zh": "印度尼西亚泗水的英雄纪念碑及周围广场。"
+      },
+      "coordinates": [
+        -7.2459,
+        112.7377
+      ],
+      "sha256": "eb97e6613316beb1243997779d8b61aef606d8e9987c17df8c7c399795cbb31f",
+      "width": 1920,
+      "height": 1318,
+      "bytes": 602132,
+      "processing": "Wikimedia-served proportional1920px thumbnail; full frame retained. No local cropping, filtering, recoloring, AI editing or watermark removal."
     }
   ]
 }

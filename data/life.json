@@ -279,40 +279,6 @@
       "marker": "light"
     },
     {
-      "id": "siem-reap",
-      "name": {
-        "en": "Siem Reap",
-        "zh": "暹粒"
-      },
-      "country": {
-        "en": "Cambodia",
-        "zh": "柬埔寨"
-      },
-      "coordinates": [
-        13.4119,
-        103.8642
-      ],
-      "photos": [
-        {
-          "file": "media/life/landmarks/siem-reap.jpg",
-          "author": "Satdeep Gill",
-          "license": "CC BY-SA 4.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Angkor_Wat_with_its_reflection.jpg",
-          "title": "Angkor Wat",
-          "alt": {
-            "en": "Angkor Wat in Siem Reap.",
-            "zh": "暹粒吴哥窟及其在池水中的倒影。"
-          },
-          "caption": {
-            "en": "Angkor Wat.",
-            "zh": "吴哥窟。"
-          }
-        }
-      ],
-      "marker": "light"
-    },
-    {
       "id": "singapore",
       "name": {
         "en": "Singapore",
@@ -959,40 +925,6 @@
       "marker": "light"
     },
     {
-      "id": "ordos",
-      "name": {
-        "en": "Ordos",
-        "zh": "鄂尔多斯"
-      },
-      "country": {
-        "en": "China",
-        "zh": "中国"
-      },
-      "coordinates": [
-        39.1552,
-        109.2967
-      ],
-      "photos": [
-        {
-          "file": "media/life/landmarks/ordos.jpg",
-          "author": "Popolon",
-          "license": "CC BY-SA 4.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Ordos_Museum.jpg",
-          "title": "File:Ordos_Museum.jpg",
-          "alt": {
-            "en": "Ordos Museum, China.",
-            "zh": "鄂尔多斯博物馆。"
-          },
-          "caption": {
-            "en": "Ordos Museum.",
-            "zh": "鄂尔多斯博物馆。"
-          }
-        }
-      ],
-      "marker": "light"
-    },
-    {
       "id": "wuhan",
       "name": {
         "en": "Wuhan",
@@ -1260,6 +1192,244 @@
           "caption": {
             "en": "Ipoh railway station.",
             "zh": "怡保火车站。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xiamen",
+      "name": {
+        "en": "Xiamen",
+        "zh": "厦门"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        24.4798,
+        118.0894
+      ],
+      "marker": "light",
+      "photos": [
+        {
+          "file": "media/life/landmarks/xiamen.jpg",
+          "author": "Jakob Montrasio",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gulangyu.jpg",
+          "title": "File:Gulangyu.jpg",
+          "alt": {
+            "en": "View of Gulangyu Island.",
+            "zh": "厦门鼓浪屿景观。"
+          },
+          "caption": {
+            "en": "Gulangyu Island.",
+            "zh": "厦门鼓浪屿。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "taiyuan",
+      "name": {
+        "en": "Taiyuan",
+        "zh": "太原"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        37.8706,
+        112.5489
+      ],
+      "marker": "light",
+      "photos": [
+        {
+          "file": "media/life/landmarks/taiyuan.jpg",
+          "author": "Patrick20242023",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "source_url": "https://commons.wikimedia.org/wiki/File:%E6%99%8B%E7%A5%A0%E5%9C%A3%E6%AF%8D%E6%AE%BF%E5%92%8C%E9%B1%BC%E6%B2%BC%E9%A3%9E%E6%A2%81.jpg",
+          "title": "File:晋祠圣母殿和鱼沼飞梁.jpg",
+          "alt": {
+            "en": "View of Saint Mother Hall, Jinci Temple.",
+            "zh": "太原晋祠圣母殿景观。"
+          },
+          "caption": {
+            "en": "Saint Mother Hall, Jinci Temple.",
+            "zh": "太原晋祠圣母殿。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nanjing",
+      "name": {
+        "en": "Nanjing",
+        "zh": "南京"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        32.0603,
+        118.7969
+      ],
+      "marker": "light",
+      "photos": [
+        {
+          "file": "media/life/landmarks/nanjing.jpg",
+          "author": "Windmemories",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "source_url": "https://commons.wikimedia.org/wiki/File:20240118_Gate_of_Fuzi_Miao.jpg",
+          "title": "File:20240118 Gate of Fuzi Miao.jpg",
+          "alt": {
+            "en": "View of Nanjing Confucius Temple.",
+            "zh": "南京夫子庙景观。"
+          },
+          "caption": {
+            "en": "Nanjing Confucius Temple.",
+            "zh": "南京夫子庙。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "haikou",
+      "name": {
+        "en": "Haikou",
+        "zh": "海口"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        20.044,
+        110.1983
+      ],
+      "marker": "light",
+      "photos": [
+        {
+          "file": "media/life/landmarks/haikou.jpg",
+          "author": "Yolanda Yao",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Altstadt_von_Haikou_(Hainan).jpg",
+          "title": "File:Altstadt von Haikou (Hainan).jpg",
+          "alt": {
+            "en": "Historic arcaded buildings along Haikou's old town streets.",
+            "zh": "海口骑楼老街的历史建筑与街景。"
+          },
+          "caption": {
+            "en": "Qilou Old Street.",
+            "zh": "骑楼老街。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hangzhou",
+      "name": {
+        "en": "Hangzhou",
+        "zh": "杭州"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        30.2741,
+        120.1551
+      ],
+      "marker": "light",
+      "photos": [
+        {
+          "file": "media/life/landmarks/hangzhou.jpg",
+          "author": "Bjoertvedt",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "source_url": "https://commons.wikimedia.org/wiki/File:West_Lake_IMG_8755_hangzhou_panorama.jpg",
+          "title": "File:West Lake IMG 8755 hangzhou panorama.jpg",
+          "alt": {
+            "en": "View of West Lake.",
+            "zh": "杭州西湖景观。"
+          },
+          "caption": {
+            "en": "West Lake.",
+            "zh": "杭州西湖。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sanya",
+      "name": {
+        "en": "Sanya",
+        "zh": "三亚"
+      },
+      "country": {
+        "en": "China",
+        "zh": "中国"
+      },
+      "coordinates": [
+        18.2528,
+        109.5119
+      ],
+      "marker": "light",
+      "photos": [
+        {
+          "file": "media/life/landmarks/sanya.jpg",
+          "author": "Gary Todd",
+          "license": "CC0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Yalong_Bay,_Sanya,_Hainan_Island_(10098690006).jpg",
+          "title": "File:Yalong Bay, Sanya, Hainan Island (10098690006).jpg",
+          "alt": {
+            "en": "The beach, boats and clear water at Yalong Bay in Sanya.",
+            "zh": "三亚亚龙湾的沙滩、游船与海水。"
+          },
+          "caption": {
+            "en": "Yalong Bay.",
+            "zh": "亚龙湾。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "surabaya",
+      "name": {
+        "en": "Surabaya",
+        "zh": "泗水"
+      },
+      "country": {
+        "en": "Indonesia",
+        "zh": "印度尼西亚"
+      },
+      "coordinates": [
+        -7.2575,
+        112.7521
+      ],
+      "marker": "light",
+      "photos": [
+        {
+          "file": "media/life/landmarks/surabaya.jpg",
+          "author": "P. Hughes",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Surabaya_-_Heroes_Monument,_or_Tugu_Pahlawan.jpg",
+          "title": "File:Surabaya - Heroes Monument, or Tugu Pahlawan.jpg",
+          "alt": {
+            "en": "The Heroes Monument and surrounding grounds in Surabaya, Indonesia.",
+            "zh": "印度尼西亚泗水的英雄纪念碑及周围广场。"
+          },
+          "caption": {
+            "en": "Heroes Monument (Tugu Pahlawan).",
+            "zh": "英雄纪念碑。"
           }
         }
       ]
