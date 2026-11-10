@@ -13,6 +13,6 @@
 
 论文的正式英文标题、作者、期刊名和 DOI 保留原文，中文主要用于研究介绍和页面说明。中文文案独立维护，修改英文后如有内容变化，请同步调整对应中文。
 
-给地图增加或移动地点后，在仓库根目录运行 `node scripts/build-life-map.cjs`，重新生成地图位置。只换照片、图注或摄影署名不需要重做地图。
+Life 使用可旋转的 3D 地球，地点直接取 `data/life.json` 的 `[纬度, 经度]`，新增或移动地点不需要生成平面坐标。`node scripts/build-life-map.cjs` 仅用于更新地球国界与海岸线。照片与地球素材的维护说明分别在 `assets/media/life/README.md` 和 `assets/maps/earth/README.md`。
 
 `data/` 目录只放 Hugo 支持的结构化数据文件（YAML、JSON、TOML、XML），使用说明请放在 `docs/`，以免中断网站构建。

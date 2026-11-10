@@ -117,7 +117,7 @@ rj-lifeCountriesCount:
 rj-lifeMapLabel:
   other: 我去过的地方，可点击的旅行地图
 rj-lifeMapHelp:
-  other: 滚轮随鼠标位置缩放，拖动探索；触屏可双指缩放。
+  other: 拖动旋转地球，滚轮或双指缩放；点城市查看风景。
 rj-lifeAllPlaces:
   other: 我的足迹
 rj-lifeEurope:
@@ -153,7 +153,7 @@ rj-lifeNoJS:
 rj-lifeViews:
   other: 浏览旅行足迹
 rj-lifeAtlas:
-  other: 足迹地图
+  other: 足迹地球
 rj-lifeScenes:
   other: 风景集
 rj-lifeViewNote:
@@ -175,4 +175,10 @@ rj-lifePreviousPlace:
 rj-lifeNextPlace:
   other: 下一个地点
 rj-lifeShowOnMap:
-  other: 在地图上看看
+  other: 在地球上看看
+rj-lifeGlobeLoading:
+  other: 正在展开地球…
+rj-lifeGlobePlaces:
+  other: 去过的地方
+rj-lifeGlobeUnavailable:
+  other: 当前浏览器暂时无法显示 3D 地球，仍可从地点列表或风景集浏览。

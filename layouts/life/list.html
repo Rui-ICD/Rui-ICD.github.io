@@ -8,13 +8,14 @@
     {{ $photos = $photos | append (dict "url" .RelPermalink "thumb" $thumb.RelPermalink "width" .Width "height" .Height "alt" (index $photo.alt $language) "caption" (index $photo.caption $language) "source" ($photo.source_url | default "") "author" ($photo.author | default "") "license" ($photo.license | default "") "licenseUrl" ($photo.license_url | default "")) }}
   {{ else }}{{ errorf "Life photo not found in assets/: %s (place: %s)" $photo.file $place.id }}{{ end }}{{ end }}
   {{ if not $photos }}{{ errorf "Life place needs at least one valid photograph: %s" .id }}{{ end }}
-  {{ $point := index (index hugo.Data "life-map").points .id }}
-  {{ if not $point }}{{ errorf "Life map position missing for %s; run node scripts/build-life-map.cjs" .id }}{{ end }}
-  {{ $places = $places | append (dict "id" .id "name" (index .name $language) "search" (printf "%s %s %s %s" .name.en .name.zh .country.en .country.zh) "country" (index .country $language) "countryKey" .country.en "marker" (.marker | default "light") "point" $point "photos" $photos) }}
+  {{ $places = $places | append (dict "id" .id "name" (index .name $language) "search" (printf "%s %s %s %s" .name.en .name.zh .country.en .country.zh) "country" (index .country $language) "countryKey" .country.en "marker" (.marker | default "light") "coordinates" .coordinates "photos" $photos) }}
 {{ end }}
 {{ $initial := index (where $places "id" hugo.Data.life.initial) 0 }}
 {{ $photo := index $initial.photos 0 }}
-{{ $detailMap := resources.Get "maps/world-detail.svg" | fingerprint }}
+{{ $earth := (resources.Get "maps/earth/blue-marble-day.jpg").Resize "4096x2048 jpg q90" }}
+{{ $topography := (resources.Get "maps/earth/earth-topography.jpg").Resize "2048x1024 jpg q85" }}
+{{ $boundaries := (resources.Get "maps/globe-borders.json") | transform.Unmarshal }}
+{{ $countryLabels := slice }}{{ range (resources.Get "maps/globe-labels.json" | transform.Unmarshal) }}{{ $countryLabels = $countryLabels | append (dict "lat" .lat "lng" .lng "name" (index .name $language)) }}{{ end }}
 <main id="main-content" class="rj-shell rj-life-page" data-pagefind-body data-life data-motion="auto" data-view="atlas">
   <header class="rj-life-heading">
     <div><h1>{{ i18n "rj-life" }}</h1><p>{{ i18n "rj-lifeTagline" }}</p></div>
@@ -37,8 +38,14 @@
         <button type="button" class="rj-life-motion" data-life-motion aria-pressed="false" aria-label="{{ i18n "rj-lifePause" }}" title="{{ i18n "rj-lifePause" }}"><span aria-hidden="true">Ⅱ</span></button>
       </div>
       <div class="rj-atlas-stage" role="group" tabindex="0" aria-label="{{ i18n "rj-lifeMapLabel" }}" aria-describedby="life-map-help" data-atlas-stage>
-        <div class="rj-atlas-layer" data-atlas-layer>{{ with resources.Get "maps/world.svg" }}{{ .Content | safeHTML }}{{ end }}</div>
+        <div class="rj-atlas-layer" data-atlas-layer></div>
         <div class="rj-atlas-points" data-atlas-points></div>
+        <p class="rj-globe-loading" role="status" data-globe-loading>{{ i18n "rj-lifeGlobeLoading" }}</p>
+        <aside class="rj-globe-index" aria-label="{{ i18n "rj-lifeChoose" }}">
+          <h3>{{ i18n "rj-lifeGlobePlaces" }} <span>{{ len $places }}</span></h3>
+          <label><span class="rj-visually-hidden">{{ i18n "rj-lifeSearch" }}</span><input type="search" data-globe-search placeholder="{{ i18n "rj-lifeSearch" }}" autocomplete="off"></label>
+          <div class="rj-globe-list" data-globe-list></div><p data-globe-list-empty hidden>{{ i18n "rj-lifeNoPlaces" }}</p>
+        </aside>
         <div class="rj-atlas-controls">
           <button type="button" data-zoom="in" aria-label="{{ i18n "rj-lifeZoomIn" }}" title="{{ i18n "rj-lifeZoomIn" }}">+</button>
           <output data-zoom-level aria-live="off">1×</output>
@@ -47,7 +54,7 @@
           <button type="button" data-map-fullscreen aria-label="{{ i18n "rj-lifeFullscreen" }}" title="{{ i18n "rj-lifeFullscreen" }}">⛶</button>
         </div>
         <div class="rj-atlas-legend"><span class="rj-legend-light" aria-hidden="true">✧</span>{{ i18n "rj-lifeVisited" }}<span class="rj-legend-capital" aria-hidden="true">★</span>{{ i18n "rj-lifeCapital" }}</div>
-        <a class="rj-atlas-credit" href="https://www.naturalearthdata.com/">Natural Earth</a>
+        <div class="rj-atlas-credit"><a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/">NASA Earth Observatory</a><span> · </span><a href="https://www.naturalearthdata.com/">Natural Earth</a></div>
       </div>
       <p class="rj-life-help" id="life-map-help">{{ i18n "rj-lifeMapHelp" }}</p>
     </section>
@@ -78,7 +85,7 @@
   <p class="rj-life-image-note">{{ index hugo.Data.life.image_note $language }}</p>
   <p class="rj-visually-hidden" role="status" aria-live="polite" data-life-status></p>
   <noscript><p>{{ i18n "rj-lifeNoJS" }}</p></noscript>
-  <script type="application/json" id="rj-life-data">{{ dict "places" $places "initial" $initial.id "language" $language "detailMap" $detailMap.RelPermalink "pause" (i18n "rj-lifePause") "play" (i18n "rj-lifePlay") "capital" (i18n "rj-lifeCapital") | jsonify | safeJS }}</script>
+  <script type="application/json" id="rj-life-data">{{ dict "places" $places "initial" $initial.id "language" $language "earth" $earth.RelPermalink "topography" $topography.RelPermalink "boundaries" $boundaries "countryLabels" $countryLabels "unavailable" (i18n "rj-lifeGlobeUnavailable") "pause" (i18n "rj-lifePause") "play" (i18n "rj-lifePlay") "capital" (i18n "rj-lifeCapital") | jsonify | safeJS }}</script>
 </main>
 <dialog class="rj-life-lightbox" data-life-lightbox aria-label="{{ i18n "rj-viewImage" }}">
   <div class="rj-lightbox-top"><div><h2 data-lightbox-name></h2><span data-lightbox-country></span></div><form method="dialog"><button type="submit" aria-label="{{ i18n "rj-close" }}">×</button></form></div>

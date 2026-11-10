@@ -117,7 +117,7 @@ rj-lifeCountriesCount:
 rj-lifeMapLabel:
   other: Interactive map of places I have visited
 rj-lifeMapHelp:
-  other: Scroll to zoom where you point. Drag to wander; pinch on touchscreens.
+  other: Drag to turn the globe. Scroll or pinch to zoom. Choose a city to explore.
 rj-lifeAllPlaces:
   other: My places
 rj-lifeEurope:
@@ -153,7 +153,7 @@ rj-lifeNoJS:
 rj-lifeViews:
   other: Explore my travels
 rj-lifeAtlas:
-  other: Atlas
+  other: Globe
 rj-lifeScenes:
   other: City scenes
 rj-lifeViewNote:
@@ -175,4 +175,10 @@ rj-lifePreviousPlace:
 rj-lifeNextPlace:
   other: Next place
 rj-lifeShowOnMap:
-  other: Find on atlas
+  other: Find on globe
+rj-lifeGlobeLoading:
+  other: Bringing the world into view…
+rj-lifeGlobePlaces:
+  other: Places visited
+rj-lifeGlobeUnavailable:
+  other: The 3D view is unavailable in this browser. Explore the place list or City scenes instead.

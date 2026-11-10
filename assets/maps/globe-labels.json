@@ -1,0 +1,14 @@
+[
+  {"lat":36,"lng":103,"name":{"en":"CHINA","zh":"中国"}},
+  {"lat":22,"lng":79,"name":{"en":"INDIA","zh":"印度"}},
+  {"lat":48,"lng":104,"name":{"en":"MONGOLIA","zh":"蒙古"}},
+  {"lat":58,"lng":86,"name":{"en":"RUSSIA","zh":"俄罗斯"}},
+  {"lat":49,"lng":66,"name":{"en":"KAZAKHSTAN","zh":"哈萨克斯坦"}},
+  {"lat":39,"lng":35,"name":{"en":"TÜRKIYE","zh":"土耳其"}},
+  {"lat":26,"lng":44,"name":{"en":"SAUDI ARABIA","zh":"沙特阿拉伯"}},
+  {"lat":27,"lng":29,"name":{"en":"EGYPT","zh":"埃及"}},
+  {"lat":33,"lng":53,"name":{"en":"IRAN","zh":"伊朗"}},
+  {"lat":46,"lng":2,"name":{"en":"FRANCE","zh":"法国"}},
+  {"lat":51,"lng":10,"name":{"en":"GERMANY","zh":"德国"}},
+  {"lat":15,"lng":101,"name":{"en":"THAILAND","zh":"泰国"}}
+]

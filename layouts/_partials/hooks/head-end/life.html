@@ -1,4 +1,5 @@
 {{ if eq .Section "life" }}
   {{ $style := resources.Get "css/life.css" | minify | fingerprint "sha256" }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+  {{ with resources.Get "vendor/globe/THIRD-PARTY-NOTICES.txt" }}<link rel="license" type="text/plain" href="{{ .RelPermalink }}">{{ end }}
 {{ end }}
